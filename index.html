@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silent Penguin PLLC — Nationwide CPA Tax Services | Remote & Secure</title>
+  <meta name="description" content="Nationwide CPA tax preparation — fully remote & secure. 100% online intake and filing. Serving all 50 states.">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #2a2a2a;
+      background: #ffffff;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: transparent;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; }
+    
+    /* ===== COLORS ===== */
+    :root {
+      --navy: #0f2136;
+      --navy-light: #193654;
+      --teal: #1f9f95;
+      --teal-dark: #177870;
+      --orange: #4f6b8a;
+      --orange-light: #8ba2bd;
+      --logo-bg: #0b1016;
+      --logo-bg-soft: #dfe6ed;
+      --blue-section: #e5ebf1;
+      --banner-bg: #e2e8ee;
+      --surface-1: #e7edf3;
+      --surface-2: #dde4eb;
+      --gray-100: #f5f7fa;
+      --gray-200: #e8ecf1;
+      --gray-400: #8a95a3;
+      --gray-600: #5a6a7a;
+      --gray-800: #2a3444;
+      --white: #ffffff;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 { color: var(--navy); line-height: 1.25; }
+    h1 { font-size: clamp(1.6rem, 5vw, 2.8rem); font-weight: 700; }
+    h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); font-weight: 600; letter-spacing: 0.5px; }
+    h3 { font-size: 1.2rem; font-weight: 600; }
+    p { color: var(--gray-600); }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+    .section-title { margin-bottom: 24px; }
+    .section-desc {
+      max-width: 620px;
+      margin: 0 auto 56px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--gray-600);
+      overflow-wrap: break-word;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .text-center { text-align: center; }
+
+    /* ===== TODO MARKER ===== */
+    .todo {
+      background: #fffbe6;
+      border: 1px dashed var(--orange);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 12px 0;
+      font-size: 0.9rem;
+      color: var(--orange);
+      font-style: italic;
+    }
+    .todo::before {
+      content: "✏️ TODO: ";
+      font-weight: 700;
+      font-style: normal;
+    }
+    section {
+      padding: 0;
+      overflow-x: hidden;
+    }
+    
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(226, 232, 238, 0.96);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(11,22,35,0.12);
+    }
+    @supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))) {
+      nav {
+        background: rgba(226, 232, 238, 1);
+      }
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: opacity 0.2s;
+    }
+    .nav-logo:hover {
+      opacity: 0.8;
+    }
+    .nav-logo span {
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+    }
+    .nav-logo .tax-label {
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 0.65rem;
+      letter-spacing: 4px;
+      margin-left: 2px;
+    }
+    .nav-links { 
+      display: flex; 
+      gap: clamp(18px, 2.5vw, 36px); 
+      list-style: none; 
+      align-items: center; 
+    }
+    .nav-links a {
+      color: rgba(11,22,35,0.78);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+      text-transform: uppercase;
+    }
+    .nav-links a:hover { 
+      color: var(--teal); 
+    }
+    .nav-links a.nav-cta {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 4px;
+      border: 1px solid var(--navy-light);
+      padding: 8px 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.7px;
+    }
+    .nav-links a.nav-cta:hover {
+      background: var(--navy-light);
+      color: var(--white);
+    }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--navy);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--banner-bg) 0%, var(--surface-2) 100%);
+      padding: clamp(100px, 15vw, 160px) 0;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 140px;
+      background: linear-gradient(to bottom, transparent, rgba(11,22,35,0.08));
+      z-index: 1;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-logo-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .hero-logo-section img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      filter: drop-shadow(0 12px 24px rgba(0,0,0,0.2));
+    }
+    .hero h1 {
+      color: var(--navy);
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 2;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      letter-spacing: -1px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+    }
+    .hero-line-lock { white-space: nowrap; }
+    .hero p {
+      color: var(--gray-600);
+      font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+      max-width: 520px;
+      margin: 0 0 36px 0;
+      position: relative;
+      z-index: 2;
+      line-height: 1.8;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      overflow-wrap: break-word;
+    }
+    .hero-tagline {
+      color: var(--teal) !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 3.5px !important;
+      text-transform: uppercase !important;
+      margin-bottom: 20px !important;
+      position: relative;
+      z-index: 2;
+      display: block;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 36px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+      cursor: pointer;
+      border: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .btn-primary:hover { 
+      background: var(--navy-light);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid rgba(11,22,35,0.3);
+    }
+    .btn-outline:hover { 
+      border-color: var(--teal);
+      color: var(--teal);
+      background: rgba(31, 159, 149, 0.1);
+    }
+
+    /* Subtle grid pattern behind hero */
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      opacity: 0;
+    }
+
+    /* ===== ABOUT ===== */
+    #about { 
+      background: linear-gradient(180deg, var(--surface-1) 0%, #f4f7fa 100%);
+      padding: clamp(80px, 12vw, 140px) 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(48px, 7vw, 80px);
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .about-text h2 { 
+      margin-bottom: 24px;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+    }
+    .about-text p { 
+      margin-bottom: 20px; 
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .about-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .highlight {
+      background: #f6f9fc;
+      border-radius: 10px;
+      padding: 30px;
+      border: 1px solid rgba(15, 33, 54, 0.12);
+      transition: all 0.35s;
+      position: relative;
+      text-align: left;
+    }
+    .highlight::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--navy), var(--teal));
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .highlight:hover {
+      box-shadow: 0 8px 24px rgba(11,22,35,0.08);
+      transform: translateY(-2px);
+      border-color: rgba(31, 159, 149, 0.28);
+    }
+    .highlight:hover::before {
+      opacity: 1;
+    }
+    .highlight-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .highlight-icon svg { 
+      width: 24px; 
+      height: 24px;
+      color: var(--white);
+    }
+    .highlight-kicker {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      margin-bottom: 8px;
+    }
+    .highlight h4 { 
+      font-size: 1rem; 
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+    .highlight p { 
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .about-trust {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .about-trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .about-trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, rgba(31, 159, 149, 0.06) 0%, rgba(31, 159, 149, 0.03) 100%);
+      border: 1px solid rgba(31, 159, 149, 0.15);
+      border-radius: 12px;
+      padding: 24px 16px;
+      color: var(--navy);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .about-trust-item:hover {
+      background: linear-gradient(135deg, rgba(31, 159, 149, 0.12) 0%, rgba(31, 159, 149, 0.08) 100%);
+      border-color: rgba(31, 159, 149, 0.25);
+      transform: translateY(-2px);
+    }
+    .about-trust-item svg {
+      color: var(--teal);
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+    .about-trust-item span { overflow-wrap: break-word; }
+    .about-trust-cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ===== SERVICES ===== */
+    #services { 
+      background: linear-gradient(180deg, var(--surface-2) 0%, #edf2f6 100%);
+      padding: clamp(64px, 12vw, 120px) 0;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(28px, 4vw, 48px);
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .service-card {
+      background: #f6f9fc;
+      border-radius: 10px;
+      padding: 30px;
+      border: 1px solid rgba(15, 33, 54, 0.12);
+      transition: box-shadow 0.35s cubic-bezier(0.23, 1, 0.320, 1), transform 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--navy), var(--teal));
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .service-card:hover {
+      box-shadow: 0 8px 24px rgba(11,22,35,0.08);
+      transform: translateY(-2px);
+      border-color: rgba(31, 159, 149, 0.24);
+    }
+    .service-card:hover::before {
+      opacity: 1;
+    }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      margin-left: 0;
+      transition: transform 0.35s;
+    }
+    .service-card:hover .service-icon {
+      transform: scale(1.05);
+    }
+    .service-icon svg { width: 24px; height: 24px; }
+    .service-kicker {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      margin-bottom: 8px;
+    }
+    .service-card h3 { 
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      color: var(--navy);
+    }
+    .service-copy { 
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--gray-600);
+      margin-bottom: 14px;
+    }
+    .service-meta {
+      font-size: 0.83rem;
+      line-height: 1.5;
+      color: var(--gray-800);
+      border-top: 1px solid rgba(15, 33, 54, 0.12);
+      padding-top: 12px;
+    }
+
+    /* ===== PRICING ===== */
+    #pricing { 
+      background: linear-gradient(180deg, var(--surface-1) 0%, #f4f7fa 100%);
+      padding: clamp(80px, 12vw, 140px) 0;
+    }
+    #pricing .section-label {
+      display: block;
+      margin-bottom: 16px;
+    }
+    #pricing h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 8px;
+    }
+    .calc-wrapper {
+      max-width: 580px;
+      margin: 48px auto 0;
+      background: var(--white);
+      border-radius: 2px;
+      padding: clamp(24px, 4vw, 48px);
+      border: 1px solid #e4e8f0;
+      box-shadow: 0 4px 12px rgba(11,22,35,0.06);
+    }
+    .calc-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .calc-item:last-child { border-bottom: none; }
+    .calc-item-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .calc-item-left input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--teal);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .calc-item-info h4 { font-size: 0.95rem; font-weight: 500; color: var(--navy); word-break: break-word; }
+    .calc-item-info p { font-size: 0.8rem; color: var(--gray-400); margin-top: 2px; word-break: break-word; }
+    .qty-counter {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .qty-counter button {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1.5px solid var(--gray-200);
+      background: var(--white);
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: var(--navy);
+      font-weight: 600;
+      transition: border-color 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .qty-counter button:hover { border-color: var(--teal); }
+    .qty-counter input {
+      width: 48px;
+      height: 32px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      border: 1.5px solid var(--gray-200);
+      border-radius: 8px;
+      background: var(--white);
+      font-family: inherit;
+      padding: 0;
+    }
+    .qty-counter input:focus {
+      outline: none;
+      border-color: var(--teal);
+    }
+
+    .calc-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 28px;
+      padding: 24px;
+      background: var(--navy);
+      border-radius: 12px;
+    }
+    .calc-total-label {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .calc-total-price {
+      color: var(--teal);
+      font-size: 1.8rem;
+      font-weight: 700;
+      transition: transform 0.15s;
+    }
+    .calc-total-price.bumped { transform: scale(1.08); }
+    .calc-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      margin-top: 16px;
+    }
+    .calc-get-started {
+      text-align: center;
+      margin-top: 20px;
+    }
+    /* Sub-items for additional services */
+    .calc-sub-items {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding-left: 48px;
+    }
+    .calc-sub-items.expanded {
+      max-height: 500px;
+    }
+    .calc-sub-item {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .calc-sub-item:last-child { border-bottom: none; }
+    .calc-sub-item input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--teal);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .calc-sub-item label {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      cursor: pointer;
+      flex: 1;
+    }
+    .calc-sub-item label:hover { color: var(--navy); }
+
+    /* ===== HOW IT WORKS ===== */
+    #how-it-works { 
+      background: linear-gradient(180deg, var(--surface-2) 0%, #edf2f6 100%);
+      padding: clamp(80px, 12vw, 140px) 0;
+    }
+    #how-it-works h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 8px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(24px, 3vw, 40px);
+      margin-top: 56px;
+    }
+    .step {
+      text-align: center;
+      position: relative;
+    }
+    .step-num {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 auto 24px;
+      box-shadow: 0 4px 12px rgba(31, 159, 149, 0.25);
+    }
+    .step h3 { 
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      color: var(--navy);
+    }
+    .step p { 
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--gray-600);
+    }
+    /* Connector line between steps */
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(50% + 32px);
+      width: calc(100% - 64px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal) 0%, transparent 100%);
+      opacity: 0.3;
+    }
+
+    /* ===== FAQ ===== */
+    #faq {
+      background: linear-gradient(180deg, var(--surface-2) 0%, #edf2f6 100%);
+      padding: clamp(80px, 12vw, 140px) 0;
+    }
+    #faq h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 8px;
+    }
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      border-top: 1px solid var(--gray-200);
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+      background: transparent;
+    }
+    .faq-question {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--navy);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question::after {
+      content: '+';
+      color: var(--teal-dark);
+      font-size: 1.35rem;
+      font-weight: 500;
+      flex-shrink: 0;
+      transform: translateY(-1px);
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] .faq-question::after {
+      content: '-';
+      transform: translateY(-2px);
+    }
+    .faq-answer {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0 0 22px;
+    }
+
+    /* ===== CONTACT FORM ===== */
+    #contact-form {
+      background: linear-gradient(180deg, var(--surface-1) 0%, #f4f7fa 100%);
+      padding: clamp(80px, 12vw, 140px) 0;
+    }
+    #contact-form h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 8px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 5vw, 64px);
+      margin-top: 56px;
+    }
+    .contact-info h3 { 
+      margin-bottom: 28px;
+      font-size: 1.2rem;
+      color: var(--navy);
+    }
+    .contact-method {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+    .contact-method-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(31, 159, 149, 0.16), rgba(79, 107, 138, 0.16));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-method-icon svg { width: 24px; height: 24px; color: var(--teal); }
+    .contact-method h4 { font-size: 0.95rem; margin-bottom: 4px; font-weight: 600; color: var(--navy); }
+    .contact-method p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; }
+    .contact-method a { color: var(--teal); font-weight: 500; transition: opacity 0.2s; }
+    .contact-method a:hover { opacity: 0.8; }
+    .contact-form {
+      background: linear-gradient(135deg, #fafbfc, #f5f7fa);
+      border-radius: 2px;
+      padding: 42px;
+      border: 1px solid #e4e8f0;
+    }
+    .form-group { margin-bottom: 22px; }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1.5px solid #e4e8f0;
+      border-radius: 2px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: var(--white);
+      transition: border-color 0.2s;
+      color: var(--navy);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--teal);
+    }
+    .form-group textarea { min-height: 110px; resize: vertical; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    /* ===== SECURITY & DOCUMENTS ===== */
+    #portal { 
+      background: linear-gradient(135deg, var(--logo-bg) 0%, var(--navy-light) 100%);
+      text-align: center; 
+      padding: clamp(80px, 12vw, 140px) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #portal h2 { 
+      color: var(--white); 
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    #portal p { 
+      color: rgba(255,255,255,0.65); 
+      margin-bottom: 40px; 
+      max-width: 540px; 
+      margin-left: auto; 
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+    }
+    .portal-features {
+      display: flex;
+      justify-content: center;
+      gap: 56px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .portal-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .portal-feature svg { color: var(--teal); flex-shrink: 0; width: 20px; height: 20px; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: clamp(56px, 8vw, 80px) 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: clamp(28px, 5vw, 56px);
+      margin-bottom: 48px;
+    }
+    .footer-brand p {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.85rem;
+      margin-top: 16px;
+      max-width: 320px;
+      line-height: 1.6;
+    }
+    .footer-col h4 {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.78rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    .footer-col a {
+      display: block;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+    .footer-col a:hover { color: var(--teal); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-bottom p {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .about-trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .step:not(:last-child)::after { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .portal-features { gap: 24px; }
+      .nav-links a { font-size: 0.78rem; }
+      .hero h1 { font-size: clamp(2rem, 5vw, 3rem); }
+      .hero .container { grid-template-columns: 1fr; }
+      .hero-logo-section { margin-top: 32px; }
+      .hero-logo-section img { max-width: 240px; }
+    }
+    @media (max-width: 768px) {
+      .steps { grid-template-columns: 1fr 1fr 1fr; }
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--banner-bg);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid rgba(11,22,35,0.12);
+        z-index: 99;
+      }
+      .nav-links.open a { font-size: 0.9rem; }
+      .nav-links.open a.nav-cta {
+          width: auto;
+          display: inline-block;
+        align-self: flex-start;
+      }
+      .service-card { padding: 28px 22px; }
+
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .about-trust-grid { grid-template-columns: 1fr; gap: 12px; }
+      .about-trust-item { padding: 18px 14px; }
+      .form-row { grid-template-columns: 1fr; }
+      .about-highlights { grid-template-columns: 1fr; }
+      .calc-wrapper { padding: 24px 18px; }
+      .calc-item { flex-wrap: wrap; gap: 12px; }
+      .calc-item-left { min-width: 0; flex: 1; }
+      .qty-counter { margin-left: auto; }
+      .calc-sub-items { padding-left: 24px; }
+      .calc-total { flex-direction: column; text-align: center; gap: 12px; }
+      .calc-total-price { font-size: 2rem; }
+      .portal-features { flex-direction: column; align-items: center; gap: 16px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .qty-counter button { width: 40px; height: 40px; font-size: 1.2rem; }
+      .contact-form { padding: 24px 18px; }
+      .contact-form-card { padding: 28px !important; }
+      .contact-info-card { padding: 28px !important; }
+      .contact-note-card { padding: 20px !important; }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-cta .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero h1 { font-size: clamp(1.6rem, 5vw, 2.4rem); }
+      .btn { padding: 14px 28px; font-size: 0.85rem; }
+    }
+    @media (max-width: 420px) {
+      .container { padding: 0 16px; }
+      nav .container { height: 62px; }
+      .hero { padding: 92px 0 84px; }
+      .hero h1 { font-size: 1.48rem; line-height: 1.25; }
+      .hero-line-lock { font-size: 0.96em; }
+      .section-desc { font-size: 0.98rem; }
+
+      .fab-overlay { padding: 12px; }
+      .fab-popup { max-height: calc(100vh - 24px); border-radius: 12px; }
+      .fab-contact {
+        width: 52px;
+        height: 52px;
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+
+    /* ===== DESKTOP CROSS-BROWSER SAFETY ===== */
+    .hero h1,
+    .section-title,
+    .section-desc,
+    .faq-question,
+    .faq-answer,
+    .footer-col a,
+    .footer-brand p {
+      overflow-wrap: break-word;
+      word-break: normal;
+      hyphens: auto;
+    }
+    input,
+    textarea,
+    button,
+    select {
+      font: inherit;
+    }
+    textarea {
+      max-width: 100%;
+    }
+    /* Hover only on devices with pointer (not touch) */
+    @media (hover: none) {
+      .service-card:hover { box-shadow: 0 12px 40px rgba(11,22,35,0.12); transform: translateY(-4px); }
+      .qty-counter button:hover { border-color: var(--gray-200); }
+      .highlight:hover { box-shadow: none; transform: none; }
+    }
+
+    /* ===== FLOATING CONTACT BUTTON & POPUP ===== */
+    .fab-contact {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--navy);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .fab-contact:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+    }
+    .fab-contact svg { width: 24px; height: 24px; }
+    .fab-tooltip {
+      position: absolute;
+      right: 64px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .fab-contact:hover .fab-tooltip { opacity: 1; }
+
+    /* Popup overlay */
+    .fab-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(11,22,35,0.5);
+      z-index: 300;
+      display: none;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+    .fab-overlay.open { display: flex; }
+    .fab-popup {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 380px;
+      max-height: calc(100vh - 56px);
+      overflow-y: auto;
+      animation: fabSlideUp 0.25s ease;
+    }
+    @keyframes fabSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fab-popup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px 0;
+    }
+    .fab-popup-header h3 { font-size: 1.1rem; margin: 0; }
+    .fab-popup-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--gray-400);
+      padding: 4px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fab-popup-close:hover { color: var(--navy); }
+    .fab-popup-body { padding: 16px 24px 24px; }
+    .fab-popup-body .form-group { margin-bottom: 14px; }
+    .fab-popup-body .form-group label { font-size: 0.8rem; margin-bottom: 4px; }
+    .fab-popup-body .form-group input,
+    .fab-popup-body .form-group textarea {
+      padding: 10px 12px;
+      font-size: 0.9rem;
+    }
+    .fab-popup-body .form-group textarea { min-height: 80px; }
+    .fab-popup-body .btn { width: 100%; text-align: center; padding: 12px; }
+    .fab-success {
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .fab-success svg { color: var(--teal); margin-bottom: 12px; }
+    .fab-success h3 { margin-bottom: 8px; }
+    .fab-success p { font-size: 0.9rem; }
+
+    @media (max-width: 600px) {
+      .fab-contact { bottom: 18px; right: 18px; width: 50px; height: 50px; }
+      .fab-contact svg { width: 22px; height: 22px; }
+      .fab-tooltip { display: none; }
+      .fab-overlay { padding: 12px; align-items: flex-end; justify-content: stretch; }
+      .fab-popup { max-width: 100%; border-radius: 16px 16px 12px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav>
+  <div class="container">
+    <a href="#home" class="nav-logo">
+      <img src="Silent_Penguin_TM_logo_-_transparent-removebg-preview.png" alt="Silent Penguin PLLC" style="height: 48px; width: auto;">
+      <div>
+        <span>SILENT PENGUIN</span>
+        <span class="tax-label">PLLC</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact-form" class="nav-cta">Start Here</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-tagline">Nationwide Remote CPA Services</p>
+      <h1><span class="hero-line-lock">Modern Tax Services.</span><br>Fully Remote.</h1>
+      <p>CPA-prepared tax returns, secure online portal, minimal meetings. Serving clients across all 50 states — everything handled digitally.</p>
+      <div class="hero-cta">
+        <a href="#contact-form" class="btn btn-primary">Start Intake Form</a>
+        <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+      </div>
+      <div style="display:flex;justify-content:flex-start;gap:36px;flex-wrap:wrap;font-size:0.85rem;color:var(--gray-600);margin-top:36px;">
+        <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span>CPA Prepared</span></div>
+        <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>Secure Portal</span></div>
+        <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span>Minimal Meetings</span></div>
+      </div>
+    </div>
+    <div class="hero-logo-section">
+      <img src="Silent_Penguin_TM_logo_-_transparent-removebg-preview.png" alt="Silent Penguin PLLC Logo">
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FIRM POSITIONING ============ -->
+<section id="about">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:56px;max-width:860px;margin-left:auto;margin-right:auto;">
+      <p class="section-label">Why Silent Penguin</p>
+      <h2 class="section-title">Built For Clients Who Want Accuracy Without Friction</h2>
+      <p style="font-size:1.05rem;color:var(--gray-600);">Silent Penguin is designed for busy professionals and business owners who want CPA-level quality, secure digital delivery, and a process that respects their time.</p>
+    </div>
+
+    <div class="about-highlights" style="margin-top:0;">
+      
+      <div class="highlight">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><circle cx="12" cy="12" r="1"/><path d="M12 1v6m0 6v6"/><path d="M4.22 4.22l4.24 4.24m1.41 1.41l4.24 4.24"/><path d="M1 12h6m6 0h6"/><path d="M4.22 19.78l4.24-4.24m1.41-1.41l4.24-4.24"/><path d="M12 17v6"/><path d="M19.78 19.78l-4.24-4.24m-1.41-1.41l-4.24-4.24"/><path d="M23 12h-6m-6 0H5"/><path d="M19.78 4.22l-4.24 4.24m-1.41 1.41l-4.24 4.24"/></svg>
+        </div>
+        <p class="highlight-kicker">Remote By Design</p>
+        <h4>Built for speed, not office visits</h4>
+        <p>Everything is handled online through secure workflows, so you can get tax work completed without scheduling in-person meetings.</p>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <p class="highlight-kicker">Security First</p>
+        <h4>Secure portal, controlled access</h4>
+        <p>Document exchange and communication happen in a protected portal environment with privacy and compliance at the center.</p>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <p class="highlight-kicker">Communication Model</p>
+        <h4>Clear updates, minimal meetings</h4>
+        <p>Email-first communication keeps things efficient while still giving you direct access when decisions or strategy need discussion.</p>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <p class="highlight-kicker">Nationwide Reach</p>
+        <h4>Consistent CPA service in all 50 states</h4>
+        <p>From single-state to multi-state filings, you get the same process quality and responsiveness no matter where you operate.</p>
+      </div>
+
+    </div>
+
+    <div class="about-trust">
+      <div class="about-trust-grid">
+        <div class="about-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>Licensed CPA</span>
+        </div>
+        <div class="about-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>IRS E-file Provider</span>
+        </div>
+        <div class="about-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Secure Portal (AES-256)</span>
+        </div>
+        <div class="about-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Nationwide Service</span>
+        </div>
+      </div>
+      <div class="about-trust-cta">
+        <a href="#contact-form" class="btn btn-primary">Start Your Return</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="container text-center">
+    <p class="section-label">Services</p>
+    <h2 class="section-title">Our Big 4 Core Services</h2>
+    <p class="section-desc">These are the four service lines we are built around. Clear scope, CPA-level execution, and fast remote delivery.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <p class="service-kicker">Core Service 01</p>
+        <h3>Individual Tax Returns</h3>
+        <p class="service-copy">Accurate federal and state filing for professionals, families, and investors with complex reporting needs.</p>
+        <p class="service-meta"><strong>Best for:</strong> W-2 earners, investment income, and multi-state filings.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <p class="service-kicker">Core Service 02</p>
+        <h3>Business Tax Returns</h3>
+        <p class="service-copy">Entity-focused preparation designed to reduce errors, protect compliance, and support better financial decisions.</p>
+        <p class="service-meta"><strong>Best for:</strong> Schedule C businesses, LLCs, S-Corps, and professional firms.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <p class="service-kicker">Core Service 03</p>
+        <h3>Tax Planning & Strategy</h3>
+        <p class="service-copy">Forward-looking planning that helps you avoid surprises and make smarter year-round tax decisions.</p>
+        <p class="service-meta"><strong>Best for:</strong> estimated taxes, entity optimization, and year-end planning.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <p class="service-kicker">Core Service 04</p>
+        <h3>IRS Notice & Resolution</h3>
+        <p class="service-copy">Structured support for IRS notices and correspondence with clear action steps and representation when needed.</p>
+        <p class="service-meta"><strong>Best for:</strong> notice response, audit support, and compliance remediation.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how-it-works">
+  <div class="container text-center">
+    <p class="section-label">The Process</p>
+    <h2 class="section-title">From Intake to Filing in 5 Steps</h2>
+    <p class="section-desc">Streamlined, transparent, entirely online. This is how you become a client.</p>
+
+    <div class="steps" style="grid-template-columns: repeat(5, 1fr);">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Complete Intake Form</h3>
+        <p>Tell us about your tax situation. Takes 5 minutes. No calls.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Receive Quote</h3>
+        <p>We quote your return within 24 hours. Transparent pricing, no surprises.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Upload Documents</h3>
+        <p>Access your secure portal. Upload W-2s, 1099s, receipts — at your pace.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>CPA Preparation</h3>
+        <p>Your CPA reviews everything and prepares your return. We keep you posted.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <h3>Review & E-File</h3>
+        <p>We email your summary for review. Once approved, we e-file — you're done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ PRICING ============ -->
+<section id="pricing">
+  <div class="container text-center">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">Calculate Your Cost</h2>
+    <p class="section-desc">Transparent flat-fee pricing. Start with an estimate, then get a final quote to lock in your services.</p>
+
+    <div class="calc-wrapper" style="text-align: left;">
+
+      <!-- Individual Return (Base) -->
+      <div class="calc-item" style="border-bottom:2px solid var(--gray-200);padding-bottom:20px;">
+        <div class="calc-item-left">
+          <input type="checkbox" id="svcIndividual" checked disabled style="opacity:0.5;">
+          <div class="calc-item-info">
+            <h4>Individual Return</h4>
+            <p>Federal 1040 with W-2 income (always included)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Return -->
+      <div class="calc-item">
+        <div class="calc-item-left">
+          <input type="checkbox" id="svcBusiness" onchange="updateTotal()">
+          <label for="svcBusiness" class="calc-item-info">
+            <h4>Business Return</h4>
+            <p>Schedule C, LLC, S-Corp, or professional services</p>
+          </label>
+        </div>
+      </div>
+
+      <!-- Tax Planning -->
+      <div class="calc-item">
+        <div class="calc-item-left">
+          <input type="checkbox" id="svcTaxPlan" onchange="updateTotal()">
+          <label for="svcTaxPlan" class="calc-item-info">
+            <h4>Tax Planning</h4>
+            <p>Estimated tax planning, entity structure, year-end strategy</p>
+          </label>
+        </div>
+      </div>
+
+      <!-- IRS Notice Support -->
+      <div class="calc-item">
+        <div class="calc-item-left">
+          <input type="checkbox" id="svcIRS" onchange="updateTotal()">
+          <label for="svcIRS" class="calc-item-info">
+            <h4>IRS Notice Support</h4>
+            <p>Notice response, audit representation, correspondence</p>
+          </label>
+        </div>
+      </div>
+
+      <!-- Add-ons: Rental Properties -->
+      <div class="calc-item">
+        <div class="calc-item-left">
+          <input type="checkbox" id="addonRental" onchange="onRentalCheck()">
+          <label for="addonRental" class="calc-item-info">
+            <h4>Rental Properties (Schedule E)</h4>
+            <p>How many rental properties?</p>
+            <p id="rentalHint" style="color:var(--orange);font-size:0.78rem;margin:4px 0 0;display:none;">↑ Please select quantity above</p>
+          </label>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div class="qty-counter">
+            <button type="button" onclick="changeRentals(-1)">−</button>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" id="rentalCount" value="0" oninput="onRentalInput()" onchange="onRentalInput()" onblur="if(!this.value)this.value='0'">
+            <button type="button" onclick="changeRentals(1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add-ons: Multi-State -->
+      <div class="calc-item">
+        <div class="calc-item-left">
+          <input type="checkbox" id="addonStates" onchange="onStateCheck()">
+          <label for="addonStates" class="calc-item-info">
+            <h4>Additional State Returns</h4>
+            <p>How many additional states?</p>
+            <p id="stateHint" style="color:var(--orange);font-size:0.78rem;margin:4px 0 0;display:none;">↑ Please select quantity above</p>
+          </label>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div class="qty-counter">
+            <button type="button" onclick="changeStates(-1)">−</button>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" id="stateCount" value="0" oninput="onStateInput()" onchange="onStateInput()" onblur="if(!this.value)this.value='0'">
+            <button type="button" onclick="changeStates(1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add-ons: Additional Services (expandable) -->
+      <div class="calc-item" style="border-bottom:none;">
+        <div class="calc-item-left">
+          <input type="checkbox" id="addonExtra" onchange="toggleExtras()">
+          <label for="addonExtra" class="calc-item-info">
+            <h4>Additional Services</h4>
+            <p>Select to see options — pricing confirmed after consultation</p>
+          </label>
+        </div>
+      </div>
+      <div class="calc-sub-items" id="extrasList">
+        <div class="calc-sub-item">
+          <input type="checkbox" id="subItemized" onchange="updateTotal()">
+          <label for="subItemized">Itemized Deductions (mortgage, property tax, charity)</label>
+          <span style="margin-left:auto;color:var(--gray-400);font-size:0.85rem;">TBD</span>
+        </div>
+        <div class="calc-sub-item">
+          <input type="checkbox" id="subHSA" onchange="updateTotal()">
+          <label for="subHSA">HSA / IRA / Retirement Contributions</label>
+          <span style="margin-left:auto;color:var(--gray-400);font-size:0.85rem;">TBD</span>
+        </div>
+        <div class="calc-sub-item">
+          <input type="checkbox" id="subEdu" onchange="updateTotal()">
+          <label for="subEdu">Education Credits (1098-T / student loans)</label>
+          <span style="margin-left:auto;color:var(--gray-400);font-size:0.85rem;">TBD</span>
+        </div>
+        <div class="calc-sub-item">
+          <input type="checkbox" id="subCrypto" onchange="updateTotal()">
+          <label for="subCrypto">Cryptocurrency Reporting</label>
+          <span style="margin-left:auto;color:var(--gray-400);font-size:0.85rem;">TBD</span>
+        </div>
+        <div class="calc-sub-item">
+          <input type="checkbox" id="subRSU" onchange="updateTotal()">
+          <label for="subRSU">Stock Compensation (RSU / ESPP / ISO)</label>
+          <span style="margin-left:auto;color:var(--gray-400);font-size:0.85rem;">TBD</span>
+        </div>
+        <div class="calc-sub-item">
+          <input type="checkbox" id="subForeign" onchange="updateTotal()">
+          <label for="subForeign">Foreign Income / FBAR / FATCA</label>
+          <span style="margin-left:auto;color:var(--gray-400);font-size:0.85rem;">TBD</span>
+        </div>
+        <div class="calc-sub-item">
+          <input type="checkbox" id="subOther" onchange="updateTotal()">
+          <label for="subOther">Other (describe in contact form)</label>
+          <span style="margin-left:auto;color:var(--gray-400);font-size:0.85rem;">TBD</span>
+        </div>
+      </div>
+
+      <!-- Estimated total -->
+      <div class="calc-total">
+        <div>
+          <div class="calc-total-label">Your Estimated Total</div>
+          <div style="color:rgba(255,255,255,0.4);font-size:0.75rem;margin-top:4px;">Services selected above</div>
+        </div>
+        <div class="calc-total-price" id="totalPrice">$300</div>
+      </div>
+
+      <div style="background:var(--navy-light,#132237);border-radius:10px;padding:16px 20px;margin-top:12px;display:flex;align-items:flex-start;gap:12px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;margin:0;line-height:1.5;">Additional services pricing confirmed after a brief consultation.</p>
+      </div>
+
+      <div class="calc-get-started" style="margin-top:24px;">
+        <a href="#contact-form" class="btn btn-primary" onclick="prefillQuoteMessage()">Get Your Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <p class="section-label">Questions</p>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-desc">Answers to common questions about our process, pricing, and service.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-question">Do you meet clients in person?</summary>
+        <p class="faq-answer">No. We're a fully remote firm. Everything happens through our secure online portal and email. This is by design and keeps the process efficient.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Which states do you serve?</summary>
+        <p class="faq-answer">All 50 states. We prepare individual and business returns nationwide, including multi-state filings.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How do I upload documents?</summary>
+        <p class="faq-answer">Once you pay, we set up your secure portal access. You can then upload W-2s, 1099s, and supporting records directly.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">What's the typical turnaround time?</summary>
+        <p class="faq-answer">Most individual returns are completed in 7-10 business days after final documents are submitted. Business timelines vary by complexity.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">When do I pay?</summary>
+        <p class="faq-answer">After you receive and accept your quote, payment is completed online before work begins.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Can you amend prior year returns?</summary>
+        <p class="faq-answer">Yes. We prepare amended returns (Form 1040-X) when prior filings need correction.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Do you work year-round?</summary>
+        <p class="faq-answer">Yes. We operate year-round for filing, planning, amendments, and business tax support.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">What documents do I need?</summary>
+        <p class="faq-answer">At minimum, W-2s, 1099s, and income records. We send a full checklist after intake based on your situation.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ CONTACT FORM ============ -->
+<section id="contact-form">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <p class="section-label">Get Started</p>
+      <h2 class="section-title">Let's Begin Your Return</h2>
+      <p class="section-desc">Start with our intake form. We'll respond within 24 hours with a quote and next steps.</p>
+    </div>
+
+    <div class="contact-form-card" style="max-width:600px;margin:0 auto;background:var(--gray-100);border:1px solid var(--gray-200);border-radius:12px;padding:48px;">
+      <form id="contact-form-element" action="https://formsubmit.co/hello@silentpenguintax.com" method="POST" style="display:flex;flex-direction:column;gap:24px;">
+        <p style="margin:0;color:var(--gray-600);font-size:0.9rem;line-height:1.5;"><span style="color:#c0392b;font-weight:700;">*</span> Required fields. Please fill Full Name and Email Address before sending.</p>
+        <div>
+          <label style="display:block;color:var(--navy);font-weight:600;margin-bottom:8px;font-size:0.95rem;">Full Name <span style="color:#c0392b;">*</span></label>
+          <input type="text" name="name" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;color:var(--navy);font-weight:600;margin-bottom:8px;font-size:0.95rem;">Email Address <span style="color:#c0392b;">*</span></label>
+          <input type="email" name="email" placeholder="you@example.com" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;color:var(--navy);font-weight:600;margin-bottom:8px;font-size:0.95rem;">Message</label>
+          <textarea name="message" placeholder="Tell us about your tax situation..." rows="5" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;resize:vertical;"></textarea>
+        </div>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://silentpenguintax.com?submitted=1#contact-form" id="contactFormNext">
+        <button type="submit" class="btn btn-primary" style="font-size:1rem;padding:14px 40px;align-self:flex-start;">Send Message</button>
+      </form>
+    </div>
+    <div style="max-width:700px;margin:40px auto 0;">
+      <div class="contact-info-card" style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:12px;padding:40px;text-align:center;">
+        <h3 style="color:var(--navy);margin-bottom:12px;">Questions? Email us directly.</h3>
+        <p style="color:var(--gray-600);margin-bottom:24px;">We prefer email — it's faster and you'll have a record of our correspondence.</p>
+        <p style="margin-bottom:0;"><a href="mailto:hello@silentpenguintax.com" style="font-size:1.2rem;font-weight:600;color:var(--teal);text-decoration:none;">hello@silentpenguintax.com</a></p>
+      </div>
+
+      <div class="contact-note-card" style="margin-top:24px;padding:24px;background:#f0fffe;border:1px solid #d4f1ed;border-radius:12px;text-align:center;">
+        <p style="color:var(--navy);font-size:0.95rem;margin:0;line-height:1.6;"><strong>No phone calls.</strong> We work asynchronously via email and secure portal. This saves everyone time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.10);">
+      <p style="color:rgba(255,255,255,0.85);font-size:0.78rem;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;font-weight:700;">Licensed. Secure. Accountable.</p>
+      <div style="display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--teal);width:20px;height:20px;flex-shrink:0;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:500;">Licensed CPA</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--teal);width:20px;height:20px;flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:500;">IRS E-file Provider</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--teal);width:20px;height:20px;flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:500;">Secure Portal (AES-256)</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--teal);width:20px;height:20px;flex-shrink:0;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:500;">Nationwide Service</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+          <img src="Silent Penguin logo color.jpeg" alt="Silent Penguin PLLC" style="height: 28px; width: auto;">
+          <span style="color:#fff;font-weight:600;letter-spacing:2px;font-size:0.9rem;">SILENT PENGUIN <span style="color:var(--teal);font-weight:400;font-size:0.7rem;letter-spacing:3px;">PLLC</span></span>
+        </div>
+        <p>Nationwide CPA firm. Remote-first. Secure. Efficient. Serving all 50 states.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <a href="mailto:hello@silentpenguintax.com">Contact Email</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Silent Penguin PLLC. All rights reserved.</p>
+      <p>Nationwide &nbsp;|&nbsp; <a href="mailto:hello@silentpenguintax.com" style="color:var(--teal);">hello@silentpenguintax.com</a></p>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- ============ CALCULATOR SCRIPT ============ -->
+<script>
+  let stateCount = 0;
+  let rentalCount = 0;
+
+  function changeStates(delta) {
+    stateCount = Math.max(0, stateCount + delta);
+    document.getElementById('stateCount').value = stateCount;
+    document.getElementById('addonStates').checked = stateCount > 0;
+    document.getElementById('stateHint').style.display = (stateCount > 0) ? 'none' : (document.getElementById('addonStates').checked ? 'block' : 'none');
+    updateTotal();
+  }
+
+  function onStateInput() {
+    var raw = document.getElementById('stateCount').value.replace(/[^0-9]/g, '');
+    var val = parseInt(raw, 10);
+    stateCount = (isNaN(val) || val < 0) ? 0 : val;
+    document.getElementById('stateCount').value = stateCount || (raw === '' ? '' : '0');
+    document.getElementById('addonStates').checked = stateCount > 0;
+    document.getElementById('stateHint').style.display = (stateCount > 0) ? 'none' : (document.getElementById('addonStates').checked ? 'block' : 'none');
+    updateTotal();
+  }
+
+  function onStateCheck() {
+    var checked = document.getElementById('addonStates').checked;
+    document.getElementById('stateHint').style.display = (checked && stateCount === 0) ? 'block' : 'none';
+    updateTotal();
+  }
+
+  function changeRentals(delta) {
+    rentalCount = Math.max(0, rentalCount + delta);
+    document.getElementById('rentalCount').value = rentalCount;
+    document.getElementById('addonRental').checked = rentalCount > 0;
+    document.getElementById('rentalHint').style.display = (rentalCount > 0) ? 'none' : (document.getElementById('addonRental').checked ? 'block' : 'none');
+    updateTotal();
+  }
+
+  function onRentalInput() {
+    var raw = document.getElementById('rentalCount').value.replace(/[^0-9]/g, '');
+    var val = parseInt(raw, 10);
+    rentalCount = (isNaN(val) || val < 0) ? 0 : val;
+    document.getElementById('rentalCount').value = rentalCount || (raw === '' ? '' : '0');
+    document.getElementById('addonRental').checked = rentalCount > 0;
+    document.getElementById('rentalHint').style.display = (rentalCount > 0) ? 'none' : (document.getElementById('addonRental').checked ? 'block' : 'none');
+    updateTotal();
+  }
+
+  function onRentalCheck() {
+    var checked = document.getElementById('addonRental').checked;
+    document.getElementById('rentalHint').style.display = (checked && rentalCount === 0) ? 'block' : 'none';
+    updateTotal();
+  }
+
+  function toggleExtras() {
+    var checked = document.getElementById('addonExtra').checked;
+    var list = document.getElementById('extrasList');
+    if (checked) {
+      list.classList.add('expanded');
+    } else {
+      list.classList.remove('expanded');
+      var subs = list.querySelectorAll('input[type="checkbox"]');
+      subs.forEach(function(cb) { cb.checked = false; });
+    }
+    updateTotal();
+  }
+
+  function updateTotal() {
+    var total = 300;
+    if (document.getElementById('svcBusiness').checked) total += 250;
+    if (document.getElementById('svcTaxPlan').checked) total += 100;
+    if (document.getElementById('svcIRS').checked) total += 300;
+    total += rentalCount * 150;
+    total += stateCount * 100;
+
+    var subs = document.getElementById('extrasList').querySelectorAll('input[type="checkbox"]:checked');
+    var hasExtras = subs.length > 0;
+
+    var el = document.getElementById('totalPrice');
+    if (hasExtras) {
+      el.textContent = '$' + total.toLocaleString() + '+';
+    } else {
+      el.textContent = '$' + total.toLocaleString();
+    }
+    el.classList.add('bumped');
+    setTimeout(function() { el.classList.remove('bumped'); }, 150);
+    syncQuoteMessageFromCalculator();
+  }
+
+  function buildQuoteMessageFromCalculator() {
+    var lines = [];
+    lines.push('Hi Silent Penguin team,');
+    lines.push('');
+    lines.push('I would like a quote for the following services:');
+    lines.push('- Individual Return (Base)');
+
+    if (document.getElementById('svcBusiness').checked) lines.push('- Business Return');
+    if (document.getElementById('svcTaxPlan').checked) lines.push('- Tax Planning');
+    if (document.getElementById('svcIRS').checked) lines.push('- IRS Notice Support');
+    if (rentalCount > 0) lines.push('- Rental Properties (Schedule E): ' + rentalCount);
+    if (stateCount > 0) lines.push('- Additional State Returns: ' + stateCount);
+
+    var extras = [];
+    var extraCheckboxes = document.getElementById('extrasList').querySelectorAll('input[type="checkbox"]:checked');
+    extraCheckboxes.forEach(function(cb) {
+      var label = document.querySelector('label[for="' + cb.id + '"]');
+      if (label) extras.push(label.textContent.trim());
+    });
+
+    if (extras.length > 0) {
+      lines.push('- Additional Services:');
+      extras.forEach(function(item) {
+        lines.push('  - ' + item);
+      });
+    }
+
+    lines.push('');
+    lines.push('Estimated total from calculator: ' + document.getElementById('totalPrice').textContent);
+    lines.push('');
+    lines.push('Please confirm final pricing and next steps.');
+
+    return lines.join('\n');
+  }
+
+  function syncQuoteMessageFromCalculator() {
+    var messageField = document.querySelector('#contact-form-element textarea[name="message"]');
+    if (messageField) {
+      messageField.value = buildQuoteMessageFromCalculator();
+      sessionStorage.setItem('sp_contact_message', messageField.value);
+    }
+  }
+
+  function prefillQuoteMessage() {
+    var messageField = document.querySelector('#contact-form-element textarea[name="message"]');
+    if (messageField) {
+      messageField.value = buildQuoteMessageFromCalculator();
+      sessionStorage.setItem('sp_contact_message', messageField.value);
+    }
+  }
+
+  syncQuoteMessageFromCalculator();
+</script>
+
+<!-- ============ CONTACT FORM STATE SCRIPT ============ -->
+<script>
+  (function() {
+    var form = document.getElementById('contact-form-element');
+    if (!form) return;
+
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('submitted') === '1') {
+      sessionStorage.removeItem('sp_contact_name');
+      sessionStorage.removeItem('sp_contact_email');
+      sessionStorage.removeItem('sp_contact_message');
+      params.delete('submitted');
+      var cleaned = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
+      window.history.replaceState({}, '', cleaned);
+    }
+
+    var nameField = form.querySelector('input[name="name"]');
+    var emailField = form.querySelector('input[name="email"]');
+    var messageField = form.querySelector('textarea[name="message"]');
+    var nextField = document.getElementById('contactFormNext');
+
+    if (sessionStorage.getItem('sp_contact_name')) {
+      nameField.value = sessionStorage.getItem('sp_contact_name');
+    }
+    if (sessionStorage.getItem('sp_contact_email')) {
+      emailField.value = sessionStorage.getItem('sp_contact_email');
+    }
+    if (sessionStorage.getItem('sp_contact_message')) {
+      messageField.value = sessionStorage.getItem('sp_contact_message');
+    }
+
+    nameField.addEventListener('input', function() {
+      sessionStorage.setItem('sp_contact_name', nameField.value);
+    });
+    emailField.addEventListener('input', function() {
+      sessionStorage.setItem('sp_contact_email', emailField.value);
+    });
+    messageField.addEventListener('input', function() {
+      sessionStorage.setItem('sp_contact_message', messageField.value);
+    });
+
+    form.addEventListener('submit', function(e) {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        form.reportValidity();
+        return;
+      }
+
+      if (nextField) {
+        nextField.value = window.location.origin + window.location.pathname + '?submitted=1#contact-form';
+      }
+    });
+  })();
+</script>
+
+<!-- ============ CONTACT FORM SCRIPT ============ -->
+<script>
+  function openFabForm() {
+    var nameEl = document.getElementById('fabName');
+    var emailEl = document.getElementById('fabEmail');
+    var messageEl = document.getElementById('fabMessage');
+
+    if (nameEl && sessionStorage.getItem('sp_fab_name')) {
+      nameEl.value = sessionStorage.getItem('sp_fab_name');
+    }
+    if (emailEl && sessionStorage.getItem('sp_fab_email')) {
+      emailEl.value = sessionStorage.getItem('sp_fab_email');
+    }
+
+    if (messageEl) {
+      var savedMessage = sessionStorage.getItem('sp_fab_message');
+      if (savedMessage) {
+        messageEl.value = savedMessage;
+      } else if (typeof buildQuoteMessageFromCalculator === 'function') {
+        messageEl.value = buildQuoteMessageFromCalculator();
+        sessionStorage.setItem('sp_fab_message', messageEl.value);
+      }
+    }
+
+    document.getElementById('fabOverlay').classList.add('open');
+  }
+  function closeFabForm() {
+    document.getElementById('fabOverlay').classList.remove('open');
+    setTimeout(function() {
+      document.getElementById('fabFormView').style.display = '';
+      document.getElementById('fabSuccessView').style.display = 'none';
+    }, 300);
+  }
+  function submitFabForm() {
+    var name = document.getElementById('fabName').value.trim();
+    var email = document.getElementById('fabEmail').value.trim();
+    var message = document.getElementById('fabMessage').value.trim();
+
+    sessionStorage.setItem('sp_fab_name', name);
+    sessionStorage.setItem('sp_fab_email', email);
+    sessionStorage.setItem('sp_fab_message', message);
+
+    if (!name || !email || !message) {
+      alert('Please fill out all fields.');
+      return;
+    }
+    document.getElementById('fabFormView').style.display = 'none';
+    document.getElementById('fabSuccessView').style.display = '';
+
+    sessionStorage.removeItem('sp_fab_name');
+    sessionStorage.removeItem('sp_fab_email');
+    sessionStorage.removeItem('sp_fab_message');
+
+    document.getElementById('fabName').value = '';
+    document.getElementById('fabEmail').value = '';
+    document.getElementById('fabMessage').value = '';
+    setTimeout(closeFabForm, 2500);
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var nameEl = document.getElementById('fabName');
+    var emailEl = document.getElementById('fabEmail');
+    var messageEl = document.getElementById('fabMessage');
+    if (!nameEl || !emailEl || !messageEl) return;
+
+    nameEl.addEventListener('input', function() {
+      sessionStorage.setItem('sp_fab_name', nameEl.value);
+    });
+    emailEl.addEventListener('input', function() {
+      sessionStorage.setItem('sp_fab_email', emailEl.value);
+    });
+    messageEl.addEventListener('input', function() {
+      sessionStorage.setItem('sp_fab_message', messageEl.value);
+    });
+  });
+</script>
+
+<!-- ============ TAGLINE WRAP SCRIPT ============ -->
+<script>
+  (function() {
+    function preventWidow(el) {
+      var original = el.getAttribute('data-original-text') || el.textContent.trim();
+      el.setAttribute('data-original-text', original);
+
+      // Keep the last two words together to avoid a one-word final line.
+      var improved = original.replace(/\s+([^\s]+)\s+([^\s]+)$/, ' $1\u00A0$2');
+      el.textContent = improved;
+    }
+
+    var taglines = document.querySelectorAll('.section-desc');
+    taglines.forEach(preventWidow);
+  })();
+</script>
+
+<!-- Floating contact button -->
+<button class="fab-contact" aria-label="Contact us" onclick="openFabForm()">
+  <span class="fab-tooltip">Send us a message</span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+</button>
+
+<!-- Floating contact popup -->
+<div class="fab-overlay" id="fabOverlay" onclick="if(event.target===this)closeFabForm()">
+  <div class="fab-popup">
+    <div id="fabFormView">
+      <div class="fab-popup-header">
+        <h3>Quick Message</h3>
+        <button class="fab-popup-close" onclick="closeFabForm()" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="fab-popup-body">
+        <p style="margin:0 0 14px;color:var(--gray-600);font-size:0.86rem;line-height:1.45;"><span style="color:#c0392b;font-weight:700;">*</span> Required fields. Please fill Name and Email before sending.</p>
+        <div class="form-group">
+          <label for="fabName">Name <span style="color:#c0392b;">*</span></label>
+          <input type="text" id="fabName" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="fabEmail">Email <span style="color:#c0392b;">*</span></label>
+          <input type="email" id="fabEmail" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="fabMessage">Message</label>
+          <textarea id="fabMessage" placeholder="Tell us about your tax situation..." required></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="submitFabForm()">Send Message</button>
+      </div>
+    </div>
+    <div id="fabSuccessView" class="fab-success" style="display:none;">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <h3>Message Sent!</h3>
+      <p>We'll get back to you via email shortly.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
