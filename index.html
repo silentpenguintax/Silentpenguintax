@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Remote CPA Services in Renton, WA | Silent Penguin Tax Services </title>
   <meta name="description" content="CPA tax preparation — fully remote & secure. 100% online intake and filing. Serving clients in Renton, WA, the Greater Seattle Area, and Nationwide.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; frame-ancestors 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <style>
     /* ===== RESET & BASE ===== */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -174,7 +176,6 @@
     .required-indicator {
       color: #c0392b;
       font-weight: 700;
-      aria-label: "required";
     }
 
     /* Ensure sufficient color contrast */
@@ -412,7 +413,7 @@
     }
     .hero-logo-section img {
       width: 100%;
-      max-width: clamp(420px, 46vw, 640px);
+      max-width: clamp(293px, 35vw, 480px);
       height: auto;
       filter: drop-shadow(0 12px 24px rgba(0,0,0,0.2));
     }
@@ -452,6 +453,7 @@
       display: block;
       white-space: nowrap;
       max-width: none !important;
+      order: 1;
     }
     .hero-cta {
       display: flex;
@@ -911,8 +913,8 @@
     }
     .steps {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: clamp(24px, 3vw, 40px);
+      grid-template-columns: repeat(5, 1fr);
+      gap: clamp(16px, 2vw, 32px);
       margin-top: 56px;
     }
     .step {
@@ -1197,16 +1199,52 @@
       .about-grid { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: 1fr; }
       .about-trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .steps { grid-template-columns: 1fr 1fr; }
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 36px;
+      }
+      .step {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        gap: 16px;
+        background: var(--white);
+        border-radius: 10px;
+        padding: 16px 20px;
+        box-shadow: 0 2px 8px rgba(11,22,35,0.07);
+      }
+      .step-num {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+      .step h3 { margin-bottom: 4px; font-size: 0.95rem; }
+      .step p { font-size: 0.84rem; }
       .step:not(:last-child)::after { display: none; }
       .contact-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .portal-features { gap: 24px; }
       .nav-links a { font-size: 0.78rem; }
       .hero h1 { font-size: clamp(1.45rem, 4.8vw, 1.95rem); }
-      .hero .container { grid-template-columns: 1fr; }
-      .hero-logo-section { margin-top: 32px; }
-      .hero-logo-section img { max-width: 440px; }
+      .hero .container {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+      }
+      .hero-content {
+        display: contents;
+      }
+      .hero-tagline { order: 1; white-space: normal !important; }
+      .hero h1 { order: 2; }
+      .hero-desc { order: 3; }
+      .hero-logo-section { order: 4; margin-top: 24px; margin-bottom: 8px; }
+      .hero-cta { order: 5; }
+      .hero-trust { order: 6; }
+      .hero-logo-section img { max-width: min(80vw, 320px); }
     }
     @media (max-width: 1150px) {
       nav .container {
@@ -1214,7 +1252,7 @@
         gap: 12px;
       }
       .nav-logo { gap: 10px; }
-      .nav-logo img { height: 40px !important; }
+      .nav-logo img { height: 46px !important; }
       .nav-logo span {
         font-size: 0.82rem;
         letter-spacing: 1.7px;
@@ -1230,9 +1268,10 @@
         flex-direction: column;
         position: absolute;
         top: 64px;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: none;
         width: min(94vw, 560px);
         background: var(--banner-bg);
         padding: 28px 24px;
@@ -1247,9 +1286,9 @@
       .nav-toggle[aria-expanded="true"] {
         position: absolute;
         top: 84px;
-        left: 50%;
-        transform: translateX(calc(-50% + 236px));
-        right: auto;
+        left: auto;
+        right: calc((100% - min(94vw, 560px)) / 2 + 8px);
+        transform: none;
         background: transparent;
         padding: 0;
         width: 32px;
@@ -1259,11 +1298,11 @@
       @keyframes slideDown {
         from {
           opacity: 0;
-          transform: translateX(-50%) translateY(-8px);
+          transform: translateY(-8px);
         }
         to {
           opacity: 1;
-          transform: translateX(-50%) translateY(0);
+          transform: translateY(0);
         }
       }
       .nav-links.open a {
@@ -1296,7 +1335,7 @@
       }
     }
     @media (max-width: 768px) {
-      .steps { grid-template-columns: 1fr 1fr 1fr; }
+      /* steps already flex-column from 900px breakpoint */
       .service-card { padding: 28px 22px; }
 
       .calc-item {
@@ -1332,7 +1371,7 @@
     }
     @media (max-width: 600px) {
       .services-grid { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr; }
+      /* steps already flex-column from 900px breakpoint */
       .about-trust-grid { grid-template-columns: 1fr; gap: 12px; }
       .about-trust-item { padding: 18px 14px; }
       .form-row { grid-template-columns: 1fr; }
@@ -1357,7 +1396,7 @@
         height: 60px;
         gap: 10px;
       }
-      .nav-logo img { height: 34px !important; }
+      .nav-logo img { height: 38px !important; }
       .nav-logo span {
         font-size: 0.74rem;
         letter-spacing: 1.4px;
@@ -1591,7 +1630,7 @@
 <nav role="navigation" aria-label="Main navigation">
   <div class="container">
     <a href="#home" class="nav-logo">
-      <img src="Silent_Penguin_TM_logo_-_transparent-removebg-preview.png" alt="Silent Penguin PLLC" style="height: 48px; width: auto;">
+      <img src="Silent_Penguin_transparent_ready_no_word-removebg.png" alt="Silent Penguin PLLC" style="height: 56px; width: auto;">
       <div>
         <span>SILENT PENGUIN TAX SERVICES</span>
       </div>
@@ -1651,17 +1690,18 @@
 
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="home" role="main" aria-label="Welcome to Silent Penguin PLLC">
-  <div id="main-content" class="container">
+<main id="main-content">
+<section class="hero" id="home" aria-label="Welcome to Silent Penguin PLLC">
+  <div class="container">
     <div class="hero-content">
       <p class="hero-tagline">Proudly serving the Greater Seattle area and clients across the United States</p>
       <h1><span class="hero-line-lock">Tax Preparation, Tax Planning, and Advisory.</span><br>100% Remote and Secure.</h1>
-      <p>CPA-prepared tax returns delivered through a secure online portal with a streamlined, fully remote experience — no unnecessary meetings.</p>
+      <p class="hero-desc">CPA-prepared tax returns delivered through a secure online portal with a streamlined, fully remote experience — no unnecessary meetings.</p>
       <div class="hero-cta">
         <a href="#contact-form" class="btn btn-primary">Start Intake Form</a>
         <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
       </div>
-      <div style="display:flex;justify-content:flex-start;gap:36px;flex-wrap:wrap;font-size:0.85rem;color:var(--gray-600);margin-top:36px;">
+      <div class="hero-trust" style="display:flex;justify-content:flex-start;gap:36px;flex-wrap:wrap;font-size:0.85rem;color:var(--gray-600);margin-top:36px;">
         <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span>CPA Prepared</span></div>
         <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>Secure Portal</span></div>
         <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span>Minimal Meetings</span></div>
@@ -1826,7 +1866,7 @@
     <h2 class="section-title">From Intake to Filing in 5 Steps</h2>
     <p class="section-desc">Streamlined, transparent, entirely online. This is how you become a client.</p>
 
-    <div class="steps" style="grid-template-columns: repeat(5, 1fr);">
+    <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
         <h3>Complete Intake Form</h3>
@@ -1869,7 +1909,7 @@
       <!-- Individual Return (Base) -->
       <div class="calc-item" style="border-bottom:2px solid var(--gray-200);padding-bottom:20px;">
         <div class="calc-item-left">
-          <input type="checkbox" id="svcIndividual" checked disabled style="opacity:0.5;">
+          <input type="checkbox" id="svcIndividual" checked disabled aria-label="Individual Return (base service)" style="opacity:0.5;">
           <div class="calc-item-info">
             <h4>Individual Return</h4>
             <p>Federal 1040 with W-2 income, retirement income, and/or social&nbsp;security&nbsp;income.</p>
@@ -2129,21 +2169,21 @@
       <form id="contact-form-element" action="https://formsubmit.co/hello@silentpenguintax.com" method="POST" style="display:flex;flex-direction:column;gap:24px;">
         <p style="margin:0;color:var(--gray-600);font-size:0.9rem;line-height:1.5;"><span style="color:#c0392b;font-weight:700;">*</span> Required fields. Please fill Full Name and Email Address before sending.</p>
         <div>
-          <label style="display:block;color:var(--navy);font-weight:600;margin-bottom:8px;font-size:0.95rem;">Full Name <span style="color:#c0392b;">*</span></label>
-          <input type="text" name="name" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;">
+          <label for="contactName" style="display:block;color:var(--navy);font-weight:600;margin-bottom:8px;font-size:0.95rem;">Full Name <span style="color:#c0392b;">*</span></label>
+          <input type="text" id="contactName" name="name" autocomplete="name" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;">
         </div>
         <div>
-          <label style="display:block;color:var(--navy);font-weight:600;margin-bottom:8px;font-size:0.95rem;">Email Address <span style="color:#c0392b;">*</span></label>
-          <input type="email" name="email" placeholder="you@example.com" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;">
+          <label for="contactEmail" style="display:block;color:var(--navy);font-weight:600;margin-bottom:8px;font-size:0.95rem;">Email Address <span style="color:#c0392b;">*</span></label>
+          <input type="email" id="contactEmail" name="email" autocomplete="email" placeholder="you@example.com" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;">
         </div>
         <div>
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
             <label id="contact-message-label" style="display:block;color:var(--navy);font-weight:600;font-size:0.95rem;">Message</label>
             <button type="button" id="clearMessageBtn" onclick="clearContactMessage()" style="display:none;background:none;border:none;cursor:pointer;color:var(--gray-400);font-size:0.8rem;font-weight:600;text-decoration:underline;padding:0;" aria-label="Clear pre-filled message">Clear</button>
           </div>
-          <textarea id="contact-message-field" name="message" placeholder="Tell us about your tax situation... (Want a cost estimate first? Try the pricing calculator above.)" rows="5" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;resize:vertical;"></textarea>
+          <textarea id="contact-message-field" name="message" aria-labelledby="contact-message-label" autocomplete="off" placeholder="Tell us about your tax situation... (Want a cost estimate first? Try the pricing calculator above.)" rows="5" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;resize:vertical;"></textarea>
         </div>
-        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none;">
         <input type="hidden" name="_next" value="https://silentpenguintax.com?submitted=1#contact-form" id="contactFormNext">
         <button type="submit" class="btn btn-primary" style="font-size:1rem;padding:14px 40px;align-self:flex-start;">Send Message</button>
       </form>
@@ -2152,7 +2192,7 @@
       <div class="contact-info-card" style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:12px;padding:40px;text-align:center;">
         <h3 style="color:var(--navy);margin-bottom:12px;">Questions? Email us directly.</h3>
         <p style="color:var(--gray-600);margin-bottom:24px;">We prefer email — it's faster and you'll have a record of our correspondence.</p>
-        <p style="margin-bottom:0;"><a href="mailto:hello@silentpenguintax.com" style="font-size:1.2rem;font-weight:600;color:var(--teal);text-decoration:none;">hello@silentpenguintax.com</a></p>
+        <p style="margin-bottom:0;"><a href="mailto:hello&#64;silentpenguintax.com" style="font-size:1.2rem;font-weight:600;color:var(--teal);text-decoration:none;">hello&#64;silentpenguintax.com</a></p>
       </div>
 
       <div class="contact-note-card" style="margin-top:24px;padding:24px;background:#f0fffe;border:1px solid #d4f1ed;border-radius:12px;text-align:center;">
@@ -2161,6 +2201,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 
 <!-- ============ FOOTER ============ -->
@@ -2190,7 +2232,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-          <img src="Silent Penguin logo color.jpeg" alt="Silent Penguin PLLC" style="height: 28px; width: auto;">
+          <img src="Silent Penguin TM logo no word.jpeg" alt="Silent Penguin PLLC" style="height: 48px; width: auto;">
           <span style="color:#fff;font-weight:600;letter-spacing:2px;font-size:0.9rem;">SILENT PENGUIN TAX SERVICES</span>
         </div>
         <p>Certified Public Accountant Firm.<br>Remote Tax & Advisory Services.<br>Based in Renton, WA, serving clients locally and nationwide.</p>
@@ -2204,11 +2246,14 @@
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#meet-your-cpa">Meet Your CPA</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Silent Penguin PLLC. Services provided by Luke (Lucanus Lam), CPA. All rights reserved.<br>Silent Penguin Tax Services is a trade name of Silent Penguin PLLC.</br></p> 
-      <p>Contact Us &nbsp;|&nbsp; <a href="mailto:hello@silentpenguintax.com" style="color:var(--teal);">hello@silentpenguintax.com</a></p>
+      <p>&copy; 2026 Silent Penguin PLLC. Services provided by Luke (Lucanus Lam), CPA. All rights reserved.<br>Silent Penguin Tax Services is a trade name of Silent Penguin PLLC.</p>
+      <p>Contact Us &nbsp;|&nbsp; <a href="mailto:hello&#64;silentpenguintax.com" style="color:var(--teal);">hello&#64;silentpenguintax.com</a></p>
+      <p style="font-size:0.82rem;color:rgba(255,255,255,0.72);">This website currently does not use advertising or tracking cookies.</p>
     </div>
   </div>
 </footer>
@@ -2824,7 +2869,8 @@
       payload.append('name', name);
       payload.append('email', email);
       payload.append('message', message);
-      payload.append('_captcha', 'false');
+      payload.append('_captcha', 'true');
+      payload.append('_honey', '');
       payload.append('_subject', 'New Silent Penguin Contact Message');
 
       await fetch('https://formsubmit.co/hello@silentpenguintax.com', {
@@ -2939,11 +2985,11 @@
         <p style="margin:0 0 14px;color:var(--gray-600);font-size:0.86rem;line-height:1.45;"><span style="color:#c0392b;font-weight:700;">*</span> Required fields. Please fill Name and Email before sending.</p>
         <div class="form-group">
           <label for="fabName">Name <span style="color:#c0392b;">*</span></label>
-          <input type="text" id="fabName" placeholder="Your name" required>
+          <input type="text" id="fabName" autocomplete="name" placeholder="Your name" required>
         </div>
         <div class="form-group">
           <label for="fabEmail">Email <span style="color:#c0392b;">*</span></label>
-          <input type="email" id="fabEmail" placeholder="you@example.com" required>
+          <input type="email" id="fabEmail" autocomplete="email" placeholder="you@example.com" required>
         </div>
         <div class="form-group">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
