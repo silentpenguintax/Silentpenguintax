@@ -2175,7 +2175,7 @@
           <input type="checkbox" id="svcIndividual" checked disabled aria-label="Individual Return (base service)" style="opacity:0.5;">
           <div class="calc-item-info">
             <h4>Individual Return</h4>
-            <p>Federal 1040 with W-2 income, retirement income, and/or social&nbsp;security&nbsp;income. Range: $250-$350.</p>
+            <p>Federal 1040 with W-2 income, retirement income, and/or social&nbsp;security&nbsp;income.</p>
           </div>
         </div>
       </div>
@@ -2193,15 +2193,15 @@
       <div class="calc-sub-items" id="investmentList">
         <div class="calc-sub-item">
           <input type="checkbox" id="invStockComp" onchange="updateTotal()">
-          <label for="invStockComp">Stock Compensation (RSU, ISO, ESPP) ($50-$100)</label>
+          <label for="invStockComp">Stock Compensation (RSU, ISO, ESPP) </label>
         </div>
         <div class="calc-sub-item">
           <input type="checkbox" id="invCrypto" onchange="updateTotal()">
-          <label for="invCrypto">Cryptocurrency Reporting ($100-$200)</label>
+          <label for="invCrypto">Cryptocurrency Reporting </label>
         </div>
         <div class="calc-sub-item">
           <input type="checkbox" id="invPropertySale" onchange="updateTotal()">
-          <label for="invPropertySale">Property sale (e.g. selling a house) ($100-$200)</label>
+          <label for="invPropertySale">Property sale (e.g. selling a house) </label>
         </div>
       </div>
 
@@ -2211,13 +2211,13 @@
           <input type="checkbox" id="addonBusiness" onchange="toggleBusiness()">
           <label for="addonBusiness" class="calc-item-info">
             <h4>Any Business?</h4>
-            <p>Select to add business-return entities ($200-$400 each)</p>
+            <p>Select to add business-return entities </p>
           </label>
         </div>
       </div>
       <div class="calc-sub-items" id="businessList">
         <div class="calc-sub-item">
-          <label for="scheduleCCount">Self-employment (Schedule C) ($200-$400 each)</label>
+          <label for="scheduleCCount">Self-employment (Schedule C) </label>
           <div class="qty-counter" style="margin-left:auto;">
             <button type="button" onclick="changeBusinessCount('scheduleCCount', -1)">−</button>
             <input type="text" inputmode="numeric" pattern="[0-9]*" id="scheduleCCount" value="0" oninput="onBusinessCountInput('scheduleCCount')" onchange="onBusinessCountInput('scheduleCCount')" onblur="if(!this.value)this.value='0'">
@@ -2225,7 +2225,7 @@
           </div>
         </div>
         <div class="calc-sub-item">
-          <label for="sCorpCount">S-corp ($200-$400 each)</label>
+          <label for="sCorpCount">S-corp </label>
           <div class="qty-counter" style="margin-left:auto;">
             <button type="button" onclick="changeBusinessCount('sCorpCount', -1)">−</button>
             <input type="text" inputmode="numeric" pattern="[0-9]*" id="sCorpCount" value="0" oninput="onBusinessCountInput('sCorpCount')" onchange="onBusinessCountInput('sCorpCount')" onblur="if(!this.value)this.value='0'">
@@ -2233,7 +2233,7 @@
           </div>
         </div>
         <div class="calc-sub-item">
-          <label for="partnershipCount">Partnership (LLC) ($200-$400 each)</label>
+          <label for="partnershipCount">Partnership (LLC) </label>
           <div class="qty-counter" style="margin-left:auto;">
             <button type="button" onclick="changeBusinessCount('partnershipCount', -1)">−</button>
             <input type="text" inputmode="numeric" pattern="[0-9]*" id="partnershipCount" value="0" oninput="onBusinessCountInput('partnershipCount')" onchange="onBusinessCountInput('partnershipCount')" onblur="if(!this.value)this.value='0'">
@@ -2248,7 +2248,7 @@
           <input type="checkbox" id="addonRental" onchange="onRentalCheck()">
           <label for="addonRental" class="calc-item-info">
             <h4>Rental Properties (Schedule E)</h4>
-            <p>How many rental properties? ($200-$400 each)</p>
+            <p>How many rental properties? </p>
             <p id="rentalHint" style="color:var(--orange);font-size:0.78rem;margin:4px 0 0;display:none;">↑ Please select quantity above</p>
           </label>
         </div>
@@ -2267,7 +2267,7 @@
           <input type="checkbox" id="addonStates" onchange="onStateCheck()">
           <label for="addonStates" class="calc-item-info">
             <h4>Any State Returns?</h4>
-            <p>How many states? ($50-$100 each)</p>
+            <p>How many states? </p>
             <p id="stateHint" style="color:var(--orange);font-size:0.78rem;margin:4px 0 0;display:none;">↑ Please select quantity above</p>
           </label>
         </div>
