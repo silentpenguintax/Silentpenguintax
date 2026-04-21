@@ -464,6 +464,29 @@
       z-index: 2;
       margin-bottom: 36px;
     }
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      gap: clamp(6px, 1.5vw, 24px);
+      font-size: clamp(0.58rem, 2.3vw, 0.85rem);
+      color: var(--gray-600);
+      margin-top: 36px;
+      max-width: 100%;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: clamp(4px, 0.8vw, 8px);
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+    .hero-trust-item svg {
+      width: clamp(14px, 2.4vw, 18px);
+      height: clamp(14px, 2.4vw, 18px);
+      flex-shrink: 0;
+    }
     .btn {
       display: inline-block;
       padding: 16px 40px;
@@ -516,6 +539,23 @@
     #meet-your-cpa {
       background: var(--white);
       padding: clamp(80px, 12vw, 140px) 0;
+    }
+    .meet-cpa-content {
+      max-width: 860px;
+      margin: 0 auto 56px;
+      text-align: left;
+    }
+    .meet-cpa-content .section-label,
+    .meet-cpa-content .section-title {
+      text-align: center;
+    }
+    .meet-cpa-copy {
+      font-size: 1.05rem;
+      color: var(--gray-600);
+      margin-bottom: 18px;
+    }
+    .meet-cpa-copy:last-child {
+      margin-bottom: 0;
     }
     .about-grid {
       display: grid;
@@ -727,6 +767,125 @@
       color: var(--gray-800);
       border-top: 1px solid rgba(15, 33, 54, 0.12);
       padding-top: 12px;
+    }
+    .services-accordion {
+      max-width: 900px;
+      margin: 0 auto;
+      border-top: 1px solid var(--gray-200);
+      text-align: left;
+    }
+    .service-accordion-item {
+      border-bottom: 1px solid var(--gray-200);
+      background: transparent;
+    }
+    .service-accordion-title {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--navy);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .service-accordion-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    .service-accordion-kicker {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      margin-bottom: 2px;
+    }
+    .service-accordion-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .service-accordion-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .service-accordion-icon svg {
+      width: 16px;
+      height: 16px;
+      color: var(--white);
+    }
+    .service-accordion-heading-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+    .service-accordion-heading-title {
+      color: var(--navy);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .service-accordion-bestfor {
+      color: var(--gray-600);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      line-height: 1.5;
+    }
+    .service-accordion-title::-webkit-details-marker { display: none; }
+    .service-accordion-title::after {
+      content: '+';
+      color: var(--teal-dark);
+      font-size: 1.35rem;
+      font-weight: 500;
+      flex-shrink: 0;
+      transform: translateY(-1px);
+      transition: transform 0.2s ease;
+    }
+    .service-accordion-item[open] .service-accordion-title::after {
+      content: '-';
+      transform: translateY(-2px);
+    }
+    .service-accordion-content {
+      color: var(--gray-600);
+      font-size: 0.96rem;
+      line-height: 1.72;
+      margin: 0;
+      padding: 0 0 24px;
+    }
+    .service-accordion-content p {
+      margin-bottom: 14px;
+      max-width: none;
+    }
+    .service-subheading {
+      font-size: 0.92rem;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      margin: 14px 0 8px;
+    }
+    .service-detail-list {
+      list-style: disc;
+      margin: 0 0 10px;
+      padding-left: 22px;
+    }
+    .service-detail-list li {
+      margin-bottom: 6px;
+      color: var(--gray-600);
     }
 
     /* ===== PRICING ===== */
@@ -1222,7 +1381,7 @@
         font-size: 1.1rem;
         margin: 0;
       }
-      .step h3 { margin-bottom: 4px; font-size: 0.95rem; }
+      .step h3 { margin-bottom: 4px; font-size: 0.95rem; white-space: nowrap; }
       .step p { font-size: 0.84rem; }
       .step:not(:last-child)::after { display: none; }
       .contact-grid { grid-template-columns: 1fr; }
@@ -1244,6 +1403,7 @@
       .hero-logo-section { order: 4; margin-top: 24px; margin-bottom: 8px; }
       .hero-cta { order: 5; }
       .hero-trust { order: 6; }
+      .hero-trust { justify-content: space-between; width: 100%; }
       .hero-logo-section img { max-width: min(80vw, 320px); }
     }
     @media (max-width: 1150px) {
@@ -1438,7 +1598,11 @@
         text-align: center;
       }
 
-      .hero h1 { font-size: clamp(1.28rem, 4.8vw, 1.72rem); }
+      .hero-tagline {
+        font-size: clamp(1rem, 3.6vw, 1.12rem) !important;
+        letter-spacing: 1.2px !important;
+      }
+      .hero h1 { font-size: clamp(1.46rem, 5.6vw, 2rem); }
       .btn { padding: 14px 28px; font-size: 0.85rem; }
 
       .nav-links.open {
@@ -1465,8 +1629,12 @@
       .container { padding: 0 16px; }
       nav .container { height: 62px; }
       .hero { padding: 92px 0 84px; }
-      .hero h1 { font-size: 1.18rem; line-height: 1.25; }
-      .hero-line-lock { font-size: 0.96em; }
+      .hero-tagline {
+        font-size: clamp(0.96rem, 4vw, 1.05rem) !important;
+        letter-spacing: 1px !important;
+      }
+      .hero h1 { font-size: clamp(1.32rem, 6vw, 1.6rem); line-height: 1.25; }
+      .hero-line-lock { font-size: 1em; }
       .section-desc { font-size: 0.98rem; }
 
       .fab-overlay { padding: 12px; }
@@ -1701,10 +1869,10 @@
         <a href="#contact-form" class="btn btn-primary">Start Intake Form</a>
         <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
       </div>
-      <div class="hero-trust" style="display:flex;justify-content:flex-start;gap:36px;flex-wrap:wrap;font-size:0.85rem;color:var(--gray-600);margin-top:36px;">
-        <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span>CPA Prepared</span></div>
-        <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>Secure Portal</span></div>
-        <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span>Minimal Meetings</span></div>
+      <div class="hero-trust">
+        <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span>CPA Prepared</span></div>
+        <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>Secure Portal</span></div>
+        <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span>Minimal Meetings</span></div>
       </div>
     </div>
     <div class="hero-logo-section">
@@ -1793,13 +1961,13 @@
 <!-- ============ MEET YOUR CPA ============ -->
 <section id="meet-your-cpa" aria-label="Meet our CPA team">
   <div class="container">
-    <div class="text-center" style="margin-bottom:56px;max-width:860px;margin-left:auto;margin-right:auto;">
+    <div class="meet-cpa-content">
       <p class="section-label">Meet Your CPA</p>
       <h2 class="section-title">The Founder of Silent Penguin PLLC</h2>
-      <p style="font-size:1.05rem;color:var(--gray-600);margin-bottom:18px;">I’m Luke Lam, a Licensed Certified Public Accountant (CPA) in Washington State and the founder of Silent Penguin PLLC.</p>
-      <p style="font-size:1.05rem;color:var(--gray-600);margin-bottom:18px;">With over 10 years of professional tax preparation and consulting experience, I established Silent Penguin to provide a modern alternative to traditional accounting firms - combining professional tax expertise with secure, technology-driven efficiency. My goal is simple: deliver clear tax strategy, accurate compliance, and a streamlined client experience without unnecessary complexity.</p>
-      <p style="font-size:1.05rem;color:var(--gray-600);margin-bottom:18px;">I work with professionals, business owners, and real estate investors across the United States, specializing in tax compliance, proactive planning, and fully remote service delivery through a secure cloud-based environment.</p>
-      <p style="font-size:1.05rem;color:var(--gray-600);">Silent Penguin PLLC is built on precision, transparency, and responsiveness - ensuring clients can move forward with clarity and confidence.</p>
+      <p class="meet-cpa-copy">I’m Luke Lam, a Licensed Certified Public Accountant (CPA) in Washington State and the founder of Silent Penguin&nbsp;PLLC.</p>
+      <p class="meet-cpa-copy">With over 10 years of professional tax preparation and consulting experience, I established Silent Penguin to provide a modern alternative to traditional accounting firms - combining professional tax expertise with secure, technology-driven efficiency. My goal is simple: deliver clear tax strategy, accurate compliance, and a streamlined client experience without unnecessary complexity.</p>
+      <p class="meet-cpa-copy">I work with professionals, business owners, and real estate investors across the United States, specializing in tax compliance, proactive planning, and fully remote service delivery through a secure cloud-based environment.</p>
+      <p class="meet-cpa-copy">Silent Penguin PLLC is built on precision, transparency, and responsiveness - ensuring clients can move forward with clarity and confidence.</p>
     </div>
   </div>
 </section>
@@ -1810,50 +1978,145 @@
   <div class="container text-center">
     <p class="section-label">Services</p>
     <h2 class="section-title">Our Big 4 Core Services</h2>
-    <p class="section-desc">These are the four service lines we are built around. Clear scope, CPA-level execution, and fast remote delivery.</p>
+    <p class="section-desc">Silent Penguin Tax Services provides modern, fully remote CPA tax services for individuals and small businesses across the United States. Our firm focuses on efficient, secure, and professional tax solutions designed for today&apos;s digital environment.</p>
 
-    <div class="services-grid">
+    <div class="services-accordion">
+      <details class="service-accordion-item">
+        <summary class="service-accordion-title">
+          <span class="service-accordion-heading">
+            <span class="service-accordion-kicker">Core Service 01</span>
+            <span class="service-accordion-row">
+              <span class="service-accordion-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </span>
+              <span class="service-accordion-heading-copy">
+                <span class="service-accordion-heading-title">Individual Tax Services</span>
+                <span class="service-accordion-bestfor">Best for: W-2 earners, investors, and multi-state filers</span>
+              </span>
+            </span>
+          </span>
+        </summary>
+        <div class="service-accordion-content">
+          <p>We provide comprehensive federal and state income tax preparation for individuals with a wide range of financial situations. Our streamlined remote process allows clients to complete their tax filing securely without in-person meetings.</p>
 
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <p class="service-subheading">Common Situations We Handle</p>
+          <ul class="service-detail-list">
+            <li>W-2 employees and professionals</li>
+            <li>Investment income and capital gains</li>
+            <li>Stock compensation (RSU, ESPP, stock options)</li>
+            <li>Multi-state tax filings</li>
+            <li>Rental property income and expenses</li>
+            <li>High-income taxpayers</li>
+            <li>Prior year amendments and corrections</li>
+          </ul>
+
+          <p class="service-subheading">What&apos;s Included</p>
+          <ul class="service-detail-list">
+            <li>CPA preparation and review</li>
+            <li>Secure document upload portal</li>
+            <li>Electronic filing (IRS and state)</li>
+            <li>Post-filing support</li>
+          </ul>
         </div>
-        <p class="service-kicker">Core Service 01</p>
-        <h3>Individual Tax Returns</h3>
-        <p class="service-copy">Accurate federal and state filing for professionals, families, and investors with complex reporting needs.</p>
-        <p class="service-meta"><strong>Best for:</strong> W-2 earners, investment income, and multi-state filings.</p>
-      </div>
+      </details>
 
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      <details class="service-accordion-item">
+        <summary class="service-accordion-title">
+          <span class="service-accordion-heading">
+            <span class="service-accordion-kicker">Core Service 02</span>
+            <span class="service-accordion-row">
+              <span class="service-accordion-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </span>
+              <span class="service-accordion-heading-copy">
+                <span class="service-accordion-heading-title">Small Business Tax Services</span>
+                <span class="service-accordion-bestfor">Best for: entrepreneurs and owner-operated businesses</span>
+              </span>
+            </span>
+          </span>
+        </summary>
+        <div class="service-accordion-content">
+          <p>We work with entrepreneurs, independent professionals, and small business owners to ensure accurate tax compliance while supporting long-term growth.</p>
+
+          <p class="service-subheading">Entity Types Supported</p>
+          <ul class="service-detail-list">
+            <li>Sole Proprietors (Schedule C)</li>
+            <li>Partnerships (Form 1065)</li>
+            <li>S Corporations (Form 1120-S)</li>
+          </ul>
+
+          <p class="service-subheading">Services Include</p>
+          <ul class="service-detail-list">
+            <li>Business tax return preparation</li>
+            <li>Owner and business tax coordination</li>
+            <li>Estimated tax calculation</li>
+            <li>Reasonable compensation guidance</li>
+            <li>Entity structure consultation</li>
+            <li>Ongoing tax compliance support</li>
+          </ul>
         </div>
-        <p class="service-kicker">Core Service 02</p>
-        <h3>Business Tax Returns</h3>
-        <p class="service-copy">Entity-focused preparation designed to reduce errors, protect compliance, and support better financial decisions.</p>
-        <p class="service-meta"><strong>Best for:</strong> Schedule C businesses, LLCs, S-Corps, and professional firms.</p>
-      </div>
+      </details>
 
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <details class="service-accordion-item">
+        <summary class="service-accordion-title">
+          <span class="service-accordion-heading">
+            <span class="service-accordion-kicker">Core Service 03</span>
+            <span class="service-accordion-row">
+              <span class="service-accordion-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </span>
+              <span class="service-accordion-heading-copy">
+                <span class="service-accordion-heading-title">Tax Planning &amp; Advisory</span>
+                <span class="service-accordion-bestfor">Best for: proactive strategy and year-round tax decisions</span>
+              </span>
+            </span>
+          </span>
+        </summary>
+        <div class="service-accordion-content">
+          <p>Tax planning goes beyond filing returns. We provide proactive planning strategies to help clients make informed financial decisions throughout the year.</p>
+
+          <p class="service-subheading">Planning Services</p>
+          <ul class="service-detail-list">
+            <li>Estimated tax planning</li>
+            <li>Year-end tax strategy</li>
+            <li>Entity selection analysis</li>
+            <li>Retirement contribution planning</li>
+            <li>Income timing strategies</li>
+            <li>Multi-state tax considerations</li>
+          </ul>
+
+          <p>Tax planning engagements are tailored based on each client&apos;s financial situation and objectives.</p>
         </div>
-        <p class="service-kicker">Core Service 03</p>
-        <h3>Tax Planning & Strategy</h3>
-        <p class="service-copy">Forward-looking planning that helps you avoid surprises and make smarter year-round tax decisions.</p>
-        <p class="service-meta"><strong>Best for:</strong> estimated taxes, entity optimization, and year-end planning.</p>
-      </div>
+      </details>
 
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <details class="service-accordion-item">
+        <summary class="service-accordion-title">
+          <span class="service-accordion-heading">
+            <span class="service-accordion-kicker">Core Service 04</span>
+            <span class="service-accordion-row">
+              <span class="service-accordion-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <span class="service-accordion-heading-copy">
+                <span class="service-accordion-heading-title">IRS Notices &amp; Tax Support</span>
+                <span class="service-accordion-bestfor">Best for: IRS/state notices, CP2000, and amended filings</span>
+              </span>
+            </span>
+          </span>
+        </summary>
+        <div class="service-accordion-content">
+          <p>Receiving a tax notice can be stressful. We assist clients in understanding and responding properly to IRS and state tax correspondence.</p>
+
+          <p class="service-subheading">We Can Help With</p>
+          <ul class="service-detail-list">
+            <li>IRS and state tax notices</li>
+            <li>CP2000 responses</li>
+            <li>Amended tax returns</li>
+            <li>Account transcript review</li>
+            <li>Correspondence with tax authorities</li>
+          </ul>
         </div>
-        <p class="service-kicker">Core Service 04</p>
-        <h3>IRS Notice & Resolution</h3>
-        <p class="service-copy">Structured support for IRS notices and correspondence with clear action steps and representation when needed.</p>
-        <p class="service-meta"><strong>Best for:</strong> notice response, audit support, and compliance remediation.</p>
-      </div>
-
+      </details>
     </div>
   </div>
 </section>
@@ -1912,7 +2175,7 @@
           <input type="checkbox" id="svcIndividual" checked disabled aria-label="Individual Return (base service)" style="opacity:0.5;">
           <div class="calc-item-info">
             <h4>Individual Return</h4>
-            <p>Federal 1040 with W-2 income, retirement income, and/or social&nbsp;security&nbsp;income.</p>
+            <p>Federal 1040 with W-2 income, retirement income, and/or social&nbsp;security&nbsp;income. Range: $250-$350.</p>
           </div>
         </div>
       </div>
@@ -1923,22 +2186,22 @@
           <input type="checkbox" id="addonInvestments" onchange="toggleInvestments()">
           <label for="addonInvestments" class="calc-item-info">
             <h4>Any Investments?</h4>
-            <p>Select to add investment-related reporting</p>
+            <p>Select to add investment-related reporting (line-item ranges below)</p>
           </label>
         </div>
       </div>
       <div class="calc-sub-items" id="investmentList">
         <div class="calc-sub-item">
           <input type="checkbox" id="invStockComp" onchange="updateTotal()">
-          <label for="invStockComp">Stock Compensation (RSU, ISO, ESPP)</label>
+          <label for="invStockComp">Stock Compensation (RSU, ISO, ESPP) ($50-$100)</label>
         </div>
         <div class="calc-sub-item">
           <input type="checkbox" id="invCrypto" onchange="updateTotal()">
-          <label for="invCrypto">Cryptocurrency Reporting</label>
+          <label for="invCrypto">Cryptocurrency Reporting ($100-$200)</label>
         </div>
         <div class="calc-sub-item">
           <input type="checkbox" id="invPropertySale" onchange="updateTotal()">
-          <label for="invPropertySale">Property sale (e.g. selling a house)</label>
+          <label for="invPropertySale">Property sale (e.g. selling a house) ($100-$200)</label>
         </div>
       </div>
 
@@ -1948,13 +2211,13 @@
           <input type="checkbox" id="addonBusiness" onchange="toggleBusiness()">
           <label for="addonBusiness" class="calc-item-info">
             <h4>Any Business?</h4>
-            <p>Select to add business-return entities</p>
+            <p>Select to add business-return entities ($200-$400 each)</p>
           </label>
         </div>
       </div>
       <div class="calc-sub-items" id="businessList">
         <div class="calc-sub-item">
-          <label for="scheduleCCount">Self-employment (Schedule C)</label>
+          <label for="scheduleCCount">Self-employment (Schedule C) ($200-$400 each)</label>
           <div class="qty-counter" style="margin-left:auto;">
             <button type="button" onclick="changeBusinessCount('scheduleCCount', -1)">−</button>
             <input type="text" inputmode="numeric" pattern="[0-9]*" id="scheduleCCount" value="0" oninput="onBusinessCountInput('scheduleCCount')" onchange="onBusinessCountInput('scheduleCCount')" onblur="if(!this.value)this.value='0'">
@@ -1962,7 +2225,7 @@
           </div>
         </div>
         <div class="calc-sub-item">
-          <label for="sCorpCount">S-corp</label>
+          <label for="sCorpCount">S-corp ($200-$400 each)</label>
           <div class="qty-counter" style="margin-left:auto;">
             <button type="button" onclick="changeBusinessCount('sCorpCount', -1)">−</button>
             <input type="text" inputmode="numeric" pattern="[0-9]*" id="sCorpCount" value="0" oninput="onBusinessCountInput('sCorpCount')" onchange="onBusinessCountInput('sCorpCount')" onblur="if(!this.value)this.value='0'">
@@ -1970,7 +2233,7 @@
           </div>
         </div>
         <div class="calc-sub-item">
-          <label for="partnershipCount">Partnership (LLC)</label>
+          <label for="partnershipCount">Partnership (LLC) ($200-$400 each)</label>
           <div class="qty-counter" style="margin-left:auto;">
             <button type="button" onclick="changeBusinessCount('partnershipCount', -1)">−</button>
             <input type="text" inputmode="numeric" pattern="[0-9]*" id="partnershipCount" value="0" oninput="onBusinessCountInput('partnershipCount')" onchange="onBusinessCountInput('partnershipCount')" onblur="if(!this.value)this.value='0'">
@@ -1985,7 +2248,7 @@
           <input type="checkbox" id="addonRental" onchange="onRentalCheck()">
           <label for="addonRental" class="calc-item-info">
             <h4>Rental Properties (Schedule E)</h4>
-            <p>How many rental properties?</p>
+            <p>How many rental properties? ($200-$400 each)</p>
             <p id="rentalHint" style="color:var(--orange);font-size:0.78rem;margin:4px 0 0;display:none;">↑ Please select quantity above</p>
           </label>
         </div>
@@ -2004,7 +2267,7 @@
           <input type="checkbox" id="addonStates" onchange="onStateCheck()">
           <label for="addonStates" class="calc-item-info">
             <h4>Any State Returns?</h4>
-            <p>How many states?</p>
+            <p>How many states? ($50-$100 each)</p>
             <p id="stateHint" style="color:var(--orange);font-size:0.78rem;margin:4px 0 0;display:none;">↑ Please select quantity above</p>
           </label>
         </div>
@@ -2084,9 +2347,9 @@
       <div class="calc-total">
         <div>
           <div class="calc-total-label">Your Estimated Individual Tax Preparation&nbsp;Total</div>
-          <div style="color:rgba(255,255,255,0.4);font-size:0.75rem;margin-top:4px;">Services selected above</div>
+          <div id="calcTotalContext" style="color:rgba(255,255,255,0.4);font-size:0.75rem;margin-top:4px;">Services selected above</div>
         </div>
-        <div class="calc-total-price" id="totalPrice">$300 - $400</div>
+        <div class="calc-total-price" id="totalPrice">$250 - $350+</div>
       </div>
 
       <div style="background:var(--navy-light,#132237);border-radius:10px;padding:16px 20px;margin-top:12px;display:flex;align-items:flex-start;gap:12px;">
@@ -2510,32 +2773,30 @@
     updateTotal();
   }
 
-  function getUpperEstimate(baseTotal) {
-    var rawUpper = baseTotal * 1.25;
-    var increment = rawUpper < 1000 ? 50 : 100;
-    return Math.ceil(rawUpper / increment) * increment;
-  }
-
   function updateTotal() {
-    var total = 300;
+    var minTotal = 250;
+    var maxTotal = 350;
     var hasSelections = true;
     var hasUnpricedSelections = false;
+    var additionalServicesSelected = document.getElementById('addonExtra').checked;
 
     if (document.getElementById('addonInvestments').checked) {
-      total += 100;
       hasSelections = true;
     }
 
     if (document.getElementById('invStockComp').checked) {
-      total += 200;
+      minTotal += 50;
+      maxTotal += 100;
       hasSelections = true;
     }
     if (document.getElementById('invCrypto').checked) {
-      total += 300;
+      minTotal += 100;
+      maxTotal += 200;
       hasSelections = true;
     }
     if (document.getElementById('invPropertySale').checked) {
-      total += 200;
+      minTotal += 100;
+      maxTotal += 200;
       hasSelections = true;
     }
 
@@ -2545,14 +2806,17 @@
     var businessTotalCount = scheduleCCount + sCorpCount + partnershipCount;
 
     if (businessTotalCount > 0) {
-      total += businessTotalCount * 200;
+      minTotal += businessTotalCount * 200;
+      maxTotal += businessTotalCount * 400;
       hasSelections = true;
       document.getElementById('addonBusiness').checked = true;
       document.getElementById('businessList').classList.add('expanded');
     }
 
-    total += rentalCount * 150;
-    total += stateCount * 100;
+    minTotal += rentalCount * 200;
+    maxTotal += rentalCount * 400;
+    minTotal += stateCount * 50;
+    maxTotal += stateCount * 100;
     if (rentalCount > 0 || stateCount > 0) {
       hasSelections = true;
     }
@@ -2560,15 +2824,19 @@
     var checkedExtraInputs = Array.from(document.getElementById('extrasList').querySelectorAll('input[type="checkbox"]:checked'));
     var extrasChecked = checkedExtraInputs.length;
     if (document.getElementById('subItemized').checked) {
-      total += 100;
+      minTotal += 100;
+      maxTotal += 100;
     }
     if (document.getElementById('subHSA').checked) {
-      total += 100;
+      minTotal += 100;
+      maxTotal += 100;
     }
 
     var foreignAccountCount = getCount('foreignAccountCount');
     if (document.getElementById('subForeign').checked && foreignAccountCount > 0) {
-      total += foreignAccountCount > 5 ? 600 : 300;
+      var foreignFee = foreignAccountCount > 5 ? 600 : 300;
+      minTotal += foreignFee;
+      maxTotal += foreignFee;
     }
 
     var filing1120SCount = getCount('filing1120SCount');
@@ -2600,10 +2868,16 @@
     setRequiredCountHighlight('sub1065', 'filing1065Count');
 
     var el = document.getElementById('totalPrice');
-    var upperTotal = getUpperEstimate(total);
-    el.textContent = '$' + total.toLocaleString() + ' - $' + upperTotal.toLocaleString() + (hasUnpricedSelections ? '+' : '');
+    var totalContext = document.getElementById('calcTotalContext');
+    el.textContent = '$' + minTotal.toLocaleString() + ' - $' + maxTotal.toLocaleString() + '+';
 
-    el.setAttribute('data-total-value', String(total));
+    if (totalContext) {
+      totalContext.textContent = (additionalServicesSelected || hasUnpricedSelections)
+        ? 'Additional Services require a brief consultation to confirm final pricing.'
+        : 'Services selected above';
+    }
+
+    el.setAttribute('data-total-value', String(minTotal) + '-' + String(maxTotal));
     el.setAttribute('data-has-selections', hasSelections ? 'true' : 'false');
 
     el.classList.add('bumped');
