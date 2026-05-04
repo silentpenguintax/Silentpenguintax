@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/intake",
+      "destination": "https://mjco7soszc.zite.so"
+    },
+    {
+      "source": "/intake/:path*",
+      "destination": "https://mjco7soszc.zite.so/:path*"
+    }
+  ]
+}
