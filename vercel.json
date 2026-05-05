@@ -1,12 +1,9 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/intake",
-      "destination": "https://mjco7soszc.zite.so"
-    },
-    {
-      "source": "/intake/:path*",
-      "destination": "https://mjco7soszc.zite.so/:path*"
+      "destination": "https://mjco7soszc.zite.so",
+      "permanent": false
     }
   ]
 }
