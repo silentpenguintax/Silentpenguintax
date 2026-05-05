@@ -95,8 +95,8 @@
       font-weight: 700;
       font-style: normal;
     }
+
     /* ===== ACCESSIBILITY ===== */
-    /* Skip to main content link */
     .skip-link {
       position: absolute;
       top: -40px;
@@ -113,7 +113,6 @@
       top: 0;
     }
 
-    /* Focus indicators for keyboard navigation */
     button:focus-visible,
     a:focus-visible,
     input:focus-visible,
@@ -123,7 +122,6 @@
       outline-offset: 2px;
     }
 
-    /* High contrast focus state */
     .btn:focus-visible {
       outline: 3px solid var(--teal);
       outline-offset: 3px;
@@ -134,19 +132,16 @@
       text-decoration: underline;
     }
 
-    /* Improve button focus */
     .nav-toggle:focus-visible {
       outline: 2px solid var(--teal);
       outline-offset: 2px;
     }
 
-    /* Improve link visibility */
     a {
       text-decoration: none;
       color: var(--teal);
     }
-    
-    /* Apply underline only to links within content, not nav or logo */
+
     p a,
     li a,
     .contact-info-card a,
@@ -159,7 +154,6 @@
       text-decoration: none;
     }
 
-    /* Visited link styling for content links only — never affect buttons */
     p a:visited,
     li a:visited,
     .contact-info-card a:visited,
@@ -172,13 +166,11 @@
       color: var(--navy);
     }
 
-    /* Error and required field indicators */
     .required-indicator {
       color: #c0392b;
       font-weight: 700;
     }
 
-    /* Ensure sufficient color contrast */
     input:invalid,
     textarea:invalid {
       border-color: #c0392b;
@@ -189,7 +181,6 @@
       outline: 2px solid #c0392b;
     }
 
-    /* Respect prefers-reduced-motion for users with motion sensitivity */
     @media (prefers-reduced-motion: reduce) {
       *,
       *::before,
@@ -200,7 +191,6 @@
       }
     }
 
-    /* Ensure form inputs have visible focus */
     input[type="text"],
     input[type="email"],
     input[type="tel"],
@@ -221,15 +211,12 @@
       box-shadow: 0 0 0 3px rgba(31, 159, 149, 0.1);
     }
 
-    /* Ensure sufficient color contrast for text */
     body { color: #1a1a1a; }
 
-    /* Improve hover/focus states for interactive elements */
     button {
       position: relative;
     }
 
-    /* Better link colors */
     .nav-links a {
       color: rgba(11, 22, 35, 0.78);
       text-decoration: none;
@@ -239,7 +226,7 @@
       color: var(--teal);
       text-decoration: underline;
     }
-    
+
     /* ===== NAV ===== */
     nav {
       position: fixed;
@@ -294,11 +281,11 @@
       letter-spacing: 4px;
       margin-left: 2px;
     }
-    .nav-links { 
-      display: flex; 
-      gap: clamp(18px, 2.5vw, 36px); 
-      list-style: none; 
-      align-items: center; 
+    .nav-links {
+      display: flex;
+      gap: clamp(18px, 2.5vw, 36px);
+      list-style: none;
+      align-items: center;
       margin-left: auto;
     }
     .nav-links li { flex-shrink: 0; }
@@ -311,8 +298,8 @@
       text-transform: uppercase;
       white-space: nowrap;
     }
-    .nav-links a:hover { 
-      color: var(--teal); 
+    .nav-links a:hover {
+      color: var(--teal);
     }
     .nav-links a.nav-cta {
       background: var(--navy);
@@ -328,10 +315,10 @@
       background: var(--navy-light);
       color: var(--white);
     }
-    .nav-toggle { 
-      display: none; 
-      background: none; 
-      border: none; 
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
       cursor: pointer;
       padding: 8px;
       position: relative;
@@ -361,7 +348,6 @@
     .nav-toggle span:nth-child(3) {
       top: 28px;
     }
-    /* Hamburger to X animation */
     .nav-toggle[aria-expanded="true"] span:nth-child(1) {
       transform: rotate(45deg);
       top: 18px;
@@ -888,179 +874,6 @@
       color: var(--gray-600);
     }
 
-    /* ===== PRICING ===== */
-    #pricing { 
-      background: linear-gradient(180deg, var(--surface-1) 0%, #f4f7fa 100%);
-      padding: clamp(80px, 12vw, 140px) 0;
-    }
-    #pricing .section-label {
-      display: block;
-      margin-bottom: 16px;
-    }
-    #pricing h2 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      margin-bottom: 8px;
-    }
-    .calc-wrapper {
-      max-width: 580px;
-      margin: 48px auto 0;
-      background: var(--white);
-      border-radius: 2px;
-      padding: clamp(24px, 4vw, 48px);
-      border: 1px solid #e4e8f0;
-      box-shadow: 0 4px 12px rgba(11,22,35,0.06);
-    }
-    .calc-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      border-bottom: 1px solid var(--gray-200);
-    }
-    .calc-item:last-child { border-bottom: none; }
-    .calc-item-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .calc-item-left input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
-      accent-color: var(--teal);
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-    .calc-item-info h4 { font-size: 0.95rem; font-weight: 500; color: var(--navy); word-break: break-word; }
-    .calc-item-info p { font-size: 0.8rem; color: var(--gray-400); margin-top: 2px; word-break: break-word; }
-    .qty-counter {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-shrink: 0;
-    }
-    .qty-counter button {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      border: 1.5px solid var(--gray-200);
-      background: var(--white);
-      font-size: 1.1rem;
-      cursor: pointer;
-      color: var(--navy);
-      font-weight: 600;
-      transition: border-color 0.15s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      -webkit-appearance: none;
-      appearance: none;
-      touch-action: manipulation;
-    }
-    .qty-counter button:hover { border-color: var(--teal); }
-    .qty-counter input {
-      width: 48px;
-      height: 32px;
-      text-align: center;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      border: 1.5px solid var(--gray-200);
-      border-radius: 8px;
-      background: var(--white);
-      font-family: inherit;
-      padding: 0;
-      -webkit-appearance: none;
-      appearance: none;
-    }
-    .qty-counter input:focus {
-      outline: none;
-      border-color: var(--teal);
-    }
-    .qty-counter.needs-count input {
-      border-color: #d97706;
-      background: #fff7e6;
-      box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.15);
-    }
-
-    .calc-total {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 28px;
-      padding: 24px;
-      background: var(--navy);
-      border-radius: 12px;
-    }
-    .calc-total-label {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-    .calc-total-price {
-      color: var(--teal);
-      font-size: clamp(1.15rem, 3.6vw, 1.8rem);
-      font-weight: 700;
-      transition: transform 0.15s;
-      white-space: nowrap;
-      letter-spacing: -0.2px;
-    }
-    .calc-total-price.bumped { transform: scale(1.08); }
-    .calc-note {
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--gray-400);
-      margin-top: 16px;
-    }
-    .calc-get-started {
-      text-align: center;
-      margin-top: 20px;
-    }
-    /* Sub-items for additional services */
-    .calc-sub-items {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      padding-left: 48px;
-    }
-    .calc-sub-items.expanded {
-      max-height: 1400px;
-    }
-    .calc-sub-item {
-      padding: 8px 0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 1px solid var(--gray-200);
-    }
-    .calc-sub-item:last-child { border-bottom: none; }
-    .calc-sub-item input[type="checkbox"] {
-      width: 16px;
-      height: 16px;
-      accent-color: var(--teal);
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-    .calc-sub-item label {
-      font-size: 0.85rem;
-      color: var(--gray-600);
-      cursor: pointer;
-      flex: 1;
-      min-width: 0;
-    }
-    .calc-sub-item label:hover { color: var(--navy); }
-    .calc-sub-item-copy {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      flex: 1;
-      min-width: 0;
-    }
-    .calc-sub-tagline {
-      font-size: 0.76rem;
-      color: var(--gray-400);
-      line-height: 1.35;
-    }
-
     /* ===== HOW IT WORKS ===== */
     #how-it-works { 
       background: linear-gradient(180deg, var(--surface-2) 0%, #edf2f6 100%);
@@ -1498,36 +1311,6 @@
       /* steps already flex-column from 900px breakpoint */
       .service-card { padding: 28px 22px; }
 
-      .calc-item {
-        align-items: flex-start;
-      }
-      .calc-sub-items {
-        padding-left: 20px;
-      }
-      .calc-sub-item {
-        display: grid;
-        grid-template-columns: 18px minmax(0, 1fr);
-        align-items: start;
-        column-gap: 10px;
-        row-gap: 8px;
-      }
-      .calc-sub-item > input[type="checkbox"] {
-        grid-column: 1;
-        grid-row: 1;
-        margin-top: 2px;
-      }
-      .calc-sub-item > label,
-      .calc-sub-item > .calc-sub-item-copy {
-        grid-column: 2;
-        grid-row: 1;
-      }
-      .calc-sub-item .qty-counter {
-        grid-column: 2;
-        grid-row: 2;
-        margin-left: 0 !important;
-        justify-self: start;
-      }
-
     }
     @media (max-width: 600px) {
       .services-grid { grid-template-columns: 1fr; }
@@ -1536,17 +1319,8 @@
       .about-trust-item { padding: 18px 14px; }
       .form-row { grid-template-columns: 1fr; }
       .about-highlights { grid-template-columns: 1fr; }
-      .calc-wrapper { padding: 24px 18px; }
-      .calc-item { flex-wrap: wrap; gap: 12px; }
-      .calc-item-left { min-width: 0; flex: 1; }
-      .qty-counter { margin-left: auto; }
-      .calc-sub-items { padding-left: 24px; }
-      .calc-total { flex-direction: column; text-align: center; gap: 12px; }
-      .calc-total-price { font-size: clamp(1.05rem, 5.8vw, 1.4rem); }
       .portal-features { flex-direction: column; align-items: center; gap: 16px; }
       .footer-bottom { flex-direction: column; text-align: center; }
-      .qty-counter button { width: 44px; height: 44px; font-size: 1.2rem; }
-      .qty-counter input { width: 56px; height: 44px; font-size: 1rem; }
       .contact-form { padding: 24px 18px; }
       .contact-form-card { padding: 28px !important; }
       .contact-info-card { padding: 28px !important; }
@@ -1671,7 +1445,6 @@
     /* Hover only on devices with pointer (not touch) */
     @media (hover: none) {
       .service-card:hover { box-shadow: 0 12px 40px rgba(11,22,35,0.12); transform: translateY(-4px); }
-      .qty-counter button:hover { border-color: var(--gray-200); }
       .highlight:hover { box-shadow: none; transform: none; }
     }
 
@@ -1808,10 +1581,9 @@
       <li><a href="#about">Why us</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
-      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#meet-your-cpa">Meet Your CPA</a></li>
-      <li><a href="#contact-form" class="nav-cta">Start Here</a></li>
+      <li><a href="https://www.silentpenguintax.com/intake" class="nav-cta" target="_blank" rel="noopener noreferrer">Get Your Quote</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -1866,7 +1638,7 @@
       <h1><span class="hero-line-lock">Tax Preparation, Tax Planning, and Advisory.</span><br>100% Remote and Secure.</h1>
       <p class="hero-desc">CPA-prepared tax returns delivered through a secure online portal with a streamlined, fully remote experience — no unnecessary meetings.</p>
       <div class="hero-cta">
-        <a href="#contact-form" class="btn btn-primary">Start Intake Form</a>
+        <a href="https://www.silentpenguintax.com/intake" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Start Intake Form</a>
         <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
       </div>
       <div class="hero-trust">
@@ -1951,7 +1723,7 @@
         </div>
       </div>
       <div class="about-trust-cta">
-        <a href="#contact-form" class="btn btn-primary">Start Your Return</a>
+        <a href="https://www.silentpenguintax.com/intake" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Your Quote</a>
       </div>
     </div>
   </div>
@@ -2159,212 +1931,6 @@
   </div>
 </section>
 
-
-<!-- ============ PRICING ============ -->
-<section id="pricing" aria-label="Tax preparation pricing calculator">
-  <div class="container text-center">
-    <p class="section-label">Pricing</p>
-    <h2 class="section-title">Calculate Your Cost</h2>
-    <p class="section-desc">Transparent flat-fee pricing. Start with an estimate, then get a final quote to lock in your services.</p>
-
-    <div class="calc-wrapper" style="text-align: left;">
-
-      <!-- Individual Return (Base) -->
-      <div class="calc-item" style="border-bottom:2px solid var(--gray-200);padding-bottom:20px;">
-        <div class="calc-item-left">
-          <input type="checkbox" id="svcIndividual" checked disabled aria-label="Individual Return (base service)" style="opacity:0.5;">
-          <div class="calc-item-info">
-            <h4>Individual Return</h4>
-            <p>Federal 1040 with W-2 income, retirement income, and/or social&nbsp;security&nbsp;income.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Any Investments -->
-      <div class="calc-item">
-        <div class="calc-item-left">
-          <input type="checkbox" id="addonInvestments" onchange="toggleInvestments()">
-          <label for="addonInvestments" class="calc-item-info">
-            <h4>Any Investments?</h4>
-            <p>Select to add investment-related reporting (line-item ranges below)</p>
-          </label>
-        </div>
-      </div>
-      <div class="calc-sub-items" id="investmentList">
-        <div class="calc-sub-item">
-          <input type="checkbox" id="invStockComp" onchange="updateTotal()">
-          <label for="invStockComp">Stock Compensation (RSU, ISO, ESPP) </label>
-        </div>
-        <div class="calc-sub-item">
-          <input type="checkbox" id="invCrypto" onchange="updateTotal()">
-          <label for="invCrypto">Cryptocurrency Reporting </label>
-        </div>
-        <div class="calc-sub-item">
-          <input type="checkbox" id="invPropertySale" onchange="updateTotal()">
-          <label for="invPropertySale">Property sale (e.g. selling a house) </label>
-        </div>
-      </div>
-
-      <!-- Any Business -->
-      <div class="calc-item" style="border-bottom:none;">
-        <div class="calc-item-left">
-          <input type="checkbox" id="addonBusiness" onchange="toggleBusiness()">
-          <label for="addonBusiness" class="calc-item-info">
-            <h4>Any Business?</h4>
-            <p>Select to add business-return entities </p>
-          </label>
-        </div>
-      </div>
-      <div class="calc-sub-items" id="businessList">
-        <div class="calc-sub-item">
-          <label for="scheduleCCount">Self-employment (Schedule C) </label>
-          <div class="qty-counter" style="margin-left:auto;">
-            <button type="button" onclick="changeBusinessCount('scheduleCCount', -1)">−</button>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="scheduleCCount" value="0" oninput="onBusinessCountInput('scheduleCCount')" onchange="onBusinessCountInput('scheduleCCount')" onblur="if(!this.value)this.value='0'">
-            <button type="button" onclick="changeBusinessCount('scheduleCCount', 1)">+</button>
-          </div>
-        </div>
-        <div class="calc-sub-item">
-          <label for="sCorpCount">S-corp </label>
-          <div class="qty-counter" style="margin-left:auto;">
-            <button type="button" onclick="changeBusinessCount('sCorpCount', -1)">−</button>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="sCorpCount" value="0" oninput="onBusinessCountInput('sCorpCount')" onchange="onBusinessCountInput('sCorpCount')" onblur="if(!this.value)this.value='0'">
-            <button type="button" onclick="changeBusinessCount('sCorpCount', 1)">+</button>
-          </div>
-        </div>
-        <div class="calc-sub-item">
-          <label for="partnershipCount">Partnership (LLC) </label>
-          <div class="qty-counter" style="margin-left:auto;">
-            <button type="button" onclick="changeBusinessCount('partnershipCount', -1)">−</button>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="partnershipCount" value="0" oninput="onBusinessCountInput('partnershipCount')" onchange="onBusinessCountInput('partnershipCount')" onblur="if(!this.value)this.value='0'">
-            <button type="button" onclick="changeBusinessCount('partnershipCount', 1)">+</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add-ons: Rental Properties -->
-      <div class="calc-item">
-        <div class="calc-item-left">
-          <input type="checkbox" id="addonRental" onchange="onRentalCheck()">
-          <label for="addonRental" class="calc-item-info">
-            <h4>Rental Properties (Schedule E)</h4>
-            <p>How many rental properties? </p>
-            <p id="rentalHint" style="color:var(--orange);font-size:0.78rem;margin:4px 0 0;display:none;">↑ Please select quantity above</p>
-          </label>
-        </div>
-        <div style="display:flex;align-items:center;gap:16px;">
-          <div class="qty-counter">
-            <button type="button" onclick="changeRentals(-1)">−</button>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="rentalCount" value="0" oninput="onRentalInput()" onchange="onRentalInput()" onblur="if(!this.value)this.value='0'">
-            <button type="button" onclick="changeRentals(1)">+</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add-ons: Multi-State -->
-      <div class="calc-item">
-        <div class="calc-item-left">
-          <input type="checkbox" id="addonStates" onchange="onStateCheck()">
-          <label for="addonStates" class="calc-item-info">
-            <h4>Any State Returns?</h4>
-            <p>How many states? </p>
-            <p id="stateHint" style="color:var(--orange);font-size:0.78rem;margin:4px 0 0;display:none;">↑ Please select quantity above</p>
-          </label>
-        </div>
-        <div style="display:flex;align-items:center;gap:16px;">
-          <div class="qty-counter">
-            <button type="button" onclick="changeStates(-1)">−</button>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="stateCount" value="0" oninput="onStateInput()" onchange="onStateInput()" onblur="if(!this.value)this.value='0'">
-            <button type="button" onclick="changeStates(1)">+</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add-ons: Additional Services (expandable) -->
-      <div class="calc-item" style="border-bottom:none;">
-        <div class="calc-item-left">
-          <input type="checkbox" id="addonExtra" onchange="toggleExtras()">
-          <label for="addonExtra" class="calc-item-info">
-            <h4>Additional Services</h4>
-            <p>Select to see options</p>
-          </label>
-        </div>
-      </div>
-      <div class="calc-sub-items" id="extrasList">
-        <div class="calc-sub-item">
-          <input type="checkbox" id="subItemized" onchange="updateTotal()">
-          <label for="subItemized">Itemized Deductions (mortgage, property tax, charity)</label>
-        </div>
-        <div class="calc-sub-item">
-          <input type="checkbox" id="subHSA" onchange="updateTotal()">
-          <label for="subHSA">HSA / IRA / Retirement Contributions</label>
-        </div>
-        <div class="calc-sub-item">
-          <input type="checkbox" id="subEdu" onchange="updateTotal()">
-          <label for="subEdu">Education Credits (1098-T / student loans)</label>
-        </div>
-        <div class="calc-sub-item">
-          <input type="checkbox" id="subForeign" onchange="onForeignCheck()">
-          <div class="calc-sub-item-copy">
-            <label for="subForeign">Foreign Income / FBAR / FATCA</label>
-            <p class="calc-sub-tagline">Number of foreign financial accounts</p>
-          </div>
-          <div class="qty-counter" style="margin-left:auto;">
-            <button type="button" onclick="changeForeignAccounts(-1)">−</button>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="foreignAccountCount" value="0" oninput="onForeignAccountInput()" onchange="onForeignAccountInput()" onblur="if(!this.value)this.value='0'">
-            <button type="button" onclick="changeForeignAccounts(1)">+</button>
-          </div>
-        </div>
-        <div class="calc-sub-item">
-          <input type="checkbox" id="sub1120S" onchange="on1120SCheck()">
-          <label for="sub1120S">Filing 1120-S with us?</label>
-          <div class="qty-counter" style="margin-left:auto;">
-            <button type="button" onclick="changeExtraCount('filing1120SCount', 'sub1120S', -1)">−</button>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="filing1120SCount" value="0" oninput="onExtraCountInput('filing1120SCount', 'sub1120S')" onchange="onExtraCountInput('filing1120SCount', 'sub1120S')" onblur="if(!this.value)this.value='0'">
-            <button type="button" onclick="changeExtraCount('filing1120SCount', 'sub1120S', 1)">+</button>
-          </div>
-        </div>
-        <div class="calc-sub-item">
-          <input type="checkbox" id="sub1065" onchange="on1065Check()">
-          <label for="sub1065">Filing 1065 with us?</label>
-          <div class="qty-counter" style="margin-left:auto;">
-            <button type="button" onclick="changeExtraCount('filing1065Count', 'sub1065', -1)">−</button>
-            <input type="text" inputmode="numeric" pattern="[0-9]*" id="filing1065Count" value="0" oninput="onExtraCountInput('filing1065Count', 'sub1065')" onchange="onExtraCountInput('filing1065Count', 'sub1065')" onblur="if(!this.value)this.value='0'">
-            <button type="button" onclick="changeExtraCount('filing1065Count', 'sub1065', 1)">+</button>
-          </div>
-        </div>
-        <div class="calc-sub-item">
-          <input type="checkbox" id="sub709" onchange="updateTotal()">
-          <label for="sub709">Filing Gift tax return (Form 709) with us?</label>
-        </div>
-        <div class="calc-sub-item">
-          <input type="checkbox" id="subOther" onchange="updateTotal()">
-          <label for="subOther">Other (describe in contact form)</label>
-        </div>
-      </div>
-
-      <!-- Estimated total -->
-      <div class="calc-total">
-        <div>
-          <div class="calc-total-label">Your Estimated Individual Tax Preparation&nbsp;Total</div>
-          <div id="calcTotalContext" style="color:rgba(255,255,255,0.4);font-size:0.75rem;margin-top:4px;">Services selected above</div>
-        </div>
-        <div class="calc-total-price" id="totalPrice">$250 - $350+</div>
-      </div>
-
-      <div style="background:var(--navy-light,#132237);border-radius:10px;padding:16px 20px;margin-top:12px;display:flex;align-items:flex-start;gap:12px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-            <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;margin:0;line-height:1.5;">Additional services pricing confirmed after a brief consultation.</p>
-      </div>
-
-      <div class="calc-get-started" style="margin-top:24px;">
-        <a href="#contact-form" class="btn btn-primary" onclick="prefillQuoteMessage()">Get Your Quote</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <!-- ============ FAQ ============ -->
 <section id="faq" aria-label="Frequently asked questions">
   <div class="container">
@@ -2423,9 +1989,9 @@
 <section id="contact-form" aria-label="Contact form and intake questionnaire">
   <div class="container">
     <div class="text-center" style="margin-bottom:48px;">
-      <p class="section-label">Get Started</p>
-      <h2 class="section-title">Let's Begin Your Return</h2>
-      <p class="section-desc">Start with our intake form. We'll respond within 24 hours with a quote and next steps.</p>
+      <p class="section-label">Connect With Us</p>
+      <h2 class="section-title">Whether you're ready for a quote or just have questions, we're here to help.</h2>
+      <p class="section-desc">Send us your questions or information, and we'll get back to you within 24 hours.</p>
     </div>
 
     <div class="contact-form-card" style="max-width:600px;margin:0 auto;background:var(--gray-100);border:1px solid var(--gray-200);border-radius:12px;padding:48px;">
@@ -2444,7 +2010,7 @@
             <label id="contact-message-label" style="display:block;color:var(--navy);font-weight:600;font-size:0.95rem;">Message</label>
             <button type="button" id="clearMessageBtn" onclick="clearContactMessage()" style="display:none;background:none;border:none;cursor:pointer;color:var(--gray-400);font-size:0.8rem;font-weight:600;text-decoration:underline;padding:0;" aria-label="Clear pre-filled message">Clear</button>
           </div>
-          <textarea id="contact-message-field" name="message" aria-labelledby="contact-message-label" autocomplete="off" placeholder="Tell us about your tax situation... (Want a cost estimate first? Try the pricing calculator above.)" rows="5" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;resize:vertical;"></textarea>
+          <textarea id="contact-message-field" name="message" aria-labelledby="contact-message-label" autocomplete="off" placeholder="Tell us about your tax situation and the services you need..." rows="5" required style="width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:1rem;font-family:inherit;box-sizing:border-box;resize:vertical;"></textarea>
         </div>
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none;">
         <input type="hidden" name="_next" value="https://silentpenguintax.com?submitted=1#contact-form" id="contactFormNext">
@@ -2506,7 +2072,6 @@
         <a href="#about">Why us</a>
         <a href="#services">Services</a>
         <a href="#how-it-works">How It Works</a>
-        <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#meet-your-cpa">Meet Your CPA</a>
       </div>
@@ -2519,474 +2084,7 @@
   </div>
 </footer>
 
-
-
-<!-- ============ CALCULATOR SCRIPT ============ -->
 <script>
-  var stateCount = 0;
-  var rentalCount = 0;
-
-  function changeStates(delta) {
-    stateCount = Math.max(0, stateCount + delta);
-    document.getElementById('stateCount').value = stateCount;
-    document.getElementById('addonStates').checked = stateCount > 0;
-    document.getElementById('stateHint').style.display = (stateCount > 0) ? 'none' : (document.getElementById('addonStates').checked ? 'block' : 'none');
-    updateTotal();
-  }
-
-  function onStateInput() {
-    var raw = document.getElementById('stateCount').value.replace(/[^0-9]/g, '');
-    var val = parseInt(raw, 10);
-    stateCount = (isNaN(val) || val < 0) ? 0 : val;
-    document.getElementById('stateCount').value = stateCount || (raw === '' ? '' : '0');
-    document.getElementById('addonStates').checked = stateCount > 0;
-    document.getElementById('stateHint').style.display = (stateCount > 0) ? 'none' : (document.getElementById('addonStates').checked ? 'block' : 'none');
-    updateTotal();
-  }
-
-  function onStateCheck() {
-    var checked = document.getElementById('addonStates').checked;
-    if (!checked && stateCount > 0) {
-      var proceed = confirm('You entered a state count. Click OK to clear it and uncheck, or Cancel to keep this selected.');
-      if (!proceed) {
-        document.getElementById('addonStates').checked = true;
-        updateTotal();
-        return;
-      }
-      stateCount = 0;
-      document.getElementById('stateCount').value = '0';
-    }
-    document.getElementById('stateHint').style.display = (checked && stateCount === 0) ? 'block' : 'none';
-    updateTotal();
-  }
-
-  function changeRentals(delta) {
-    rentalCount = Math.max(0, rentalCount + delta);
-    document.getElementById('rentalCount').value = rentalCount;
-    document.getElementById('addonRental').checked = rentalCount > 0;
-    document.getElementById('rentalHint').style.display = (rentalCount > 0) ? 'none' : (document.getElementById('addonRental').checked ? 'block' : 'none');
-    updateTotal();
-  }
-
-  function onRentalInput() {
-    var raw = document.getElementById('rentalCount').value.replace(/[^0-9]/g, '');
-    var val = parseInt(raw, 10);
-    rentalCount = (isNaN(val) || val < 0) ? 0 : val;
-    document.getElementById('rentalCount').value = rentalCount || (raw === '' ? '' : '0');
-    document.getElementById('addonRental').checked = rentalCount > 0;
-    document.getElementById('rentalHint').style.display = (rentalCount > 0) ? 'none' : (document.getElementById('addonRental').checked ? 'block' : 'none');
-    updateTotal();
-  }
-
-  function onRentalCheck() {
-    var checked = document.getElementById('addonRental').checked;
-    if (!checked && rentalCount > 0) {
-      var proceed = confirm('You entered a rental property count. Click OK to clear it and uncheck, or Cancel to keep this selected.');
-      if (!proceed) {
-        document.getElementById('addonRental').checked = true;
-        updateTotal();
-        return;
-      }
-      rentalCount = 0;
-      document.getElementById('rentalCount').value = '0';
-    }
-    document.getElementById('rentalHint').style.display = (checked && rentalCount === 0) ? 'block' : 'none';
-    updateTotal();
-  }
-
-  function onForeignCheck() {
-    var checked = document.getElementById('subForeign').checked;
-    var count = getCount('foreignAccountCount');
-    if (!checked && count > 0) {
-      var proceed = confirm('You entered foreign financial account count. Click OK to clear it and uncheck, or Cancel to keep this selected.');
-      if (!proceed) {
-        document.getElementById('subForeign').checked = true;
-        updateTotal();
-        return;
-      }
-      setCount('foreignAccountCount', 0);
-    }
-    updateTotal();
-  }
-
-  function on1120SCheck() {
-    var checked = document.getElementById('sub1120S').checked;
-    var count = getCount('filing1120SCount');
-    if (!checked && count > 0) {
-      var proceed = confirm('You entered a 1120-S filing count. Click OK to clear it and uncheck, or Cancel to keep this selected.');
-      if (!proceed) {
-        document.getElementById('sub1120S').checked = true;
-        updateTotal();
-        return;
-      }
-      setCount('filing1120SCount', 0);
-    }
-    updateTotal();
-  }
-
-  function on1065Check() {
-    var checked = document.getElementById('sub1065').checked;
-    var count = getCount('filing1065Count');
-    if (!checked && count > 0) {
-      var proceed = confirm('You entered a 1065 filing count. Click OK to clear it and uncheck, or Cancel to keep this selected.');
-      if (!proceed) {
-        document.getElementById('sub1065').checked = true;
-        updateTotal();
-        return;
-      }
-      setCount('filing1065Count', 0);
-    }
-    updateTotal();
-  }
-
-  function toggleExtras() {
-    var checked = document.getElementById('addonExtra').checked;
-    var list = document.getElementById('extrasList');
-    if (checked) {
-      list.classList.add('expanded');
-    } else {
-      list.classList.remove('expanded');
-      list.querySelectorAll('input[type="checkbox"]').forEach(function(cb) { cb.checked = false; });
-      var foreignCountInput = document.getElementById('foreignAccountCount');
-      if (foreignCountInput) foreignCountInput.value = '0';
-      setCount('filing1120SCount', 0);
-      setCount('filing1065Count', 0);
-    }
-    updateTotal();
-  }
-
-  function changeExtraCount(inputId, checkboxId, delta) {
-    var next = Math.max(0, getCount(inputId) + delta);
-    setCount(inputId, next);
-    document.getElementById(checkboxId).checked = next > 0;
-    if (next > 0) {
-      document.getElementById('addonExtra').checked = true;
-      document.getElementById('extrasList').classList.add('expanded');
-    }
-    updateTotal();
-  }
-
-  function onExtraCountInput(inputId, checkboxId) {
-    var count = getCount(inputId);
-    setCount(inputId, count);
-    document.getElementById(checkboxId).checked = count > 0;
-    if (count > 0) {
-      document.getElementById('addonExtra').checked = true;
-      document.getElementById('extrasList').classList.add('expanded');
-    }
-    updateTotal();
-  }
-
-  function changeForeignAccounts(delta) {
-    var current = getCount('foreignAccountCount');
-    var next = Math.max(0, current + delta);
-    setCount('foreignAccountCount', next);
-    document.getElementById('subForeign').checked = next > 0;
-    if (next > 0) {
-      document.getElementById('addonExtra').checked = true;
-      document.getElementById('extrasList').classList.add('expanded');
-    }
-    updateTotal();
-  }
-
-  function onForeignAccountInput() {
-    var count = getCount('foreignAccountCount');
-    setCount('foreignAccountCount', count);
-    document.getElementById('subForeign').checked = count > 0;
-    if (count > 0) {
-      document.getElementById('addonExtra').checked = true;
-      document.getElementById('extrasList').classList.add('expanded');
-    }
-    updateTotal();
-  }
-
-  function getCount(inputId) {
-    var input = document.getElementById(inputId);
-    if (!input) return 0;
-    var raw = (input.value || '').replace(/[^0-9]/g, '');
-    var val = parseInt(raw, 10);
-    return (isNaN(val) || val < 0) ? 0 : val;
-  }
-
-  function setCount(inputId, value) {
-    var input = document.getElementById(inputId);
-    if (!input) return;
-    input.value = Math.max(0, value);
-  }
-
-  function setRequiredCountHighlight(checkboxId, inputId) {
-    var checkbox = document.getElementById(checkboxId);
-    var input = document.getElementById(inputId);
-    if (!checkbox || !input) return;
-    var wrapper = input.closest('.qty-counter');
-    if (!wrapper) return;
-    var shouldHighlight = checkbox.checked && getCount(inputId) === 0;
-    wrapper.classList.toggle('needs-count', shouldHighlight);
-  }
-
-  function businessEntityCount() {
-    return getCount('scheduleCCount') + getCount('sCorpCount') + getCount('partnershipCount');
-  }
-
-  function toggleInvestments() {
-    var checked = document.getElementById('addonInvestments').checked;
-    var list = document.getElementById('investmentList');
-    if (checked) {
-      list.classList.add('expanded');
-    } else {
-      list.classList.remove('expanded');
-      list.querySelectorAll('input[type="checkbox"]').forEach(function(cb) { cb.checked = false; });
-    }
-    updateTotal();
-  }
-
-  function toggleBusiness() {
-    var checked = document.getElementById('addonBusiness').checked;
-    var list = document.getElementById('businessList');
-    if (checked) {
-      list.classList.add('expanded');
-    } else {
-      list.classList.remove('expanded');
-      setCount('scheduleCCount', 0);
-      setCount('sCorpCount', 0);
-      setCount('partnershipCount', 0);
-    }
-    updateTotal();
-  }
-
-  function changeBusinessCount(inputId, delta) {
-    var next = Math.max(0, getCount(inputId) + delta);
-    setCount(inputId, next);
-    if (businessEntityCount() > 0) {
-      document.getElementById('addonBusiness').checked = true;
-      document.getElementById('businessList').classList.add('expanded');
-    }
-    updateTotal();
-  }
-
-  function onBusinessCountInput(inputId) {
-    setCount(inputId, getCount(inputId));
-    if (businessEntityCount() > 0) {
-      document.getElementById('addonBusiness').checked = true;
-      document.getElementById('businessList').classList.add('expanded');
-    }
-    updateTotal();
-  }
-
-  function updateTotal() {
-    var minTotal = 250;
-    var maxTotal = 350;
-    var hasSelections = true;
-    var hasUnpricedSelections = false;
-    var additionalServicesSelected = document.getElementById('addonExtra').checked;
-
-    if (document.getElementById('addonInvestments').checked) {
-      hasSelections = true;
-    }
-
-    if (document.getElementById('invStockComp').checked) {
-      minTotal += 50;
-      maxTotal += 100;
-      hasSelections = true;
-    }
-    if (document.getElementById('invCrypto').checked) {
-      minTotal += 100;
-      maxTotal += 200;
-      hasSelections = true;
-    }
-    if (document.getElementById('invPropertySale').checked) {
-      minTotal += 100;
-      maxTotal += 200;
-      hasSelections = true;
-    }
-
-    var scheduleCCount = getCount('scheduleCCount');
-    var sCorpCount = getCount('sCorpCount');
-    var partnershipCount = getCount('partnershipCount');
-    var businessTotalCount = scheduleCCount + sCorpCount + partnershipCount;
-
-    if (businessTotalCount > 0) {
-      minTotal += businessTotalCount * 200;
-      maxTotal += businessTotalCount * 400;
-      hasSelections = true;
-      document.getElementById('addonBusiness').checked = true;
-      document.getElementById('businessList').classList.add('expanded');
-    }
-
-    minTotal += rentalCount * 200;
-    maxTotal += rentalCount * 400;
-    minTotal += stateCount * 50;
-    maxTotal += stateCount * 100;
-    if (rentalCount > 0 || stateCount > 0) {
-      hasSelections = true;
-    }
-
-    var checkedExtraInputs = Array.from(document.getElementById('extrasList').querySelectorAll('input[type="checkbox"]:checked'));
-    var extrasChecked = checkedExtraInputs.length;
-    if (document.getElementById('subItemized').checked) {
-      minTotal += 100;
-      maxTotal += 100;
-    }
-    if (document.getElementById('subHSA').checked) {
-      minTotal += 100;
-      maxTotal += 100;
-    }
-
-    var foreignAccountCount = getCount('foreignAccountCount');
-    if (document.getElementById('subForeign').checked && foreignAccountCount > 0) {
-      var foreignFee = foreignAccountCount > 5 ? 600 : 300;
-      minTotal += foreignFee;
-      maxTotal += foreignFee;
-    }
-
-    var filing1120SCount = getCount('filing1120SCount');
-    var filing1065Count = getCount('filing1065Count');
-    if (filing1120SCount > 0 || filing1065Count > 0) {
-      hasSelections = true;
-      hasUnpricedSelections = true;
-    }
-
-    var unpricedExtraIds = ['subEdu', 'sub709', 'subOther', 'sub1120S', 'sub1065'];
-    if (checkedExtraInputs.some(function(input) { return unpricedExtraIds.indexOf(input.id) !== -1; })) {
-      hasUnpricedSelections = true;
-    }
-
-    if (document.getElementById('sub1120S').checked && filing1120SCount > 0) {
-      hasUnpricedSelections = true;
-    }
-    if (document.getElementById('sub1065').checked && filing1065Count > 0) {
-      hasUnpricedSelections = true;
-    }
-    if (extrasChecked > 0) {
-      hasSelections = true;
-    }
-
-    setRequiredCountHighlight('addonRental', 'rentalCount');
-    setRequiredCountHighlight('addonStates', 'stateCount');
-    setRequiredCountHighlight('subForeign', 'foreignAccountCount');
-    setRequiredCountHighlight('sub1120S', 'filing1120SCount');
-    setRequiredCountHighlight('sub1065', 'filing1065Count');
-
-    var el = document.getElementById('totalPrice');
-    var totalContext = document.getElementById('calcTotalContext');
-    el.textContent = '$' + minTotal.toLocaleString() + ' - $' + maxTotal.toLocaleString() + '+';
-
-    if (totalContext) {
-      totalContext.textContent = (additionalServicesSelected || hasUnpricedSelections)
-        ? 'Additional Services require a brief consultation to confirm final pricing.'
-        : 'Services selected above';
-    }
-
-    el.setAttribute('data-total-value', String(minTotal) + '-' + String(maxTotal));
-    el.setAttribute('data-has-selections', hasSelections ? 'true' : 'false');
-
-    el.classList.add('bumped');
-    setTimeout(function() { el.classList.remove('bumped'); }, 150);
-    syncQuoteMessageFromCalculator();
-  }
-
-  function buildQuoteMessageFromCalculator() {
-    var lines = [];
-    lines.push('Hi Silent Penguin team,');
-    lines.push('');
-    lines.push('I would like a quote for the following services:');
-    lines.push('- Individual Return (Base)');
-
-    if (document.getElementById('addonInvestments').checked ||
-        document.getElementById('invStockComp').checked ||
-        document.getElementById('invCrypto').checked ||
-        document.getElementById('invPropertySale').checked) {
-      lines.push('- Any Investments');
-      if (document.getElementById('invStockComp').checked) lines.push('  - Stock Compensation (RSU, ISO, ESPP)');
-      if (document.getElementById('invCrypto').checked) lines.push('  - Cryptocurrency Reporting');
-      if (document.getElementById('invPropertySale').checked) lines.push('  - Property sale (e.g. selling a house)');
-    }
-
-    var scheduleCCount = getCount('scheduleCCount');
-    var sCorpCount = getCount('sCorpCount');
-    var partnershipCount = getCount('partnershipCount');
-    if (scheduleCCount + sCorpCount + partnershipCount > 0) {
-      lines.push('- Any Business');
-      if (scheduleCCount > 0) lines.push('  - Self-employment (Schedule C): ' + scheduleCCount);
-      if (sCorpCount > 0) lines.push('  - S-corp: ' + sCorpCount);
-      if (partnershipCount > 0) lines.push('  - Partnership (LLC): ' + partnershipCount);
-    }
-
-    if (rentalCount > 0) lines.push('- Rental Properties (Schedule E): ' + rentalCount);
-    if (stateCount > 0) lines.push('- Additional State Returns: ' + stateCount);
-
-    var extras = [];
-    var extraCheckboxes = document.getElementById('extrasList').querySelectorAll('input[type="checkbox"]:checked');
-    extraCheckboxes.forEach(function(cb) {
-      var label = document.querySelector('label[for="' + cb.id + '"]');
-      if (label) extras.push(label.textContent.trim());
-    });
-
-    if (extras.length > 0) {
-      lines.push('- Additional Services:');
-      extras.forEach(function(item) {
-        lines.push('  - ' + item);
-      });
-    }
-
-    var foreignAccountCount = getCount('foreignAccountCount');
-    if (document.getElementById('subForeign').checked && foreignAccountCount > 0) {
-      lines.push('  - Number of foreign financial accounts: ' + foreignAccountCount);
-    }
-
-    var filing1120SCount = getCount('filing1120SCount');
-    var filing1065Count = getCount('filing1065Count');
-    if (document.getElementById('sub1120S').checked && filing1120SCount > 0) {
-      lines.push('  - Filing 1120-S with us?: ' + filing1120SCount);
-    }
-    if (document.getElementById('sub1065').checked && filing1065Count > 0) {
-      lines.push('  - Filing 1065 with us?: ' + filing1065Count);
-    }
-
-    if (
-      !document.getElementById('addonInvestments').checked &&
-      !document.getElementById('invStockComp').checked &&
-      !document.getElementById('invCrypto').checked &&
-      !document.getElementById('invPropertySale').checked &&
-      (scheduleCCount + sCorpCount + partnershipCount === 0) &&
-      rentalCount === 0 &&
-      stateCount === 0 &&
-      document.getElementById('extrasList').querySelectorAll('input[type="checkbox"]:checked').length === 0
-    ) {
-      lines.push('- No additional selections yet');
-    }
-
-    lines.push('');
-    var totalEl = document.getElementById('totalPrice');
-    if (totalEl.getAttribute('data-has-selections') === 'true') {
-      lines.push('Estimated total from calculator: ' + totalEl.textContent);
-    } else {
-      lines.push('Estimated total from calculator: Select options to generate estimate (base return starts at $300).');
-    }
-    lines.push('');
-    lines.push('Please confirm final pricing and next steps.');
-
-    return lines.join('\n');
-  }
-
-  function syncQuoteMessageFromCalculator() {
-    var messageField = document.querySelector('#contact-message-field');
-    if (messageField) {
-      messageField.value = buildQuoteMessageFromCalculator();
-      sessionStorage.setItem('sp_contact_message', messageField.value);
-      toggleContactClearBtn();
-    }
-  }
-
-  function prefillQuoteMessage() {
-    var messageField = document.querySelector('#contact-message-field');
-    if (messageField) {
-      messageField.value = buildQuoteMessageFromCalculator();
-      sessionStorage.setItem('sp_contact_message', messageField.value);
-      toggleContactClearBtn();
-    }
-  }
-
   function toggleContactClearBtn() {
     var messageField = document.getElementById('contact-message-field');
     var clearBtn = document.getElementById('clearMessageBtn');
@@ -3021,8 +2119,6 @@
       clearBtn.style.display = messageEl.value.trim() ? 'inline' : 'none';
     }
   }
-
-  updateTotal();
 </script>
 
 <!-- ============ CONTACT FORM STATE SCRIPT ============ -->
@@ -3100,9 +2196,6 @@
       var savedMessage = sessionStorage.getItem('sp_fab_message');
       if (savedMessage) {
         messageEl.value = savedMessage;
-      } else if (typeof buildQuoteMessageFromCalculator === 'function') {
-        messageEl.value = buildQuoteMessageFromCalculator();
-        sessionStorage.setItem('sp_fab_message', messageEl.value);
       }
       toggleFabClearBtn();
     }
@@ -3163,7 +2256,7 @@
       document.getElementById('fabMessage').value = '';
       setTimeout(closeFabForm, 2500);
     } catch (err) {
-      alert('We could not send your message from the bubble form. Please use Start Here in the Contact section.');
+      alert('We could not send your message from the bubble form. Please use Get Your Quote in the Contact section.');
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;
