@@ -3,6 +3,22 @@
     {
       "source": "/intake",
       "destination": "/intake.html"
+    },
+    {
+      "source": "/expat-tax",
+      "destination": "/expat-tax.html"
+    },
+    {
+      "source": "/crypto-tax",
+      "destination": "/crypto-tax.html"
+    },
+    {
+      "source": "/streamlined-offshore",
+      "destination": "/streamlined-offshore.html"
+    },
+    {
+      "source": "/trust-tax",
+      "destination": "/trust-tax.html"
     }
   ]
 }
