@@ -1,6 +1,6 @@
 # Silent Penguin Tax Services
 
-> Silent Penguin Tax Services (legal name: Silent Penguin PLLC) is a fully remote U.S. CPA firm based in Renton, Washington, serving the Greater Seattle area and clients nationwide. It specializes in U.S. expat / international tax, cryptocurrency reporting, offshore (Streamlined) compliance, and trust & estate returns. Service is 100% online and asynchronous — secure portal and email, no phone calls — with flat-fee pricing and CPA-prepared, e-filed returns.
+> Silent Penguin Tax Services (legal name: Silent Penguin PLLC) is a fully remote U.S. CPA firm based in Mercer Island, Washington, serving the Greater Seattle area and clients nationwide. It specializes in U.S. expat / international tax, cryptocurrency reporting, offshore (Streamlined) compliance, and trust & estate returns. Service is 100% online and asynchronous — secure portal and email, no phone calls — with flat-fee pricing and CPA-prepared, e-filed returns.
 
 Key facts:
 - Licensed CPA firm. Founder: Lucanus "Luke" Lam, CPA. IRS e-file provider. Secure client portal (AES-256).
@@ -8,7 +8,7 @@ Key facts:
 - Specialties: U.S. expat / foreign income tax, cryptocurrency & digital-asset tax, Streamlined offshore disclosure (SDOP / SFOP), trust & estate income tax (Form 1041), amended returns (Form 1040-X), and IRS / state notice response.
 - Does NOT offer: bookkeeping, payroll, or monthly retainer / accounting services.
 - Languages: English and Cantonese (廣東話).
-- Location: Renton, WA (remote). Contact: hello@silentpenguintax.com
+- Location: Mercer Island, WA (remote). Contact: hello@silentpenguintax.com
 
 ## Services
 - [U.S. Expat & International Tax](https://www.silentpenguintax.com/expat-tax): Remote expat tax preparation — Foreign Earned Income Exclusion (Form 2555), Foreign Tax Credit (Form 1116), FBAR (FinCEN Form 114), FATCA (Form 8938), PFICs (Form 8621), foreign pensions, and streamlined catch-up filing.
@@ -22,4 +22,4 @@ Key facts:
 
 ## Contact
 - Email: hello@silentpenguintax.com
-- Service area: Renton, WA and the Greater Seattle area; remote nationwide (all 50 states).
+- Service area: Mercer Island, WA and the Greater Seattle area; remote nationwide (all 50 states).
