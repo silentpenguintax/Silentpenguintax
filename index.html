@@ -1586,7 +1586,10 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["Accountant", "ProfessionalService"],
+        "@type": [
+          "Accountant",
+          "ProfessionalService"
+        ],
         "@id": "https://www.silentpenguintax.com/#business",
         "name": "Silent Penguin Tax Services",
         "legalName": "Silent Penguin PLLC",
@@ -1595,9 +1598,7 @@
         "logo": "https://www.silentpenguintax.com/Silent_Penguin_TM_logo_-_transparent-removebg-preview.png",
         "description": "Fully remote CPA tax preparation, tax planning, and advisory. 100% online intake and filing. Based in Renton, WA, serving the Greater Seattle Area and clients nationwide. Niche in expat / foreign income, cryptocurrency reporting, and offshore (Streamlined) compliance.",
         "founder": {
-          "@type": "Person",
-          "name": "Luke Lam",
-          "jobTitle": "Certified Public Accountant (CPA)"
+          "@id": "https://www.silentpenguintax.com/#luke-lam"
         },
         "address": {
           "@type": "PostalAddress",
@@ -1606,13 +1607,28 @@
           "addressCountry": "US"
         },
         "areaServed": [
-          { "@type": "City", "name": "Renton" },
-          { "@type": "City", "name": "Seattle" },
-          { "@type": "AdministrativeArea", "name": "Greater Seattle Area" },
-          { "@type": "Country", "name": "United States" }
+          {
+            "@type": "City",
+            "name": "Renton"
+          },
+          {
+            "@type": "City",
+            "name": "Seattle"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Greater Seattle Area"
+          },
+          {
+            "@type": "Country",
+            "name": "United States"
+          }
         ],
         "priceRange": "$$",
-        "knowsLanguage": ["en", "zh-yue"],
+        "knowsLanguage": [
+          "en",
+          "zh-yue"
+        ],
         "serviceType": [
           "Tax preparation",
           "Tax planning and advisory",
@@ -1624,35 +1640,121 @@
         ],
         "sameAs": [
           "https://www.google.com/maps?cid=1954675569158632551"
-        ]
+        ],
+        "employee": {
+          "@id": "https://www.silentpenguintax.com/#luke-lam"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.silentpenguintax.com/#luke-lam",
+        "name": "Lucanus Lam",
+        "alternateName": "Luke Lam",
+        "jobTitle": "Certified Public Accountant (CPA)",
+        "description": "Lucanus “Luke” Lam is a licensed CPA and the founder of Silent Penguin PLLC, with over ten years of tax experience. He focuses on U.S. expat and international tax, cryptocurrency reporting, offshore (Streamlined) compliance, and trust and estate returns, serving clients remotely nationwide.",
+        "knowsAbout": [
+          "U.S. expatriate and international taxation",
+          "Foreign Earned Income Exclusion (Form 2555)",
+          "Foreign Tax Credit (Form 1116)",
+          "FBAR (FinCEN Form 114) and FATCA (Form 8938) reporting",
+          "Cryptocurrency and digital-asset taxation",
+          "Streamlined Filing Compliance Procedures (SDOP and SFOP)",
+          "Trust and estate income tax (Form 1041)"
+        ],
+        "knowsLanguage": [
+          "en",
+          "zh-yue"
+        ],
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "license",
+          "name": "Certified Public Accountant (CPA)",
+          "recognizedBy": {
+            "@type": "GovernmentOrganization",
+            "name": "Washington State Board of Accountancy"
+          }
+        },
+        "worksFor": {
+          "@id": "https://www.silentpenguintax.com/#business"
+        }
       },
       {
         "@type": "WebSite",
         "@id": "https://www.silentpenguintax.com/#website",
         "url": "https://www.silentpenguintax.com/",
         "name": "Silent Penguin Tax Services",
-        "publisher": { "@id": "https://www.silentpenguintax.com/#business" }
+        "publisher": {
+          "@id": "https://www.silentpenguintax.com/#business"
+        }
       },
       {
         "@type": "FAQPage",
         "@id": "https://www.silentpenguintax.com/#faq",
         "mainEntity": [
-          { "@type": "Question", "name": "Do you meet clients in person?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. We're a fully remote firm. Everything happens through our secure online portal and email. This is by design and keeps the process efficient." } },
-          { "@type": "Question", "name": "Which states do you serve?",
-            "acceptedAnswer": { "@type": "Answer", "text": "All 50 states. We prepare individual and business returns nationwide, including multi-state filings." } },
-          { "@type": "Question", "name": "How do I upload documents?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Once you pay, we set up your secure portal access. You can then upload W-2s, 1099s, and supporting records directly." } },
-          { "@type": "Question", "name": "What's the typical turnaround time?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Most individual returns are completed in 7-10 business days after final documents are submitted. Business timelines vary by complexity." } },
-          { "@type": "Question", "name": "When do I pay?",
-            "acceptedAnswer": { "@type": "Answer", "text": "After you receive and accept your quote, payment is completed online before work begins." } },
-          { "@type": "Question", "name": "Can you amend prior year returns?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We prepare amended returns (Form 1040-X) when prior filings need correction." } },
-          { "@type": "Question", "name": "Do you work year-round?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We operate year-round for filing, planning, amendments, and business tax support." } },
-          { "@type": "Question", "name": "What documents do I need?",
-            "acceptedAnswer": { "@type": "Answer", "text": "At minimum, W-2s, 1099s, and income records. We send a full checklist after intake based on your situation." } }
+          {
+            "@type": "Question",
+            "name": "Do you meet clients in person?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We're a fully remote firm. Everything happens through our secure online portal and email. This is by design and keeps the process efficient."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which states do you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All 50 states. We prepare individual and business returns nationwide, including multi-state filings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I upload documents?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Once you pay, we set up your secure portal access. You can then upload W-2s, 1099s, and supporting records directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the typical turnaround time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most individual returns are completed in 7-10 business days after final documents are submitted. Business timelines vary by complexity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When do I pay?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "After you receive and accept your quote, payment is completed online before work begins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you amend prior year returns?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We prepare amended returns (Form 1040-X) when prior filings need correction."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work year-round?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We operate year-round for filing, planning, amendments, and business tax support."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What documents do I need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At minimum, W-2s, 1099s, and income records. We send a full checklist after intake based on your situation."
+            }
+          }
         ]
       }
     ]

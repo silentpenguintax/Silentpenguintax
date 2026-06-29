@@ -1,0 +1,25 @@
+# Silent Penguin Tax Services
+
+> Silent Penguin Tax Services (legal name: Silent Penguin PLLC) is a fully remote U.S. CPA firm based in Renton, Washington, serving the Greater Seattle area and clients nationwide. It specializes in U.S. expat / international tax, cryptocurrency reporting, offshore (Streamlined) compliance, and trust & estate returns. Service is 100% online and asynchronous — secure portal and email, no phone calls — with flat-fee pricing and CPA-prepared, e-filed returns.
+
+Key facts:
+- Licensed CPA firm. Founder: Lucanus "Luke" Lam, CPA. IRS e-file provider. Secure client portal (AES-256).
+- Fully remote and asynchronous: email + secure portal, no phone calls. Flat-fee pricing. Serves all 50 states.
+- Specialties: U.S. expat / foreign income tax, cryptocurrency & digital-asset tax, Streamlined offshore disclosure (SDOP / SFOP), trust & estate income tax (Form 1041), amended returns (Form 1040-X), and IRS / state notice response.
+- Does NOT offer: bookkeeping, payroll, or monthly retainer / accounting services.
+- Languages: English and Cantonese (廣東話).
+- Location: Renton, WA (remote). Contact: hello@silentpenguintax.com
+
+## Services
+- [U.S. Expat & International Tax](https://www.silentpenguintax.com/expat-tax): Remote expat tax preparation — Foreign Earned Income Exclusion (Form 2555), Foreign Tax Credit (Form 1116), FBAR (FinCEN Form 114), FATCA (Form 8938), PFICs (Form 8621), foreign pensions, and streamlined catch-up filing.
+- [Cryptocurrency Tax Reporting](https://www.silentpenguintax.com/crypto-tax): Capital gains and losses (Form 8949 / Schedule D), staking and mining income, DeFi, NFTs, FIFO vs. specific-identification cost basis, and multi-wallet / multi-exchange reconciliation.
+- [Streamlined Offshore Disclosure (SDOP / SFOP)](https://www.silentpenguintax.com/streamlined-offshore): Non-willful catch-up under the IRS Streamlined Filing Compliance Procedures — three years of amended returns, six years of FBARs, and the Form 14654 / 14653 certification narrative.
+- [Trust & Estate Income Tax (Form 1041)](https://www.silentpenguintax.com/trust-tax): Fiduciary income tax returns, beneficiary Schedule K-1s, distributable net income, grantor vs. non-grantor trusts, and the decedent's final Form 1040.
+
+## Main pages
+- [Home](https://www.silentpenguintax.com/): Firm overview, why-us, process, FAQ, and how to become a client.
+- [Get a Quote / Client Intake](https://www.silentpenguintax.com/intake): Online intake form to receive a flat-fee quote. No phone call required.
+
+## Contact
+- Email: hello@silentpenguintax.com
+- Service area: Renton, WA and the Greater Seattle area; remote nationwide (all 50 states).
