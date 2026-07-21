@@ -1588,6 +1588,10 @@
   </style>
   <!-- ===== CANONICAL & INDEXING ===== -->
   <link rel="canonical" href="https://www.silentpenguintax.com/trust-tax">
+  <link rel="alternate" hreflang="en" href="https://www.silentpenguintax.com/trust-tax">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.silentpenguintax.com/zh/trust-tax/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.silentpenguintax.com/zh-cn/trust-tax/">
+  <link rel="alternate" hreflang="x-default" href="https://www.silentpenguintax.com/trust-tax">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <!-- ===== LOCAL / GEO ===== -->
   <meta name="geo.region" content="US-WA">
@@ -1703,6 +1707,22 @@
     ]
   }
   </script>
+  <style>
+    /* ===== NAV LANGUAGE SWITCHER (EN / 繁 / 简) ===== */
+    .lang-switch { display: flex; align-items: center; gap: 2px; flex-shrink: 0; margin-left: 14px; border: 1px solid rgba(11,22,35,0.18); border-radius: 999px; padding: 3px; background: rgba(255,255,255,0.65); }
+    .lang-switch a, .lang-switch span { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 0.74rem; font-weight: 600; line-height: 1; letter-spacing: 0.5px; color: rgba(11,22,35,0.72); text-decoration: none; white-space: nowrap; transition: color 0.2s, background 0.2s; }
+    .lang-switch a:hover { color: var(--teal); }
+    .lang-switch span.on { background: var(--navy); color: var(--white); }
+    @media (max-width: 1150px) {
+      .lang-switch { margin-left: auto; }
+      .nav-toggle { margin-left: 10px; }
+    }
+    @media (max-width: 480px) {
+      .lang-switch { padding: 2px; margin-left: 8px; }
+      .lang-switch a, .lang-switch span { padding: 3px 7px; font-size: 0.66rem; letter-spacing: 0.3px; }
+      .nav-logo span { font-size: 0.68rem; letter-spacing: 1px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -1726,6 +1746,7 @@
       <li><a href="https://www.silentpenguintax.com/#meet-your-cpa">Meet Your CPA</a></li>
       <li><a href="https://www.silentpenguintax.com/intake" class="nav-cta" target="_blank" rel="noopener noreferrer">Get Your Quote</a></li>
     </ul>
+    <div class="lang-switch" role="group" aria-label="Language selection"><span class="on" aria-current="true" title="English">EN</span><a href="/zh/trust-tax/" lang="zh-Hant" hreflang="zh-Hant" title="繁體中文">繁</a><a href="/zh-cn/trust-tax/" lang="zh-Hans" hreflang="zh-Hans" title="简体中文">简</a></div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>

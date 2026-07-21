@@ -20,6 +20,18 @@ Key facts:
 - [Home](https://www.silentpenguintax.com/): Firm overview, why-us, process, FAQ, and how to become a client.
 - [Get a Quote / Client Intake](https://www.silentpenguintax.com/intake): Online intake form to receive a flat-fee quote. No phone call required.
 
+## 中文服務 (Chinese-language pages)
+- [中文主頁 — 香港及華人移民美國稅務](https://www.silentpenguintax.com/zh/): 粵語/英語雙語 CPA 服務:全球收入申報、FBAR/FATCA 海外戶口、強積金、加密貨幣、SDOP 自願披露。
+- [FBAR 中文指南](https://www.silentpenguintax.com/zh/guides/who-must-file-fbar/): 誰需要申報 FBAR;香港銀行戶口、聯名戶口、強積金與儲蓄保險的申報規則。
+- [SDOP 中文指南](https://www.silentpenguintax.com/zh/guides/streamlined-domestic-offshore-sdop/): 漏報海外收入及戶口的簡化補救程序 — 資格、5% 罰款與 Form 14654。
+
+- [简体中文主页 — 华人移民美国税务](https://www.silentpenguintax.com/zh-cn/): 中英双语 CPA 服务:海外账户申报、国内理财与公积金、加密货币、自愿披露。
+- [FBAR 简体中文指南](https://www.silentpenguintax.com/zh-cn/guides/who-must-file-fbar/): 谁需要申报 FBAR;国内银行账户、联名账户、理财与住房公积金的申报规则。
+- [SDOP 简体中文指南](https://www.silentpenguintax.com/zh-cn/guides/streamlined-domestic-offshore-sdop/): 漏报海外收入及账户的简化补救程序 — 资格、5% 罚款与 Form 14654。
+
+- [中文服務頁(繁體)](https://www.silentpenguintax.com/zh/expat-tax/) — 移民及跨境稅務;另有 [加密貨幣](https://www.silentpenguintax.com/zh/crypto-tax/)、[海外自願披露](https://www.silentpenguintax.com/zh/streamlined-offshore/)、[信託及遺產](https://www.silentpenguintax.com/zh/trust-tax/)。
+- [中文服务页(简体)](https://www.silentpenguintax.com/zh-cn/expat-tax/) — 移民及跨境税务;另有 [加密货币](https://www.silentpenguintax.com/zh-cn/crypto-tax/)、[海外自愿披露](https://www.silentpenguintax.com/zh-cn/streamlined-offshore/)、[信托及遗产](https://www.silentpenguintax.com/zh-cn/trust-tax/)。
+
 ## Contact
 - Email: hello@silentpenguintax.com
 - Service area: Mercer Island, WA and the Greater Seattle area; remote nationwide (all 50 states).
