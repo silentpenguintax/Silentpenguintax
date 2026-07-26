@@ -1723,6 +1723,20 @@
       .nav-logo span { font-size: 0.68rem; letter-spacing: 1px; }
     }
   </style>
+  <style>
+    /* ===== INLINE TESTIMONIAL PULL QUOTE ===== */
+    .pq-wrap { padding: clamp(48px,7vw,84px) 0; }
+    .pq { max-width: 780px; margin: 0 auto; background: var(--white); border: 1px solid var(--gray-200); border-left: 4px solid var(--teal); border-radius: 14px; padding: 32px 34px 26px; box-shadow: 0 2px 14px rgba(15,33,54,0.05); }
+    .pq-kicker { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .pq blockquote { margin: 0; padding: 0; border: 0; }
+    .pq blockquote p { font-size: 1.03rem; line-height: 1.85; color: var(--gray-700); margin: 0 0 14px; }
+    .pq blockquote p:last-of-type { margin-bottom: 0; }
+    .pq-attr { display: flex; align-items: center; gap: 12px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-200); }
+    .pq-initials { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; }
+    .pq-who { font-size: 0.9rem; color: var(--gray-600); line-height: 1.5; }
+    .pq-who strong { display: block; color: var(--navy); font-size: 0.95rem; }
+    .pq-more { display: block; text-align: center; margin-top: 20px; font-size: 0.88rem; font-weight: 700; color: var(--teal); }
+  </style>
 </head>
 <body>
 
@@ -1921,6 +1935,20 @@
         <span class="go">View service &rarr;</span>
       </a>
     </div>
+  </div>
+</section>
+
+<section class="pq-wrap" aria-label="Client testimonial">
+  <div class="container">
+    <div class="pq">
+      <span class="pq-kicker">From an executor</span>
+      <blockquote><p>I turned to Silent Penguin Tax Services to prepare the final tax return for my recently deceased mother. Their price was very competitive and they handled what was a sensitive situation with kindness. I was surprised to find that the online process was actually easier to handle than in person because all documents were easily scanned into the preparation app with a smartphone.</p><p>I will use them in the future and I recommend them highly.</p></blockquote>
+      <div class="pq-attr">
+        <div class="pq-initials" aria-hidden="true">G.J.</div>
+        <div class="pq-who"><strong>G.J.</strong>Decedent's final return &middot; California</div>
+      </div>
+    </div>
+    <a class="pq-more" href="/testimonials/">Read more client testimonials &rarr;</a>
   </div>
 </section>
 
