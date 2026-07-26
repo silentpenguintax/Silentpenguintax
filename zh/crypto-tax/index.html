@@ -1718,6 +1718,45 @@
     ]
   }
   </script>
+  <style>
+    /* ===== NAV: SERVICES DROPDOWN ===== */
+    .nav-links li.has-dd { position: relative; }
+    .nav-links .dd-toggle {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: none; border: 0; padding: 0; margin: 0; cursor: pointer;
+      font-family: inherit;
+      color: rgba(11,22,35,0.78);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .nav-links .dd-toggle:hover, .nav-links li.has-dd.open > .dd-toggle { color: var(--teal); }
+    @media (max-width: 1280px) { .nav-links .dd-toggle { font-size: 0.74rem; } }
+    @media (max-width: 1150px) { .nav-links .dd-toggle { font-size: 0.78rem; } }
+    .nav-links .dd-toggle::after { content: ''; width: 6px; height: 6px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); opacity: 0.65; transition: transform 0.2s; }
+    .nav-links li.has-dd.open > .dd-toggle::after { transform: rotate(-135deg) translateY(-2px); }
+    .dd-menu { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(-6px); min-width: 262px; background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; box-shadow: 0 12px 34px rgba(15,33,54,0.14); padding: 8px; margin: 0; list-style: none; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.18s, transform 0.18s, visibility 0.18s; z-index: 120; }
+    .dd-menu::before { content: ''; position: absolute; top: -14px; left: 0; right: 0; height: 14px; }
+    .nav-links li.has-dd:hover > .dd-menu,
+    .nav-links li.has-dd:focus-within > .dd-menu,
+    .nav-links li.has-dd.open > .dd-menu { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+    .dd-menu li { margin: 0; }
+    .dd-menu a { display: block; padding: 10px 13px; border-radius: 8px; font-size: 0.86rem; font-weight: 600; color: var(--navy); text-decoration: none; line-height: 1.45; transition: background 0.15s, color 0.15s; }
+    .dd-menu a small { display: block; font-size: 0.75rem; font-weight: 400; color: var(--gray-500); margin-top: 2px; }
+    .dd-menu a:hover, .dd-menu a:focus { background: var(--surface-1); color: var(--teal); }
+    @media (max-width: 1150px) {
+      .nav-links li.has-dd { width: 100%; }
+      .nav-links .dd-toggle { width: 100%; justify-content: center; }
+      .dd-menu { position: static; transform: none; opacity: 1; visibility: visible; pointer-events: auto; min-width: 0; width: 100%; box-shadow: none; border: 0; border-left: 2px solid var(--gray-200); border-radius: 0; margin: 4px 0 6px; padding: 0 0 0 12px; display: none; }
+      .nav-links li.has-dd.open > .dd-menu { display: block; }
+      .dd-menu::before { display: none; }
+      .dd-menu a { text-align: center; padding: 9px 6px; }
+      .dd-menu a small { display: none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -1733,9 +1772,17 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="https://www.silentpenguintax.com/#home">Home</a></li>
-      <li><a href="https://www.silentpenguintax.com/#about">Why us</a></li>
-      <li><a href="https://www.silentpenguintax.com/#services">Services</a></li>
-      <li><a href="https://www.silentpenguintax.com/#how-it-works">How It Works</a></li>
+      <li class="has-dd">
+        <button class="dd-toggle" type="button" aria-expanded="false" aria-haspopup="true">服務</button>
+        <ul class="dd-menu">
+          <li><a href="/zh/expat-tax/">移民及跨境稅務<small>FEIE、FBAR、FATCA</small></a></li>
+          <li><a href="/zh/crypto-tax/">加密貨幣稅務<small>Form 8949、質押、DeFi</small></a></li>
+          <li><a href="/zh/streamlined-offshore/">海外自願披露(SDOP)<small>非故意漏報補救</small></a></li>
+          <li><a href="/zh/trust-tax/">信託及遺產(Form 1041)<small>1041 稅表與 K-1</small></a></li>
+        </ul>
+      </li>
+      <li><a href="/zh/#zh-guides">中文指南</a></li>
+      <li><a href="/zh/testimonials/">客戶推薦</a></li>
       <li><a href="https://www.silentpenguintax.com/#faq">FAQ</a></li>
       <li><a href="https://www.silentpenguintax.com/#meet-your-cpa">Meet Your CPA</a></li>
       <li><a href="https://www.silentpenguintax.com/intake" class="nav-cta" target="_blank" rel="noopener noreferrer">Get Your Quote</a></li>
@@ -2114,5 +2161,30 @@ function openFabForm() {
   </div>
 </div>
 
+
+<script>
+  (function () {
+    var items = document.querySelectorAll('.nav-links li.has-dd');
+    items.forEach(function (li) {
+      var btn = li.querySelector('.dd-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = li.classList.contains('open');
+        items.forEach(function (o) { o.classList.remove('open'); o.querySelector('.dd-toggle').setAttribute('aria-expanded', 'false'); });
+        if (!isOpen) { li.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.nav-links li.has-dd')) return;
+      items.forEach(function (o) { o.classList.remove('open'); o.querySelector('.dd-toggle').setAttribute('aria-expanded', 'false'); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      items.forEach(function (o) { o.classList.remove('open'); o.querySelector('.dd-toggle').setAttribute('aria-expanded', 'false'); });
+    });
+  })();
+</script>
 </body>
 </html>
