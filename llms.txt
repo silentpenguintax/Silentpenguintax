@@ -26,6 +26,9 @@ Key facts:
 
 ## 中文服務 (Chinese-language pages)
 - [中文主頁 — 香港及華人移民美國稅務](https://www.silentpenguintax.com/zh/): 粵語/英語雙語 CPA 服務:全球收入申報、FBAR/FATCA 海外戶口、強積金、加密貨幣、SDOP 自願披露。
+- [October 15 Deadline: What's Actually Due](https://www.silentpenguintax.com/guides/october-15-deadline-what-is-due/): Final deadline for extended 2025 individual returns, what is and isn't due that day, penalties, and what to do if you miss it.
+- [Extension to File, Not to Pay](https://www.silentpenguintax.com/guides/extension-more-time-to-file-not-to-pay/): Why Form 4868 did not extend the payment date; failure-to-file vs failure-to-pay penalties and relief options.
+- [October 15 Checklist for Americans Abroad](https://www.silentpenguintax.com/guides/october-15-checklist-abroad/): Expat document checklist, FEIE vs FTC, FBAR/8938/8621, and the discretionary December 15 extension.
 - [FBAR 中文指南](https://www.silentpenguintax.com/zh/guides/who-must-file-fbar/): 誰需要申報 FBAR;香港銀行戶口、聯名戶口、強積金與儲蓄保險的申報規則。
 - [SDOP 中文指南](https://www.silentpenguintax.com/zh/guides/streamlined-domestic-offshore-sdop/): 漏報海外收入及戶口的簡化補救程序 — 資格、5% 罰款與 Form 14654。
 
