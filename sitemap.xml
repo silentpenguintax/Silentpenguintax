@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.silentpenguintax.com/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,170 +13,230 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.silentpenguintax.com/about/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.silentpenguintax.com/expat-tax</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/crypto-tax</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/streamlined-offshore</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/trust-tax</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/testimonials/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/guides/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.silentpenguintax.com/guides/october-15-deadline-what-is-due/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.silentpenguintax.com/guides/extension-more-time-to-file-not-to-pay/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.silentpenguintax.com/guides/october-15-checklist-abroad/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/guides/who-must-file-fbar/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/guides/how-is-crypto-taxed/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/guides/streamlined-domestic-offshore-sdop/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/guides/october-15-deadline-what-is-due/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/guides/extension-more-time-to-file-not-to-pay/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/guides/october-15-checklist-abroad/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/guides/havent-filed-taxes-in-years/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh/expat-tax/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh/crypto-tax/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh/streamlined-offshore/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh/trust-tax/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh/testimonials/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh/guides/who-must-file-fbar/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh/guides/streamlined-domestic-offshore-sdop/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/zh/guides/october-15-deadline-what-is-due/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/zh/guides/extension-more-time-to-file-not-to-pay/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/zh/guides/october-15-checklist-abroad/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/zh/guides/havent-filed-taxes-in-years/</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh-cn/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh-cn/expat-tax/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh-cn/crypto-tax/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh-cn/streamlined-offshore/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh-cn/trust-tax/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh-cn/testimonials/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh-cn/guides/who-must-file-fbar/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.silentpenguintax.com/zh-cn/guides/streamlined-domestic-offshore-sdop/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/zh-cn/guides/october-15-deadline-what-is-due/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/zh-cn/guides/extension-more-time-to-file-not-to-pay/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/zh-cn/guides/october-15-checklist-abroad/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.silentpenguintax.com/zh-cn/guides/havent-filed-taxes-in-years/</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
