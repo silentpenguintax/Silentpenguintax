@@ -19,6 +19,10 @@
     {
       "source": "/trust-tax",
       "destination": "/trust-tax.html"
+    },
+    {
+      "source": "/s-corp-tax",
+      "destination": "/s-corp-tax.html"
     }
   ]
 }

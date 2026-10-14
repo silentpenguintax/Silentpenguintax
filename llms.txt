@@ -5,8 +5,8 @@
 Key facts:
 - Licensed CPA firm. Founder: Lucanus "Luke" Lam, CPA. IRS e-file provider. Secure client portal (AES-256).
 - Fully remote and asynchronous: email + secure portal, no phone calls. Flat-fee pricing. Serves all 50 states.
-- Specialties: U.S. expat / foreign income tax, cryptocurrency & digital-asset tax, Streamlined offshore disclosure (SDOP / SFOP), trust & estate income tax (Form 1041), amended returns (Form 1040-X), and IRS / state notice response.
-- Does NOT offer: bookkeeping, payroll, or monthly retainer / accounting services.
+- Specialties: U.S. expat / foreign income tax, cryptocurrency & digital-asset tax, Streamlined offshore disclosure (SDOP / SFOP), trust & estate income tax (Form 1041), S-Corp and small business returns (Form 1120-S, Form 1065, state income and franchise tax returns), amended returns (Form 1040-X), and IRS / state notice response.
+- Does NOT offer: payroll processing or payroll tax filings, ongoing monthly bookkeeping, sales/use tax or B&O filings, or retainer services. Simple records for small businesses may be accepted case by case.
 - Languages: English and Cantonese (廣東話).
 - Location: Mercer Island, WA (remote). Contact: hello@silentpenguintax.com
 
@@ -15,6 +15,7 @@ Key facts:
 - [Cryptocurrency Tax Reporting](https://www.silentpenguintax.com/crypto-tax): Capital gains and losses (Form 8949 / Schedule D), staking and mining income, DeFi, NFTs, FIFO vs. specific-identification cost basis, and multi-wallet / multi-exchange reconciliation.
 - [Streamlined Offshore Disclosure (SDOP / SFOP)](https://www.silentpenguintax.com/streamlined-offshore): Non-willful catch-up under the IRS Streamlined Filing Compliance Procedures — three years of amended returns, six years of FBARs, and the Form 14654 / 14653 certification narrative.
 - [Trust & Estate Income Tax (Form 1041)](https://www.silentpenguintax.com/trust-tax): Fiduciary income tax returns, beneficiary Schedule K-1s, distributable net income, grantor vs. non-grantor trusts, and the decedent's final Form 1040.
+- [S-Corp & Small Business Tax](https://www.silentpenguintax.com/s-corp-tax): Form 1120-S and shareholder K-1s, state income and franchise tax returns, reasonable compensation review, shareholder basis (Form 7203), S-election analysis, Form 2553 and late-election relief; partnerships (Form 1065). Payroll and monthly bookkeeping not included.
 
 ## About the founder
 - [Meet Your CPA: Luke Lam](https://www.silentpenguintax.com/about/): Licensed CPA in Washington State, founder of Silent Penguin PLLC, 10+ years of tax preparation and consulting experience; fully remote, secure cloud-based, flat-fee. Bilingual English/Cantonese.
@@ -41,8 +42,8 @@ Key facts:
 - [FBAR 简体中文指南](https://www.silentpenguintax.com/zh-cn/guides/who-must-file-fbar/): 谁需要申报 FBAR;国内银行账户、联名账户、理财与住房公积金的申报规则。
 - [SDOP 简体中文指南](https://www.silentpenguintax.com/zh-cn/guides/streamlined-domestic-offshore-sdop/): 漏报海外收入及账户的简化补救程序 — 资格、5% 罚款与 Form 14654。
 
-- [中文服務頁(繁體)](https://www.silentpenguintax.com/zh/expat-tax/) — 移民及跨境稅務;另有 [加密貨幣](https://www.silentpenguintax.com/zh/crypto-tax/)、[海外自願披露](https://www.silentpenguintax.com/zh/streamlined-offshore/)、[信託及遺產](https://www.silentpenguintax.com/zh/trust-tax/)。
-- [中文服务页(简体)](https://www.silentpenguintax.com/zh-cn/expat-tax/) — 移民及跨境税务;另有 [加密货币](https://www.silentpenguintax.com/zh-cn/crypto-tax/)、[海外自愿披露](https://www.silentpenguintax.com/zh-cn/streamlined-offshore/)、[信托及遗产](https://www.silentpenguintax.com/zh-cn/trust-tax/)。
+- [中文服務頁(繁體)](https://www.silentpenguintax.com/zh/expat-tax/) — 移民及跨境稅務;另有 [加密貨幣](https://www.silentpenguintax.com/zh/crypto-tax/)、[海外自願披露](https://www.silentpenguintax.com/zh/streamlined-offshore/)、[信託及遺產](https://www.silentpenguintax.com/zh/trust-tax/)、[S 公司](https://www.silentpenguintax.com/zh/s-corp-tax/)。
+- [中文服务页(简体)](https://www.silentpenguintax.com/zh-cn/expat-tax/) — 移民及跨境税务;另有 [加密货币](https://www.silentpenguintax.com/zh-cn/crypto-tax/)、[海外自愿披露](https://www.silentpenguintax.com/zh-cn/streamlined-offshore/)、[信托及遗产](https://www.silentpenguintax.com/zh-cn/trust-tax/)、[S 公司](https://www.silentpenguintax.com/zh-cn/s-corp-tax/)。
 
 ## Contact
 - Email: hello@silentpenguintax.com
