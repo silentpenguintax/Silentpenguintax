@@ -1799,6 +1799,37 @@
   </style>
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    /* ===== NAV LAYOUT FIXES (header fit, mobile menu) ===== */
+    .nav-logo .brand-br { display: none; }
+    @media (max-width: 1150px) {
+      nav .nav-links li.has-dd:hover > .dd-menu,
+      nav .nav-links li.has-dd:focus-within > .dd-menu,
+      nav .nav-links li.has-dd.open > .dd-menu { transform: none; }
+    }
+    @media (max-width: 480px) {
+      nav .nav-logo .brand-br { display: inline; }
+      nav .nav-logo span { line-height: 1.3; }
+    }
+    @media (max-width: 400px) {
+      nav .lang-switch { margin-left: 4px; }
+      nav .nav-toggle { margin-left: 4px; }
+    }
+    @media (max-width: 340px) {
+      nav .nav-logo > div { display: none; }
+    }
+    @media (min-width: 1151px) {
+      nav .container { max-width: 1480px; gap: clamp(20px, 2.5vw, 40px); }
+      nav .lang-switch { margin-left: 18px; }
+    }
+    @media (min-width: 1281px) {
+      .nav-links { gap: clamp(14px, 1.3vw, 24px); }
+    }
+    @media (min-width: 1151px) and (max-width: 1440px) {
+      nav .nav-logo .brand-br { display: inline; }
+      nav .nav-logo span { line-height: 1.3; }
+    }
+  </style>
 </head>
 <body>
 
@@ -1809,7 +1840,7 @@
     <a href="https://www.silentpenguintax.com/#home" class="nav-logo">
       <img src="/Silent_Penguin_transparent_ready_no_word-removebg.png" alt="Silent Penguin PLLC" style="height: 56px; width: auto;">
       <div>
-        <span>SILENT PENGUIN TAX SERVICES</span>
+        <span>SILENT PENGUIN<br class="brand-br"> TAX SERVICES</span>
       </div>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -1819,7 +1850,7 @@
         <ul class="dd-menu">
           <li><a href="/expat-tax">Expat &amp; International Tax<small>FEIE, FBAR &amp; FATCA</small></a></li>
           <li><a href="/crypto-tax">Cryptocurrency Tax<small>Form 8949, staking, DeFi</small></a></li>
-          <li><a href="/streamlined-offshore">Streamlined Offshore (SDOP)<small>Non-willful catch-up filing</small></a></li>
+          <li><a href="/streamlined-offshore">Streamlined Offshore (SDOP / SFOP)<small>Non-willful catch-up filing</small></a></li>
           <li><a href="/trust-tax">Trust &amp; Estate (Form 1041)<small>Fiduciary returns &amp; K-1s</small></a></li>
           <li><a href="/s-corp-tax">S-Corp &amp; Small Business<small>Form 1120-S, K-1s &amp; state returns</small></a></li>
         </ul>

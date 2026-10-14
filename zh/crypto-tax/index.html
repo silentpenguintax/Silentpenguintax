@@ -1759,6 +1759,37 @@
   </style>
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    /* ===== NAV LAYOUT FIXES (header fit, mobile menu) ===== */
+    .nav-logo .brand-br { display: none; }
+    @media (max-width: 1150px) {
+      nav .nav-links li.has-dd:hover > .dd-menu,
+      nav .nav-links li.has-dd:focus-within > .dd-menu,
+      nav .nav-links li.has-dd.open > .dd-menu { transform: none; }
+    }
+    @media (max-width: 480px) {
+      nav .nav-logo .brand-br { display: inline; }
+      nav .nav-logo span { line-height: 1.3; }
+    }
+    @media (max-width: 400px) {
+      nav .lang-switch { margin-left: 4px; }
+      nav .nav-toggle { margin-left: 4px; }
+    }
+    @media (max-width: 340px) {
+      nav .nav-logo > div { display: none; }
+    }
+    @media (min-width: 1151px) {
+      nav .container { max-width: 1480px; gap: clamp(20px, 2.5vw, 40px); }
+      nav .lang-switch { margin-left: 18px; }
+    }
+    @media (min-width: 1281px) {
+      .nav-links { gap: clamp(14px, 1.3vw, 24px); }
+    }
+    @media (min-width: 1151px) and (max-width: 1440px) {
+      nav .nav-logo .brand-br { display: inline; }
+      nav .nav-logo span { line-height: 1.3; }
+    }
+  </style>
 </head>
 <body>
 
@@ -1769,7 +1800,7 @@
     <a href="https://www.silentpenguintax.com/#home" class="nav-logo">
       <img src="/Silent_Penguin_transparent_ready_no_word-removebg.png" alt="Silent Penguin PLLC" style="height: 56px; width: auto;">
       <div>
-        <span>SILENT PENGUIN TAX SERVICES</span>
+        <span>SILENT PENGUIN<br class="brand-br"> TAX SERVICES</span>
       </div>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -1779,7 +1810,7 @@
         <ul class="dd-menu">
           <li><a href="/zh/expat-tax/">移民及跨境稅務<small>FEIE、FBAR、FATCA</small></a></li>
           <li><a href="/zh/crypto-tax/">加密貨幣稅務<small>Form 8949、質押、DeFi</small></a></li>
-          <li><a href="/zh/streamlined-offshore/">海外自願披露(SDOP)<small>非故意漏報補救</small></a></li>
+          <li><a href="/zh/streamlined-offshore/">海外自願披露(SDOP / SFOP)<small>非故意漏報補救</small></a></li>
           <li><a href="/zh/trust-tax/">信託及遺產(Form 1041)<small>1041 稅表與 K-1</small></a></li>
           <li><a href="/zh/s-corp-tax/">S 公司及小型企業<small>1120-S、K-1、州稅表</small></a></li>
         </ul>
