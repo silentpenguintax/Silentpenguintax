@@ -1563,11 +1563,11 @@
   </style>
   <style>
     /* ===== SUBPAGE / ARTICLE ADDITIONS (reuses homepage tokens) ===== */
-    .crumbs { font-size: 0.82rem; color: var(--gray-400); margin-bottom: 14px; }
+    .crumbs { position: static; z-index: auto; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: 0; font-size: 0.82rem; color: var(--gray-400); margin-bottom: 14px; }
     .crumbs a { color: var(--gray-600); }
     .crumbs a:hover { color: var(--teal); }
     .crumbs span { margin: 0 7px; color: var(--gray-400); }
-    .article-header { background: linear-gradient(180deg, var(--surface-1) 0%, #eef3f8 100%); padding: clamp(40px,7vw,76px) 0 clamp(30px,5vw,48px); }
+    .article-header { background: linear-gradient(180deg, var(--surface-1) 0%, #eef3f8 100%); padding: calc(64px + clamp(16px,2.5vw,24px)) 0 clamp(30px,5vw,48px); }
     .article-header h1 { font-size: clamp(1.55rem,3.8vw,2.3rem); line-height: 1.3; margin: 6px 0 16px; max-width: 30ch; color: var(--navy); }
     .article-meta { font-size: 0.9rem; color: var(--gray-600); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
     .article-meta a { color: var(--teal); font-weight: 600; }
@@ -1655,7 +1655,7 @@
         "headline": "什麼是 SDOP?漏報海外收入及戶口的官方補救程序",
         "description": "IRS 簡化申報合規程序(SDOP)中文詳解:資格條件、5% 罰款如何計算、須補交的 3 年稅表與 6 年 FBAR、Form 14654 非故意聲明,以及香港移民最常見的漏報情況與補救方法。美國持牌 CPA 主理。",
         "datePublished": "2026-07-01",
-        "dateModified": "2026-07-01",
+        "dateModified": "2026-10-14",
         "inLanguage": "zh-Hant",
         "mainEntityOfPage": "https://www.silentpenguintax.com/zh/guides/streamlined-domestic-offshore-sdop/",
         "author": {
@@ -1747,6 +1747,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "可以。截至 2026 年,簡化程序仍然開放;但 IRS 可隨時修改或終止,而且一旦 IRS 主動接觸您便會失去資格,所以不宜拖延。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "從未報過美國稅,可以用 SDOP 嗎?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "不可以。SDOP 只接受修訂稅表,所以最近三年必須已經提交原稅表。居於美國而從未報稅的人士,一般要按正常程序補交稅表;涉及海外帳戶時應走哪條路(包括是否需要 IRS 自願披露計劃),要按事實評估。居於海外的人士則可以循 SFOP 補交原稅表。"
             }
           }
         ]
@@ -1893,7 +1901,7 @@
         <nav class="crumbs" aria-label="Breadcrumb"><a href="https://www.silentpenguintax.com/">主頁</a><span>/</span><a href="/zh/">中文</a><span>/</span><span aria-current="page">什麼是 SDOP</span></nav>
         <p class="section-label">SDOP 海外自願披露</p>
         <h1>什麼是 SDOP?漏報海外收入及戶口的官方補救程序</h1>
-        <p class="article-meta"><span>作者:<a href="/about/">Lucanus Lam,美國持牌會計師(CPA)</a></span><span class="dot">&middot;</span><span>更新日期:2026年7月1日</span><span class="dot">&middot;</span><a href="/guides/streamlined-domestic-offshore-sdop/" lang="en">English version</a><span class="dot">&middot;</span><a href="/zh-cn/guides/streamlined-domestic-offshore-sdop/" lang="zh-Hans">简体版</a></p>
+        <p class="article-meta"><span>作者:<a href="/about/">Lucanus Lam,美國持牌會計師(CPA)</a></span><span class="dot">&middot;</span><span>更新日期:2026年10月14日</span><span class="dot">&middot;</span><a href="/guides/streamlined-domestic-offshore-sdop/" lang="en">English version</a><span class="dot">&middot;</span><a href="/zh-cn/guides/streamlined-domestic-offshore-sdop/" lang="zh-Hans">简体版</a></p>
       </div>
     </header>
 
@@ -1905,10 +1913,10 @@
       <p>SDOP 是 IRS <a href="https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures" target="_blank" rel="noopener nofollow">簡化申報合規程序</a>(Streamlined Filing Compliance Procedures)的其中一條途徑,專為「因誠實錯誤或不知情」而漏報海外帳戶及收入的納稅人而設,適用於<strong>居於美國</strong>的人士。另一條途徑 — 簡化海外離岸程序(SFOP)— 則適用於符合非居留測試的人士,並且<strong>完全沒有</strong>離岸罰款。對移民而言,這是把過去多年「不知道要報」的問題一次過解決的正式渠道。</p>
 
       <h2>誰合資格?</h2>
-      <p>使用 SDOP,一般須符合以下條件:</p><ul><li>過去曾漏報海外帳戶的收入、漏交 FBAR 或其他必須提交的資訊申報表</li><li>能夠聲明有關漏報屬<strong>非故意</strong>(non-willful)— 即出於疏忽、無心之失或真誠的誤解,而非蓄意隱瞞</li><li>持有有效的納稅人識別號碼(如 SSN 或 ITIN)</li><li>目前<strong>未</strong>被 IRS 審查或刑事調查</li></ul><p>如果事實情況指向<strong>故意</strong>隱瞞,SDOP 便不是正確的工具 — 錯誤地簽署非故意聲明反而會製造真正的法律風險。故意個案一般循 IRS 自願披露計劃(Voluntary Disclosure Practice)處理,並通常需要稅務律師參與。因此,<strong>誠實的資格評估是整個過程最重要的第一步</strong>,我們會在開展任何工作之前先做這一步,並坦白告訴您 SDOP 是否適合。</p>
+      <p>使用 SDOP,一般須符合以下條件:</p><ul><li>過去曾漏報海外帳戶的收入、漏交 FBAR 或其他必須提交的資訊申報表</li><li>最近三個已過期限的年度,<strong>都已提交美國原稅表</strong> — SDOP 只接受修訂稅表</li><li>不符合 SFOP 的非居留測試 — 居於海外的人士請參閱 <a href="/zh/guides/streamlined-foreign-offshore-sfop/">SFOP 指南</a></li><li>能夠聲明有關漏報屬<strong>非故意</strong>(non-willful)— 即出於疏忽、無心之失或真誠的誤解,而非蓄意隱瞞</li><li>持有有效的納稅人識別號碼(如 SSN 或 ITIN)</li><li>目前<strong>未</strong>被 IRS 審查或刑事調查</li></ul><p>如果事實情況指向<strong>故意</strong>隱瞞,SDOP 便不是正確的工具 — 錯誤地簽署非故意聲明反而會製造真正的法律風險。故意個案一般循 IRS 自願披露計劃(Voluntary Disclosure Practice)處理,並通常需要稅務律師參與。因此,<strong>誠實的資格評估是整個過程最重要的第一步</strong>,我們會在開展任何工作之前先做這一步,並坦白告訴您 SDOP 是否適合。</p>
 
       <h2>需要提交什麼?</h2>
-      <p>一份完整的 SDOP 申請包含三個部分:</p><ol><li><strong>3 年修訂或補交的稅表</strong>(Form 1040-X)— 就最近三個已過期限的年度,補報先前遺漏的海外收入(例如香港的利息、股息、租金、出售資產收益),並適用可用的海外稅收抵免或豁免</li><li><strong>6 年 FBAR</strong>(FinCEN Form 114)— 就過去六年中每一個本應申報而未報的年度,以電子方式補交</li><li><strong>Form 14654 非故意聲明</strong> — 包括一份解釋您具體情況的事實陳述,在偽證罪罰則下簽署</li></ol>
+      <p>一份完整的 SDOP 申請包含三個部分:</p><ol><li><strong>3 年修訂稅表</strong>(Form 1040-X)— 就最近三個已過期限的年度,補報先前遺漏的海外收入(例如香港的利息、股息、租金、出售資產收益),並適用可用的海外稅收抵免或豁免</li><li><strong>6 年 FBAR</strong>(FinCEN Form 114)— 就過去六年中每一個本應申報而未報的年度,以電子方式補交</li><li><strong>Form 14654 非故意聲明</strong> — 包括一份解釋您具體情況的事實陳述,在偽證罪罰則下簽署</li></ol>
 
       <h2>5% 罰款如何計算?</h2>
       <p>SDOP 只設一項 <strong>5% 雜項離岸罰款</strong>:以 6 年 FBAR 期間內,須納入計算的海外金融資產「<strong>年終合計價值</strong>」最高的一年為基數,乘以 5%。它<strong>不是</strong>按您的收入計算,也<strong>不會</strong>逐個帳戶、逐年疊加 — 是單一一筆罰款。符合非居留測試而改用 SFOP 的人士,更可完全豁免此罰款。</p>
@@ -1918,6 +1926,7 @@
 
       <h2>各補救途徑比較</h2>
       <table><thead><tr><th>途徑</th><th>適用對象</th><th>罰款</th></tr></thead><tbody><tr><td>SDOP</td><td>非故意漏報、居於美國</td><td>相關資產最高合計價值的 5%</td></tr><tr><td>SFOP</td><td>非故意漏報、符合非居留測試</td><td>0%</td></tr><tr><td>逾期 FBAR 程序</td><td>只漏 FBAR,收入已如實申報</td><td>一般無罰款</td></tr><tr><td>自願披露(VDP)</td><td>屬故意、有刑事風險</td><td>較高,按個案而定</td></tr></tbody></table>
+      <p>居於美國境外?請閱讀我們的 <a href="/zh/guides/streamlined-foreign-offshore-sfop/">SFOP 指南</a> — 符合非居留測試的話,海外版本完全沒有離岸罰款。</p>
 
       <h2>香港移民最常見的情況 — 程序仍然開放嗎?</h2>
       <p>我們最常協助的,正是這幾類情況:移民美國時保留了香港的銀行戶口與強積金、繼承了香港親人的帳戶或資產、或多年來真心不知道美國要求申報全球收入及海外帳戶。SDOP 正是為這類「非故意」情況而設。</p><p>截至 2026 年,簡化程序<strong>仍然開放</strong>,但 IRS 一直保留隨時修改或終止的權利;而且<strong>一旦 IRS 主動接觸您,便即時失去資格</strong>。及早主動處理,幾乎永遠是結果較好的一邊。</p>
@@ -1933,7 +1942,7 @@
           <p class="section-label">常見問題</p>
           <h2 class="section-title">SDOP 常見問題</h2>
         </div>
-        <div class="faq-list"><details class="faq-item"><summary class="faq-question">SDOP 與 SFOP 有什麼分別?</summary><p class="faq-answer">兩者同屬 IRS 簡化申報合規程序:SDOP 適用於居於美國的納稅人,罰款為相關海外資產最高合計價值的 5%;SFOP 適用於符合非居留測試的人士,完全沒有離岸罰款。</p></details><details class="faq-item"><summary class="faq-question">5% 罰款以什麼作基數?</summary><p class="faq-answer">以 6 年 FBAR 期間內,須納入計算的海外金融資產「年終合計價值」最高的一年為基數,乘以 5%。是單一罰款 — 不按收入計算,也不會逐個帳戶、逐年疊加。</p></details><details class="faq-item"><summary class="faq-question">如果我的情況可能被視為「故意」,怎麼辦?</summary><p class="faq-answer">那麼 SDOP 並不適合,錯誤地簽署非故意聲明反而會製造風險。故意個案一般循 IRS 自願披露計劃(VDP)處理,並應諮詢稅務律師。第一步永遠是誠實評估事實 — 我們會在報價前先做這個評估,並坦白告知。</p></details><details class="faq-item"><summary class="faq-question">2026 年仍可以申請嗎?</summary><p class="faq-answer">可以。截至 2026 年,簡化程序仍然開放;但 IRS 可隨時修改或終止,而且一旦 IRS 主動接觸您便會失去資格,所以不宜拖延。</p></details></div>
+        <div class="faq-list"><details class="faq-item"><summary class="faq-question">SDOP 與 SFOP 有什麼分別?</summary><p class="faq-answer">兩者同屬 IRS 簡化申報合規程序:SDOP 適用於居於美國的納稅人,罰款為相關海外資產最高合計價值的 5%;SFOP 適用於符合非居留測試的人士,完全沒有離岸罰款。</p></details><details class="faq-item"><summary class="faq-question">5% 罰款以什麼作基數?</summary><p class="faq-answer">以 6 年 FBAR 期間內,須納入計算的海外金融資產「年終合計價值」最高的一年為基數,乘以 5%。是單一罰款 — 不按收入計算,也不會逐個帳戶、逐年疊加。</p></details><details class="faq-item"><summary class="faq-question">如果我的情況可能被視為「故意」,怎麼辦?</summary><p class="faq-answer">那麼 SDOP 並不適合,錯誤地簽署非故意聲明反而會製造風險。故意個案一般循 IRS 自願披露計劃(VDP)處理,並應諮詢稅務律師。第一步永遠是誠實評估事實 — 我們會在報價前先做這個評估,並坦白告知。</p></details><details class="faq-item"><summary class="faq-question">2026 年仍可以申請嗎?</summary><p class="faq-answer">可以。截至 2026 年,簡化程序仍然開放;但 IRS 可隨時修改或終止,而且一旦 IRS 主動接觸您便會失去資格,所以不宜拖延。</p></details><details class="faq-item"><summary class="faq-question">從未報過美國稅,可以用 SDOP 嗎?</summary><p class="faq-answer">不可以。SDOP 只接受修訂稅表,所以最近三年必須已經提交原稅表。居於美國而從未報稅的人士,一般要按正常程序補交稅表;涉及海外帳戶時應走哪條路(包括是否需要 IRS 自願披露計劃),要按事實評估。居於海外的人士則可以循 SFOP 補交原稅表。</p></details></div>
       </div>
     </section>
 

@@ -1562,11 +1562,11 @@
     }
   </style>
   <style>
-    .crumbs { font-size: 0.82rem; color: var(--gray-400); margin-bottom: 14px; }
+    .crumbs { position: static; z-index: auto; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: 0; font-size: 0.82rem; color: var(--gray-400); margin-bottom: 14px; }
     .crumbs a { color: var(--gray-600); }
     .crumbs a:hover { color: var(--teal); }
     .crumbs span { margin: 0 7px; color: var(--gray-400); }
-    .article-header { background: linear-gradient(180deg, var(--surface-1) 0%, #eef3f8 100%); padding: clamp(40px,7vw,76px) 0 clamp(30px,5vw,48px); }
+    .article-header { background: linear-gradient(180deg, var(--surface-1) 0%, #eef3f8 100%); padding: calc(64px + clamp(16px,2.5vw,24px)) 0 clamp(30px,5vw,48px); }
     .article-header h1 { font-size: clamp(1.6rem,4vw,2.4rem); line-height: 1.2; margin: 6px 0 16px; max-width: 22ch; color: var(--navy); }
     .article-meta { font-size: 0.9rem; color: var(--gray-600); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
     .article-meta a { color: var(--teal); font-weight: 600; }
@@ -1636,7 +1636,7 @@
         "headline": "Who Has to File an FBAR (FinCEN Form 114)?",
         "description": "Who must file an FBAR, the $10,000 threshold, the April 15 deadline, 2026 penalties after Bittner, and how to catch up if you're behind. By a licensed CPA.",
         "datePublished": "2026-06-29",
-        "dateModified": "2026-06-29",
+        "dateModified": "2026-10-14",
         "inLanguage": "en-US",
         "mainEntityOfPage": "https://www.silentpenguintax.com/guides/who-must-file-fbar/",
         "author": {
@@ -1869,7 +1869,7 @@
         <nav class="crumbs" aria-label="Breadcrumb"><a href="https://www.silentpenguintax.com/">Home</a><span>/</span><a href="/guides/">Guides</a><span>/</span><span aria-current="page">Who must file an FBAR</span></nav>
         <p class="section-label">FBAR</p>
         <h1>Who Has to File an FBAR (FinCEN Form 114)?</h1>
-        <p class="article-meta"><span>By <a href="/about/">Lucanus Lam, CPA</a></span><span class="dot">&middot;</span><span>Updated June 29, 2026</span><span class="dot">&middot;</span><span>6 min read</span><span class="dot">&middot;</span><a href="/zh/guides/who-must-file-fbar/" lang="zh-Hant">中文版</a></p>
+        <p class="article-meta"><span>By <a href="/about/">Lucanus Lam, CPA</a></span><span class="dot">&middot;</span><span>Updated October 14, 2026</span><span class="dot">&middot;</span><span>6 min read</span><span class="dot">&middot;</span><a href="/zh/guides/who-must-file-fbar/" lang="zh-Hant">中文版</a></p>
       </div>
     </header>
 
@@ -1896,7 +1896,7 @@
       <p>FBAR penalties are among the steepest in U.S. law, which is exactly why proactive compliance matters. The amounts are inflation-adjusted each year; recent figures look like this:</p><table><thead><tr><th>Violation</th><th>Penalty (2026, inflation-adjusted)</th></tr></thead><tbody><tr><td>Non-willful</td><td>Up to about $16,500 per annual report</td></tr><tr><td>Willful</td><td>Greater of about $165,000 or 50% of the account balance, per account, per year</td></tr></tbody></table><p>In <em>Bittner v. United States</em> (2023), the Supreme Court held that the non-willful penalty applies <strong>per annual report, not per account</strong>. One missed year with ten accounts is treated as a single non-willful violation for the penalty cap &mdash; a major reduction from the IRS's former per-account stacking. Reasonable cause can reduce or eliminate non-willful penalties, and taxpayers who come forward before the IRS contacts them very often avoid penalties entirely.</p>
 
       <h2>Behind on FBARs? You have options</h2>
-      <p>If you simply missed FBARs but reported all your foreign income, the <strong>Delinquent FBAR Submission Procedures</strong> let you e-file the late reports with a short reasonable-cause explanation, usually with no penalty. If you are behind on both your tax returns <em>and</em> your FBARs, the <a href="https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures" target="_blank" rel="noopener nofollow">Streamlined Filing Compliance Procedures</a> are the usual path &mdash; see our guide to the <a href="/guides/streamlined-domestic-offshore-sdop/">Streamlined Domestic Offshore Procedure (SDOP)</a>. The key in every case is to act <strong>before</strong> the IRS reaches you first.</p>
+      <p>If you simply missed FBARs but reported all your foreign income, the <strong>Delinquent FBAR Submission Procedures</strong> let you e-file the late reports with a short reasonable-cause explanation, usually with no penalty. If foreign income also went unreported, the <a href="https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures" target="_blank" rel="noopener nofollow">Streamlined Filing Compliance Procedures</a> are the usual path &mdash; the <a href="/guides/streamlined-foreign-offshore-sfop/">SFOP</a> if you live abroad, or the <a href="/guides/streamlined-domestic-offshore-sdop/">SDOP</a> if you live in the U.S. and filed your original returns. The key in every case is to act <strong>before</strong> the IRS reaches you first.</p>
 
         <div class="refs"><h3>Primary sources</h3><ul><li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar" target="_blank" rel="noopener nofollow">IRS &mdash; Report of Foreign Bank and Financial Accounts (FBAR)</a></li><li><a href="https://bsaefiling.fincen.gov/" target="_blank" rel="noopener nofollow">FinCEN BSA E-Filing System (where the FBAR is filed)</a></li><li>Bank Secrecy Act: 31 U.S.C. §5314; 31 CFR §1010.350</li><li>Bittner v. United States, 598 U.S. 85 (2023)</li></ul></div>
         <p class="disclaimer">This guide is general information for educational purposes and is not tax advice for your specific situation. Tax rules change and individual facts vary &mdash; please consult a qualified tax professional before acting.</p>

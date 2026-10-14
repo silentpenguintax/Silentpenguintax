@@ -1562,11 +1562,11 @@
     }
   </style>
   <style>
-    .crumbs { font-size: 0.82rem; color: var(--gray-400); margin-bottom: 14px; }
+    .crumbs { position: static; z-index: auto; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: 0; font-size: 0.82rem; color: var(--gray-400); margin-bottom: 14px; }
     .crumbs a { color: var(--gray-600); }
     .crumbs a:hover { color: var(--teal); }
     .crumbs span { margin: 0 7px; color: var(--gray-400); }
-    .article-header { background: linear-gradient(180deg, var(--surface-1) 0%, #eef3f8 100%); padding: clamp(40px,7vw,76px) 0 clamp(30px,5vw,48px); }
+    .article-header { background: linear-gradient(180deg, var(--surface-1) 0%, #eef3f8 100%); padding: calc(64px + clamp(16px,2.5vw,24px)) 0 clamp(30px,5vw,48px); }
     .article-header h1 { font-size: clamp(1.6rem,4vw,2.4rem); line-height: 1.2; margin: 6px 0 16px; max-width: 22ch; color: var(--navy); }
     .article-meta { font-size: 0.9rem; color: var(--gray-600); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
     .article-meta a { color: var(--teal); font-weight: 600; }
@@ -1636,7 +1636,7 @@
         "headline": "Haven't Filed Taxes in Years? Here Are Your Options",
         "description": "Several years of unfiled returns is fixable, and usually less painful than people fear. How many years the IRS expects, what penalties really apply, refund deadlines you can still meet, and the special path for foreign accounts.",
         "datePublished": "2026-09-08",
-        "dateModified": "2026-09-08",
+        "dateModified": "2026-10-14",
         "inLanguage": "en-US",
         "mainEntityOfPage": "https://www.silentpenguintax.com/guides/havent-filed-taxes-in-years/",
         "author": {
@@ -1874,11 +1874,11 @@
         <nav class="crumbs" aria-label="Breadcrumb"><a href="https://www.silentpenguintax.com/">Home</a><span>/</span><a href="/guides/">Guides</a><span>/</span><span aria-current="page">Haven't filed in years</span></nav>
         <p class="section-label">Catching Up</p>
         <h1>Haven't Filed Taxes in Years? Here Are Your Options</h1>
-        <p class="article-meta"><span>By <a href="/about/">Lucanus Lam, CPA</a></span><span class="dot">&middot;</span><span>Updated September 8, 2026</span><span class="dot">&middot;</span><span>7 min read</span><span class="dot">&middot;</span><a href="/zh/guides/havent-filed-taxes-in-years/" lang="zh-Hant">中文版</a><span class="dot">&middot;</span><a href="/zh-cn/guides/havent-filed-taxes-in-years/" lang="zh-Hans">简体版</a></p>
+        <p class="article-meta"><span>By <a href="/about/">Lucanus Lam, CPA</a></span><span class="dot">&middot;</span><span>Updated October 14, 2026</span><span class="dot">&middot;</span><span>7 min read</span><span class="dot">&middot;</span><a href="/zh/guides/havent-filed-taxes-in-years/" lang="zh-Hant">中文版</a><span class="dot">&middot;</span><a href="/zh-cn/guides/havent-filed-taxes-in-years/" lang="zh-Hans">简体版</a></p>
       </div>
     </header>
     <div class="article-body"><div class="container">
-        <div class="answer-box">Unfiled years are fixable. The IRS generally expects the <strong>last six years</strong> of returns to be filed to be considered compliant, penalties only apply to years where tax was owed, refunds can still be claimed for roughly the <strong>last three years</strong>, and if foreign accounts or income are involved there is a structured route &mdash; the <strong>Streamlined Procedures</strong> &mdash; that often means no penalty at all. The one thing that makes every option worse is waiting until the IRS contacts you first.</div>
+        <div class="answer-box">Unfiled years are fixable. The IRS generally expects the <strong>last six years</strong> of returns to be filed to be considered compliant, penalties only apply to years where tax was owed, refunds can still be claimed for roughly the <strong>last three years</strong>, and if you live abroad and foreign accounts or income are involved, the <strong>Streamlined Foreign Offshore Procedures</strong> often mean no penalty at all. The one thing that makes every option worse is waiting until the IRS contacts you first.</div>
 
       <h2>First, how bad is it really?</h2>
       <p>Usually less bad than the years of dread suggest. Three facts reframe most situations:</p><ul><li><strong>Penalties are calculated on unpaid tax.</strong> A year where you were owed a refund, or where withholding covered the bill, generally carries no failure-to-file penalty at all.</li><li><strong>The IRS generally looks back six years.</strong> Under its own policy, filing the most recent six years is normally enough to be treated as compliant, unless there are unusual circumstances. Legally every unfiled year stays open, but six is the practical working number.</li><li><strong>Refunds expire.</strong> A refund must generally be claimed within three years of the return's original due date (<a href="https://www.law.cornell.edu/uscode/text/26/6511" target="_blank" rel="noopener nofollow">IRC &sect;6511</a>). Money from older years is usually gone &mdash; which is a reason to move now, not a reason to despair.</li></ul>
@@ -1890,7 +1890,7 @@
       <p>The IRS does not need your return to assess tax. Under <a href="https://www.law.cornell.edu/uscode/text/26/6020" target="_blank" rel="noopener nofollow">IRC &sect;6020(b)</a> it can prepare a <strong>substitute for return</strong> using the income reported to it on W-2s and 1099s &mdash; with no deductions, no credits, and the least favourable filing status. Taxpayers routinely discover a substitute return has produced a balance several times what they actually owed. Filing your own accurate return, even after a substitute has been prepared, usually replaces it.</p><p>Unfiled years also block things you may want later: mortgage applications, immigration matters that require tax transcripts, and access to the streamlined offshore procedures, which require that you be able to get current.</p>
 
       <h2>If foreign accounts or income are part of the picture</h2>
-      <p>This changes the analysis, and it is where many immigrants and expats sit. If foreign accounts went unreported on the FBAR or foreign income went unreported on your return, and the failure was <strong>non-willful</strong>, the <a href="https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures" target="_blank" rel="noopener nofollow">Streamlined Filing Compliance Procedures</a> are usually the right route: three years of returns, six years of FBARs, and a non-willful certification. Filed from abroad the penalty is zero; filed from the U.S. it is 5% of the highest year-end foreign balance. It is a structured, well-trodden path &mdash; but only available <em>before</em> the IRS makes contact.</p>
+      <p>This changes the analysis, and it is where many immigrants and expats sit. If foreign accounts went unreported on the FBAR or foreign income went unreported, and the failure was <strong>non-willful</strong>, the <a href="https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures" target="_blank" rel="noopener nofollow">Streamlined Filing Compliance Procedures</a> may apply &mdash; but which version depends on where you live. If you meet the non-residency test (generally 330 full days outside the U.S. with no U.S. abode), the <a href="/guides/streamlined-foreign-offshore-sfop/">SFOP</a> accepts late original returns and carries no penalty. The domestic version, the <a href="/guides/streamlined-domestic-offshore-sdop/">SDOP</a>, works only through amended returns &mdash; so it is not available to U.S. residents who never filed. Non-filers in the U.S. with foreign accounts need a careful, case-by-case assessment before anything is filed. Either way, these options exist only <em>before</em> the IRS makes contact.</p>
 
       <h2>How to actually do it</h2>
       <ol><li><strong>Pull your IRS records.</strong> <a href="https://www.irs.gov/individuals/get-transcript" target="_blank" rel="noopener nofollow">Wage and income transcripts</a> show every W-2, 1099 and other form the IRS holds for each year &mdash; the fastest way to know what the IRS already knows.</li><li><strong>Decide the scope.</strong> Usually the last six years; more if the IRS has already asked, or if older years carry a refund you can still claim.</li><li><strong>Gather what the transcripts do not show</strong> &mdash; deductions, foreign income, crypto records, dependents, state information.</li><li><strong>Prepare and file all years together,</strong> so the story is consistent and every year gets the right filing status and credits.</li><li><strong>Handle the balance.</strong> Pay what you can, set up an installment agreement for the rest, and request penalty relief where you qualify.</li><li><strong>Do not forget the states.</strong> State filing obligations run in parallel, and some states have no statute of limitations on unfiled returns.</li></ol>

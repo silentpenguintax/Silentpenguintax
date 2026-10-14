@@ -1563,11 +1563,11 @@
   </style>
   <style>
     /* ===== SUBPAGE / ARTICLE ADDITIONS (reuses homepage tokens) ===== */
-    .crumbs { font-size: 0.82rem; color: var(--gray-400); margin-bottom: 14px; }
+    .crumbs { position: static; z-index: auto; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: 0; font-size: 0.82rem; color: var(--gray-400); margin-bottom: 14px; }
     .crumbs a { color: var(--gray-600); }
     .crumbs a:hover { color: var(--teal); }
     .crumbs span { margin: 0 7px; color: var(--gray-400); }
-    .article-header { background: linear-gradient(180deg, var(--surface-1) 0%, #eef3f8 100%); padding: clamp(40px,7vw,76px) 0 clamp(30px,5vw,48px); }
+    .article-header { background: linear-gradient(180deg, var(--surface-1) 0%, #eef3f8 100%); padding: calc(64px + clamp(16px,2.5vw,24px)) 0 clamp(30px,5vw,48px); }
     .article-header h1 { font-size: clamp(1.55rem,3.8vw,2.3rem); line-height: 1.3; margin: 6px 0 16px; max-width: 30ch; color: var(--navy); }
     .article-meta { font-size: 0.9rem; color: var(--gray-600); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
     .article-meta a { color: var(--teal); font-weight: 600; }
@@ -1655,7 +1655,7 @@
         "headline": "多年未報美國稅?您的選項在這裡",
         "description": "多年未申報的稅表是可以補救的,而且通常沒有想像中痛苦。IRS 期望補多少年、罰款實際如何計、仍可申領的退稅期限,以及涉及海外帳戶時的專門途徑。美國持牌 CPA 中文詳解。",
         "datePublished": "2026-09-08",
-        "dateModified": "2026-09-08",
+        "dateModified": "2026-10-14",
         "inLanguage": "zh-Hant",
         "mainEntityOfPage": "https://www.silentpenguintax.com/zh/guides/havent-filed-taxes-in-years/",
         "author": {
@@ -1893,11 +1893,11 @@
         <nav class="crumbs" aria-label="Breadcrumb"><a href="https://www.silentpenguintax.com/">主頁</a><span>/</span><a href="/zh/">中文</a><span>/</span><span aria-current="page">多年未報稅</span></nav>
         <p class="section-label">補報</p>
         <h1>多年未報美國稅?您的選項在這裡</h1>
-        <p class="article-meta"><span>作者:<a href="/about/">Lucanus Lam,美國持牌會計師(CPA)</a></span><span class="dot">&middot;</span><span>更新日期:2026年9月8日</span><span class="dot">&middot;</span><a href="/guides/havent-filed-taxes-in-years/" lang="en">English version</a><span class="dot">&middot;</span><a href="/zh-cn/guides/havent-filed-taxes-in-years/" lang="zh-Hans">简体版</a></p>
+        <p class="article-meta"><span>作者:<a href="/about/">Lucanus Lam,美國持牌會計師(CPA)</a></span><span class="dot">&middot;</span><span>更新日期:2026年10月14日</span><span class="dot">&middot;</span><a href="/guides/havent-filed-taxes-in-years/" lang="en">English version</a><span class="dot">&middot;</span><a href="/zh-cn/guides/havent-filed-taxes-in-years/" lang="zh-Hans">简体版</a></p>
       </div>
     </header>
     <div class="article-body"><div class="container">
-        <div class="answer-box">未申報的年度是可以補救的。IRS 一般期望補齊<strong>最近六年</strong>的稅表便視為合規;罰款只適用於欠稅的年度;<strong>最近約三年</strong>的退稅仍可申領;若涉及海外帳戶或收入,有一條有系統的途徑 — <strong>簡化申報程序</strong> — 往往完全免罰。唯一會令所有選項變差的,是等到 IRS 先找上門。</div>
+        <div class="answer-box">未申報的年度是可以補救的。IRS 一般期望補齊<strong>最近六年</strong>的稅表便視為合規;罰款只適用於欠稅的年度;<strong>最近約三年</strong>的退稅仍可申領;若您居於海外、又涉及海外帳戶或收入,<strong>海外簡化申報程序(SFOP)</strong>往往完全免罰。唯一會令所有選項變差的,是等到 IRS 先找上門。</div>
 
       <h2>首先,情況到底有多糟?</h2>
       <p>通常比多年的憂慮要好。三個事實可以重新定義大部分情況:</p><ul><li><strong>罰款按未繳稅款計算。</strong>本應退稅、或預扣稅已足夠的年度,一般完全沒有逾期申報罰款。</li><li><strong>IRS 一般只回望六年。</strong>按其自身政策,補齊最近六年通常足以視為合規,除非有特殊情況。法律上每個未申報的年度都保持開放,但六年是實際的工作數字。</li><li><strong>退稅會過期。</strong>退稅一般須在該稅表原到期日起三年內申領(<a href="https://www.law.cornell.edu/uscode/text/26/6511" target="_blank" rel="noopener nofollow">IRC §6511</a>)。更早年度的退稅通常已經失去 — 這是現在就行動的理由,不是絕望的理由。</li></ul>
@@ -1909,7 +1909,7 @@
       <p>IRS 不需要您的稅表也能評稅。根據 <a href="https://www.law.cornell.edu/uscode/text/26/6020" target="_blank" rel="noopener nofollow">IRC §6020(b)</a>,它可以用 W-2、1099 等已申報的收入為您製作<strong>替代稅表</strong> — 沒有任何扣除、沒有抵免、用最不利的申報身份。納稅人經常發現替代稅表算出的欠款是實際應繳的幾倍。即使替代稅表已經製作,自行提交準確的稅表通常可以取而代之。</p><p>未申報的年度也會阻礙您日後想做的事:申請按揭、需要稅務紀錄的移民事務,以及海外簡化申報程序 — 後者要求您有能力先把稅務補齊。</p>
 
       <h2>如果涉及海外帳戶或收入</h2>
-      <p>這會改變整個分析,而許多移民及海外人士正正處於這個位置。如果海外帳戶未在 FBAR 申報、或海外收入未在稅表申報,而漏報屬<strong>非故意</strong>,<a href="https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures" target="_blank" rel="noopener nofollow">簡化申報合規程序</a>通常是正確途徑:三年稅表、六年 FBAR,加一份非故意聲明。身在海外提交罰款為零;身在美國提交則為海外資產最高年終結餘的 5%。這是一條有系統、走過無數次的路 — 但只在 IRS 接觸您<em>之前</em>才可以用。</p>
+      <p>這會改變整個分析,而許多移民及海外人士正正處於這個位置。如果海外帳戶未在 FBAR 申報、或海外收入未在稅表申報,而漏報屬<strong>非故意</strong>,<a href="https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures" target="_blank" rel="noopener nofollow">簡化申報合規程序</a>或許適用 — 但適用哪一個版本,取決於您住在哪裡。符合非居留測試(一般為一年內身處美國境外滿 330 日、且在美國沒有住所)的人士,可以循 <a href="/zh/guides/streamlined-foreign-offshore-sfop/">SFOP</a> 補交原稅表,而且完全免罰。國內版本 <a href="/zh/guides/streamlined-domestic-offshore-sdop/">SDOP</a> 只接受修訂稅表 — 從未報稅、人在美國的人士並不適用。居於美國而從未報稅、又涉及海外帳戶的,提交任何文件之前都必須按個案仔細評估。無論哪種情況,這些途徑都只在 IRS 接觸您<em>之前</em>才可以用。</p>
 
       <h2>實際怎樣做</h2>
       <ol><li><strong>取得您的 IRS 紀錄。</strong><a href="https://www.irs.gov/individuals/get-transcript" target="_blank" rel="noopener nofollow">工資及收入紀錄(transcript)</a>顯示 IRS 每年持有的每一份 W-2、1099 及其他表格 — 是了解「IRS 已經知道什麼」最快的方法。</li><li><strong>決定範圍。</strong>通常是最近六年;若 IRS 已經來信、或更早年度有仍可申領的退稅,則更多。</li><li><strong>收集紀錄中沒有的資料</strong> — 扣除項目、海外收入、加密貨幣紀錄、受養人、州稅資料。</li><li><strong>把所有年度一起準備及提交,</strong>令整個故事一致,每年都用對申報身份及抵免。</li><li><strong>處理欠款。</strong>先繳能繳的,餘額設立分期協議,符合資格便申請罰款減免。</li><li><strong>不要忘記州稅。</strong>州稅義務並行存在,部分州份對未申報稅表沒有時效限制。</li></ol>
